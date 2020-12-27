@@ -1,0 +1,16 @@
+.guide {
+  +.guide {
+    margin: 24px 0 0 0;
+  }
+  
+  >.title {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+
+    >span {
+      margin: 0 0 0 4px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
