@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACE,MADI,GACH,MAAM,CAAC;EACN,MAAM,EAAE,UAAU;CACnB;;AAHH,AAKE,MALI,GAKH,MAAM,CAAC;EACN,MAAM,EAAE,UAAU;EAClB,SAAS,EAAE,IAAI;CAOhB;;AAdH,AASI,MATE,GAKH,MAAM,GAIJ,IAAI,CAAC;EACJ,MAAM,EAAE,SAAS;EACjB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,MAAM;CACpB",
-    "sources": [
-        "../scss/guide.scss"
-    ],
-    "names": [],
-    "file": "guide.css"
-}
