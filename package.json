@@ -1,0 +1,44 @@
+{
+  "name": "sonky-gatsby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My Gatsby site",
+  "author": "sonky740",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "babel-plugin-prismjs": "^2.0.1",
+    "babel-preset-gatsby": "^0.8.0",
+    "gatsby": "^2.26.1",
+    "gatsby-image": "^2.7.0",
+    "gatsby-plugin-google-analytics": "^2.7.0",
+    "gatsby-plugin-image": "^0.3.1",
+    "gatsby-plugin-react-helmet": "^3.6.0",
+    "gatsby-plugin-sass": "^2.7.0",
+    "gatsby-plugin-sharp": "^2.10.1",
+    "gatsby-source-filesystem": "^2.7.0",
+    "gatsby-transformer-sharp": "^2.8.0",
+    "gsap": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "prismjs": "^1.22.0",
+    "react": "^16.14.0",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
+    "react-hot-loader": "^4.13.0",
+    "scrollmagic": "^2.0.8"
+  },
+  "devDependencies": {
+    "@hot-loader/react-dom": "^17.0.1"
+  }
+}
