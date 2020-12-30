@@ -1,5 +1,8 @@
 import React from "react";
 import { Layout } from "../../components/index";
+import Woori1 from '../../images/woori/woori1.png';
+import Woori2 from '../../images/woori/woori2.png';
+import Woori3 from '../../images/woori/woori3.png';
 
 // main
 const IndexPage = () => {
@@ -9,13 +12,25 @@ const IndexPage = () => {
         {/* 우리은행 */}
         <section className="section-type1">
           <h2 className="tit-sub1">우리은행 WON기업뱅킹 앱 구축</h2>
-          <p className="txt-p">우리은행 WON기업뱅킹앱 구축 프로젝트 진행 중</p>
+          <p className="txt-p">상단 메뉴는 네이티브였으며 컨텐츠는 웹뷰로 진행하였습니다. 신규 앱 구축이라 인터랙션을 많이 신경 쓴 프로젝트입니다.</p>
           <div>
             <figure>
-              {/* <a href={}>
-               <img src={} alt="" />
-              </a> */}
-              <figcaption>이미지 공수 중</figcaption>
+              <a href={Woori1} target="_blank" rel="noreferrer">
+              <img src={Woori1} alt="작업당시 일부분" />
+              </a>
+              <figcaption>작업당시 일부분</figcaption>
+            </figure>
+            <figure>
+              <a href={Woori2} target="_blank" rel="noreferrer">
+              <img src={Woori2} alt="작업당시 일부분" />
+              </a>
+              <figcaption>작업당시 일부분</figcaption>
+            </figure>
+            <figure>
+              <a href={Woori3} target="_blank" rel="noreferrer">
+              <img src={Woori3} alt="실서버" />
+              </a>
+              <figcaption>실서버</figcaption>
             </figure>
           </div>
         </section>

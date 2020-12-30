@@ -38,7 +38,7 @@ const IndexPage = () => {
                 <p>역할: PA 25%</p>
                 <p>기간: 2020.06 ~ 2020.09</p>
                 <div className="btn-area1">
-                  <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
+                  <a href="https://play.google.com/store/apps/details?id=com.wooribank.smart.biz&hl=ko&gl=US" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
                   <Link to="/works7" className="btn-type1">기술서</Link>
                 </div>
               </div>

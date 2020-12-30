@@ -12,7 +12,7 @@ const IndexPage = () => {
           <p className="txt-p">프로젝트 진행 중</p>
           <div>
             <figure>
-              {/* <a href={}>
+              {/* <a href={} target="_blank" rel="noreferrer">
                 <img src={} alt="" />
               </a> */}
               <figcaption></figcaption>

@@ -17,7 +17,7 @@ const IndexPage = () => {
           </p>
           <div>
             <figure>
-              <a href={Kbbanking1}>
+              <a href={Kbbanking1} target="_blank" rel="noreferrer">
                 <img src={Kbbanking1} alt="KB국민은행 개인 인터넷뱅킹 메인" />
               </a>
               <figcaption>KB국민은행 개인 인터넷뱅킹 메인</figcaption>
