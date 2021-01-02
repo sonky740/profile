@@ -7,11 +7,12 @@ export default function Layout({ children }) {
     <div className="wrapper">
       {/* <!-- ### 헤더 ### --> */}
       <header className="header">
-        <div>
-          <h1>
-            <Link to="/">Sonky</Link>
-          </h1>
-        </div>
+        <h1>
+          <Link to="/">Sonky</Link>
+        </h1>
+        <nav>
+          <Link to="/about">About</Link>
+        </nav>
       </header>
 
       {children}

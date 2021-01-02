@@ -2,18 +2,25 @@
   min-width: 375px;
 
   .header {
+    display: flex;
     max-width: 1200px;
     margin: auto;
     margin-bottom: 24px;
+    padding: 8px 24px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-between;
 
-    >div {
-      display: flex;
-      padding: 8px 24px;
-      font-size: 24px;
-      justify-content: space-between;
+    >nav {
+      font-size: 18px;
+    }
 
-      @media screen and (max-width: 1120px) {
-        width: 100%;
+    @media screen and (max-width: 1120px) {
+      width: 100%;
+      font-size: 21px;
+
+      >nav {
+        font-size: 16px;
       }
     }
   }
@@ -32,10 +39,9 @@
         margin-top: 24px;
       }
     }
-  
+
     @media screen and (max-width: 1120px) {
       width: 100%;
     }
   }
 }
-

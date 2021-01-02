@@ -134,3 +134,12 @@
     transform: translateY(0);
   }
 }
+
+.about {
+
+  @media screen and (max-width: 1120px) {
+    .tit-sub1 {
+      text-align: center;
+    }
+  }
+}

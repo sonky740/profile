@@ -5,7 +5,6 @@ import Heroes2 from '../../images/heroes/heroes2.png';
 
 // main
 const IndexPage = () => {
-  console.log(Heroes1)
   return (
     <Layout>
       <main className="container center">

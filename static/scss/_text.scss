@@ -46,3 +46,42 @@
     text-decoration: underline;
   }
 }
+
+// dl 타입
+.dl-type1 {
+  font-size: 16px;
+
+  dt {
+    position: relative;
+    padding-left: 12px;
+    color: $text-type2;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: $text-type2;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  dd {
+    margin-top: 4px;
+    padding-left: 12px;
+    word-break: break-all;
+
+    p {
+      +p {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  +.dl-type1 {
+    margin-top: 16px;
+  }
+}

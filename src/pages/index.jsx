@@ -7,7 +7,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 const IndexPage = () => {
   return (
     <Layout>
-      {/* <!-- ### 메인 ### --> */}
       <main className="container">
         {/* <!-- 포폴 --> */}
         <section className="main-section1">
@@ -38,7 +37,7 @@ const IndexPage = () => {
                 <p>역할: PA 25%</p>
                 <p>기간: 2020.06 ~ 2020.09</p>
                 <div className="btn-area1">
-                  <a href="https://play.google.com/store/apps/details?id=com.wooribank.smart.biz&hl=ko&gl=US" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
+                  <a href="https://svc.wooribank.com/svc/Dream?withyou=SFSBK0003" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
                   <Link to="/works7" className="btn-type1">기술서</Link>
                 </div>
               </div>
