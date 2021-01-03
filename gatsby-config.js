@@ -23,5 +23,5 @@ module.exports = {
       __key: "images",
     }
   ],
-  pathPrefix: "/PF",
+  pathPrefix: `/PF`,
 };
