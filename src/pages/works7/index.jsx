@@ -1,11 +1,39 @@
 import React from "react";
 import { Layout } from "../../components/index";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import Woori1 from '../../images/woori/woori1.png';
 import Woori2 from '../../images/woori/woori2.png';
 import Woori3 from '../../images/woori/woori3.png';
 
 // main
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file1: file(relativePath: { eq: "woori/woori1.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      file2: file(relativePath: { eq: "woori/woori2.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      file3: file(relativePath: { eq: "woori/woori3.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <main className="container center">
@@ -16,19 +44,19 @@ const IndexPage = () => {
           <div>
             <figure>
               <a href={Woori1} target="_blank" rel="noreferrer">
-              <img src={Woori1} alt="작업당시 일부분" />
+                <Img fixed={data.file1.childImageSharp.fixed} alt="작업당시 일부분" />
               </a>
               <figcaption>작업당시 일부분</figcaption>
             </figure>
             <figure>
               <a href={Woori2} target="_blank" rel="noreferrer">
-              <img src={Woori2} alt="작업당시 일부분" />
+                <Img fixed={data.file2.childImageSharp.fixed} alt="작업당시 일부분" />
               </a>
               <figcaption>작업당시 일부분</figcaption>
             </figure>
             <figure>
               <a href={Woori3} target="_blank" rel="noreferrer">
-              <img src={Woori3} alt="실서버" />
+                <Img fixed={data.file3.childImageSharp.fixed} alt="실서버" />
               </a>
               <figcaption>실서버</figcaption>
             </figure>

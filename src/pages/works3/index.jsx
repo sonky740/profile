@@ -1,9 +1,23 @@
 import React from "react";
 import { Layout } from "../../components/index";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import Kbbanking1 from '../../images/kbbanking/kb_banking.jpg';
 
 // main
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file1: file(relativePath: { eq: "kbbanking/kb_banking.jpg" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <main className="container center">
@@ -18,7 +32,7 @@ const IndexPage = () => {
           <div>
             <figure>
               <a href={Kbbanking1} target="_blank" rel="noreferrer">
-                <img src={Kbbanking1} alt="KB국민은행 개인 인터넷뱅킹 메인" />
+                <Img fixed={data.file1.childImageSharp.fixed} alt="KB국민은행 개인 인터넷뱅킹 메인" />
               </a>
               <figcaption>KB국민은행 개인 인터넷뱅킹 메인</figcaption>
             </figure>

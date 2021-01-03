@@ -1,13 +1,28 @@
 import React, { useEffect } from "react";
 import { Layout } from "../../components/index";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import Prism from "prismjs";
 import Posco1 from '../../images/posco/posco1.png';
 
 // main
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file1: file(relativePath: { eq: "posco/posco1.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   useEffect(() => {
     setTimeout(() => Prism.highlightAll(), 0)
   })
+
   return (
     <Layout>
       <main className="container center">
@@ -21,7 +36,7 @@ const IndexPage = () => {
           <div>
             <figure>
               <a href={Posco1} target="_blank" rel="noreferrer">
-                <img src={Posco1} alt="" />
+                <Img fixed={data.file1.childImageSharp.fixed} alt="작업 중 일부분" />
               </a>
               <figcaption>
                 ag-grid 와 rechart를 활용한 페이지<br />

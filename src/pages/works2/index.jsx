@@ -1,10 +1,31 @@
 import React from "react";
 import { Layout } from "../../components/index";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import Hyosung1 from '../../images/hyosung/hyosung1.png';
 import Hyosung2 from '../../images/hyosung/hyosung2.png';
 
 // main
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file1: file(relativePath: { eq: "hyosung/hyosung1.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      file2: file(relativePath: { eq: "hyosung/hyosung2.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <main className="container center">
@@ -18,13 +39,13 @@ const IndexPage = () => {
           <div>
             <figure>
               <a href={Hyosung1} target="_blank" rel="noreferrer">
-                <img src={Hyosung1} alt="효성중공업" />
+                <Img fixed={data.file1.childImageSharp.fixed} alt="효성중공업" />
               </a>
               <figcaption>당시 구축했던 효성그룹 및 하위 사이트 4개중 중공업부문</figcaption>
             </figure>
             <figure>
               <a href={Hyosung2} target="_blank" rel="noreferrer">
-                <img src={Hyosung2} alt="효성중공업 협력업체 동반성장" />
+                <Img fixed={data.file2.childImageSharp.fixed} alt="효성중공업 협력업체 동반성장" />
               </a>
               <figcaption>효성중공업 협력업체 동반성장 사이트</figcaption>
             </figure>

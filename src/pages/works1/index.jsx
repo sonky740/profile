@@ -1,10 +1,31 @@
 import React from "react";
 import { Layout } from "../../components/index";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import Heroes1 from '../../images/heroes/heroes1.png';
 import Heroes2 from '../../images/heroes/heroes2.png';
 
 // main
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file1: file(relativePath: { eq: "heroes/heroes1.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      file2: file(relativePath: { eq: "heroes/heroes2.png" }) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <main className="container center">
@@ -18,13 +39,13 @@ const IndexPage = () => {
           <div className="box-type2">
             <figure>
               <a href={Heroes1} target="_blank" rel="noreferrer">
-                <img src={Heroes1} alt="넥센히어로즈 시절 이미지" />
+                <Img fixed={data.file1.childImageSharp.fixed} alt="넥센히어로즈 시절 이미지" />
               </a>
               <figcaption>넥센히어로즈 시절</figcaption>
             </figure>
             <figure>
               <a href={Heroes2} target="_blank" rel="noreferrer">
-                <img src={Heroes2} alt="넥센히어로즈 시절 이미지" />
+                <Img fixed={data.file2.childImageSharp.fixed} alt="키움히어로즈 이미지" />
               </a>
               <figcaption>2018년 리뉴얼 후 키움히어로즈 시절</figcaption>
             </figure>
