@@ -12,22 +12,22 @@ const IndexPage = () => {
     query {
       file1: file(relativePath: { eq: "jamo/jamo1.png" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       file2: file(relativePath: { eq: "jamo/jamo2.png" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       file3: file(relativePath: { eq: "jamo/jamo3.png" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -43,22 +43,22 @@ const IndexPage = () => {
           <p className="txt-p">
             자사 자체 언어교정 솔루션으로 PC버전만 제작한 프로젝트입니다.
           </p>
-          <div>
+          <div className="img-box1">
             <figure>
               <a href={Jamo1} target="_blank" rel="noreferrer">
-                <Img fixed={data.file1.childImageSharp.fixed} alt="자모 메인" />
+                <Img fluid={data.file1.childImageSharp.fluid} alt="자모 메인" />
               </a>
               <figcaption>메인 페이지</figcaption>
             </figure>
             <figure>
               <a href={Jamo2} target="_blank" rel="noreferrer">
-                <Img fixed={data.file2.childImageSharp.fixed} alt="자모 네비게이션" />
+                <Img fluid={data.file2.childImageSharp.fluid} alt="자모 네비게이션" />
               </a>
               <figcaption>네비게이션을 열었을 때</figcaption>
             </figure>
             <figure>
               <a href={Jamo3} target="_blank" rel="noreferrer">
-                <Img fixed={data.file3.childImageSharp.fixed} alt="자모 콘텐츠 교정" />
+                <Img fluid={data.file3.childImageSharp.fluid} alt="자모 콘텐츠 교정" />
               </a>
               <figcaption>콘텐츠 교정 페이지</figcaption>
             </figure>

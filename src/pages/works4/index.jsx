@@ -11,8 +11,8 @@ const IndexPage = () => {
     query {
       file1: file(relativePath: { eq: "posco/posco1.png" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -33,10 +33,10 @@ const IndexPage = () => {
             포스코 MES 시스템을 React로 재구축한 프로젝트입니다.<br />
             UI는 <a href="https://react.semantic-ui.com/" target="_blank" rel="noreferrer">Semantic-UI-React</a>를 기반으로 하였습니다.
           </p>
-          <div>
+          <div className="img-box1">
             <figure>
               <a href={Posco1} target="_blank" rel="noreferrer">
-                <Img fixed={data.file1.childImageSharp.fixed} alt="작업 중 일부분" />
+                <Img fluid={data.file1.childImageSharp.fluid} alt="작업 중 일부분" />
               </a>
               <figcaption>
                 ag-grid 와 rechart를 활용한 페이지<br />

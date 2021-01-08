@@ -10,8 +10,8 @@ const IndexPage = () => {
     query {
       file1: file(relativePath: { eq: "kbbanking/kb_banking.jpg" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -29,10 +29,10 @@ const IndexPage = () => {
               href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=9262" target="_blank" rel="noreferrer">웹 어워드
               대상</a>을 받은 프로젝트입니다.
           </p>
-          <div>
+          <div className="img-box1">
             <figure>
               <a href={Kbbanking1} target="_blank" rel="noreferrer">
-                <Img fixed={data.file1.childImageSharp.fixed} alt="KB국민은행 개인 인터넷뱅킹 메인" />
+                <Img fluid={data.file1.childImageSharp.fluid} alt="KB국민은행 개인 인터넷뱅킹 메인" />
               </a>
               <figcaption>KB국민은행 개인 인터넷뱅킹 메인</figcaption>
             </figure>

@@ -29,18 +29,10 @@
 figure {
 
   img {
-    max-width: 400px;
-
-    @media screen and (max-width: 620px) {
-      max-width: 100%;
-    }
+    max-width: 100%;
   }
 
   >a {
     cursor: zoom-in;
-  }
-
-  +figure {
-    margin-top: 16px;
   }
 }

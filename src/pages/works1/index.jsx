@@ -11,15 +11,15 @@ const IndexPage = () => {
     query {
       file1: file(relativePath: { eq: "heroes/heroes1.png" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       file2: file(relativePath: { eq: "heroes/heroes2.png" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -36,16 +36,16 @@ const IndexPage = () => {
             당시 사내 인프라 업무를 하면서 처음으로 퍼블리싱 운영 업무를 맡게 된 사이트 입니다.<br />
             퍼블리싱 업무 말고도 DB, JAVA, Linux 뒷단 개발 및 서버도 조금씩 다뤘던 프로젝트입니다.
           </p>
-          <div className="box-type2">
+          <div className="img-box1">
             <figure>
               <a href={Heroes1} target="_blank" rel="noreferrer">
-                <Img fixed={data.file1.childImageSharp.fixed} alt="넥센히어로즈 시절 이미지" />
+                <Img fluid={data.file1.childImageSharp.fluid} alt="넥센히어로즈 시절 이미지" />
               </a>
               <figcaption>넥센히어로즈 시절</figcaption>
             </figure>
             <figure>
               <a href={Heroes2} target="_blank" rel="noreferrer">
-                <Img fixed={data.file2.childImageSharp.fixed} alt="키움히어로즈 이미지" />
+                <Img fluid={data.file2.childImageSharp.fluid} alt="키움히어로즈 이미지" />
               </a>
               <figcaption>2018년 리뉴얼 후 키움히어로즈 시절</figcaption>
             </figure>
