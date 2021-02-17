@@ -19,7 +19,7 @@ const IndexPage = () => {
                 KB국민은행 오픈뱅킹 고도화
               </div>
               <div className="bottom">
-                <p>역할: PA 30%</p>
+                <p>역할: PA 100%</p>
                 <p>기간: 2020.11 ~ 2021.02</p>
                 <div className="btn-area1">
                   <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
@@ -34,7 +34,7 @@ const IndexPage = () => {
                 우리은행 WON기업뱅킹앱 구축 프로젝트 진행 중
               </div>
               <div className="bottom">
-                <p>역할: PA 25%</p>
+                <p>역할: PA 80%</p>
                 <p>기간: 2020.06 ~ 2020.09</p>
                 <div className="btn-area1">
                   <a href="https://svc.wooribank.com/svc/Dream?withyou=SFSBK0003" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
@@ -79,7 +79,7 @@ const IndexPage = () => {
                 MES 시스템 React로 구축
               </div>
               <div className="bottom">
-                <p>역할: PA 20%</p>
+                <p>역할: PA 70%</p>
                 <p>기간: 2019.01 ~ 2019.09</p>
                 <div className="btn-area1">
                   <Tooltip text="관리자 사이트">관리자 사이트라 접근이 불가합니다.</Tooltip>
@@ -94,7 +94,7 @@ const IndexPage = () => {
                 KB국민은행 개인 인터넷뱅킹 리뉴얼 및 웹 접근성 취득, 웹 어워드 대상 수상
               </div>
               <div className="bottom">
-                <p>역할: PA 20%</p>
+                <p>역할: PA 100%</p>
                 <p>기간: 2018.07 ~ 2018.11</p>
                 <div className="btn-area1">
                   <a href="https://obank.kbstar.com/quics?page=obank" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
@@ -109,7 +109,7 @@ const IndexPage = () => {
                 효성그룹 사이트 수정 및 하위 4개 사이트 리뉴얼, 다국어 추가
               </div>
               <div className="bottom">
-                <p>역할: PA 25%</p>
+                <p>역할: PA 100%</p>
                 <p>기간: 2018.03 ~ 2018.07</p>
                 <div className="btn-area1">
                   <Tooltip text="사이트 바로가기">
