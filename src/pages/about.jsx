@@ -30,16 +30,6 @@ const IndexPage = () => {
                 그렇게 자연스럽게 Gatsby로 만들게 되었습니다.
               </dd>
             </dl>
-
-            <dl className="dl-type1">
-              <dt>이 사이트는 어디에 배포되고 있나?</dt>
-              <dd>
-                이 사이트는 두 곳에 배포됩니다.<br />
-                하나는 제 NAS의 <a href="http://sonky.myasustor.com" className="color-a" target="_blank" rel="noreferrer">sonky.myasustor.com</a>,<br />
-                하나는 Github의 <a href="https://sonky740.github.io/PF/" className="color-a" target="_blank" rel="noreferrer">sonky740.github.io/PF/</a><br />
-                두 곳 모두 동일한 내용으로 올라갑니다.
-              </dd>
-            </dl>
           </article>
         </section>
       </main>

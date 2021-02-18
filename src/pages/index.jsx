@@ -12,17 +12,32 @@ const IndexPage = () => {
         <section className="main-section1">
           <h2 className="tit-main1" data-text="PROJECT">PROJECT</h2>
           <div className="box-type1">
+            {/* <!-- 우리은행 마이데이터 구축 --> */}
+            <ScrollAnimation animateIn="fadeIn" offset={0}>
+              <h3 className="tit-sub1">우리은행 마이데이터 구축</h3>
+              <div className="content">
+                우리은행 마이데이터 구축 프로젝트 진행 중
+              </div>
+              <div className="bottom">
+                <p>역할: PA ?%</p>
+                <p>기간: 2021.02 ~ 2021.09</p>
+                <div className="btn-area1">
+                  <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
+                  <Link to="/works9" className="btn-type1">기술서</Link>
+                </div>
+              </div>
+            </ScrollAnimation>
             {/* <!-- KB국민은행 오픈뱅킹 고도화 --> */}
             <ScrollAnimation animateIn="fadeIn" offset={0}>
               <h3 className="tit-sub1">KB국민은행 오픈뱅킹 고도화</h3>
               <div className="content">
-                KB국민은행 오픈뱅킹 고도화
+                KB국민은행 오픈뱅킹(인터넷뱅킹, 스타뱅킹) 고도화
               </div>
               <div className="bottom">
                 <p>역할: PA 100%</p>
                 <p>기간: 2020.11 ~ 2021.02</p>
                 <div className="btn-area1">
-                  <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
+                  <a href="https://obank.kbstar.com/quics?page=obank&QSL=F#loading" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
                   <Link to="/works8" className="btn-type1">기술서</Link>
                 </div>
               </div>
@@ -31,7 +46,7 @@ const IndexPage = () => {
             <ScrollAnimation animateIn="fadeIn" offset={0}>
               <h3 className="tit-sub1">우리은행 WON기업뱅킹 앱 구축</h3>
               <div className="content">
-                우리은행 WON기업뱅킹앱 구축 프로젝트 진행 중
+                새로운 WON기업뱅킹 앱 구축, 웹뷰 영역 작업
               </div>
               <div className="bottom">
                 <p>역할: PA 80%</p>
