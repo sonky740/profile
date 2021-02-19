@@ -1,7 +1,10 @@
-import Layout from './layout';
-import Tooltip from './tooltip';
-
-export {
-  Layout,
-  Tooltip
-}
+export {default as Layout} from './sources/layout';
+export {default as Tooltip} from './sources/tooltip';
+export {default as BtnArea} from './sources/buttonArea';
+export {default as Code} from './sources/code';
+export {default as DL} from './sources/dl';
+export {default as SectionMain} from './sources/sectionMain';
+export {default as SectionType} from './sources/sectionType';
+export {default as FigureBox} from './sources/figureBox';
+export {default as BoxType} from './sources/boxType';
+export {default as ButtonType} from './sources/buttonType';

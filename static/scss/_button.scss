@@ -1,22 +1,10 @@
-.btn-area1 {
-  display: flex;
-  position: relative; // 하단 툴팁이 들어갈 경우
-  flex-wrap: wrap;
-  margin: 0 -4px;
-  text-align: center;
-
-  >* {
-    margin: 2px 4px 2px;
-  }
-}
-
 // 버튼 1
 .btn-type1 {
   display: inline-block;
   position: relative;
   height: 40px;
   padding: 8px 16px;
-  border: 1px solid $btn1;
+  border: 1px solid #ffbd39;
   border-radius: 24px;
   font-size: 14px;
   transition: all .5s ease;
@@ -29,12 +17,12 @@
     left: -150px;
     width: 100%;
     height: 100%;
-    background: $btn1;
+    background: #ffbd39;
     transition: all .5s ease;
     z-index: -1;
   }
 
-  +.btn-type1 {
+  & + & {
     margin-left: 4px;
   }
 
@@ -44,14 +32,6 @@
     color: #000;
     &:before {
       left: 0;
-    }
-  }
-
-  @at-root span#{&} {
-    cursor: default;
-
-    &:hover {
-      box-shadow: none;
     }
   }
 }
