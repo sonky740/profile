@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import "../../../static/scss/common.scss";
 import styled, { createGlobalStyle } from "styled-components";
 import "./fonts/font.css";
 

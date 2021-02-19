@@ -1,6 +1,5 @@
 import React from "react";
-import { Layout, Tooltip, BtnArea, SectionMain, BoxType } from "../components/index";
-import { Link } from "gatsby";
+import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType } from "../components/index";
 import ScrollAnimation from "react-animate-on-scroll";
 
 // main
@@ -21,7 +20,7 @@ const IndexPage = () => {
               <p>기간: 2021.02 ~ 2021.09</p>
               <BtnArea>
                 <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
-                <Link to="/works9" className="btn-type1">기술서</Link>
+                <ButtonType as="Link" to="/works9">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -35,8 +34,8 @@ const IndexPage = () => {
               <p>역할: PA 100%</p>
               <p>기간: 2020.11 ~ 2021.02</p>
               <BtnArea>
-                <a href="https://obank.kbstar.com/quics?page=obank&QSL=F#loading" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
-                <Link to="/works8" className="btn-type1">기술서</Link>
+                <ButtonType href="https://obank.kbstar.com/quics?page=obank&QSL=F#loading" target="_blank" rel="noreferrer">사이트 바로가기</ButtonType>
+                <ButtonType as="Link" to="/works8">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -50,8 +49,8 @@ const IndexPage = () => {
               <p>역할: PA 80%</p>
               <p>기간: 2020.06 ~ 2020.09</p>
               <BtnArea>
-                <a href="https://svc.wooribank.com/svc/Dream?withyou=SFSBK0003" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
-                <Link to="/works7" className="btn-type1">기술서</Link>
+                <ButtonType href="https://svc.wooribank.com/svc/Dream?withyou=SFSBK0003" target="_blank" rel="noreferrer">사이트 바로가기</ButtonType>
+                <ButtonType as="Link" to="/works7">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -66,7 +65,7 @@ const IndexPage = () => {
               <p>기간: 2020.04 ~ 2020.05</p>
               <BtnArea>
                 <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
-                <Link to="/works6" className="btn-type1">기술서</Link>
+                <ButtonType as="Link" to="/works6">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -81,7 +80,7 @@ const IndexPage = () => {
               <p>기간: 2019.09 ~ 2020.03</p>
               <BtnArea>
                 <Tooltip text="관리자 사이트">관리자 사이트라 접근이 불가합니다.</Tooltip>
-                <Link to="/works5" className="btn-type1">기술서</Link>
+                <ButtonType as="Link" to="/works5">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -96,7 +95,7 @@ const IndexPage = () => {
               <p>기간: 2019.01 ~ 2019.09</p>
               <BtnArea>
                 <Tooltip text="관리자 사이트">관리자 사이트라 접근이 불가합니다.</Tooltip>
-                <Link to="/works4" className="btn-type1">기술서</Link>
+                <ButtonType as="Link" to="/works4">기술서</ButtonType>
               </BtnArea>
             </div>  
           </ScrollAnimation>
@@ -110,8 +109,8 @@ const IndexPage = () => {
               <p>역할: PA 100%</p>
               <p>기간: 2018.07 ~ 2018.11</p>
               <BtnArea>
-                <a href="https://obank.kbstar.com/quics?page=obank" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
-                <Link to="/works3" className="btn-type1">기술서</Link>
+                <ButtonType href="https://obank.kbstar.com/quics?page=obank" target="_blank" rel="noreferrer">사이트 바로가기</ButtonType>
+                <ButtonType as="Link" to="/works3">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -127,14 +126,14 @@ const IndexPage = () => {
               <BtnArea>
                 <Tooltip text="사이트 바로가기">
                   <BtnArea>
-                    <a href="http://www.hyosung.co.kr/kr/index.do" className="btn-type1" target="_blank" rel="noreferrer">효성그룹</a>
-                    <a href="http://www.hyosungtnc.com/kr/main.do" className="btn-type1" target="_blank" rel="noreferrer">효성티앤씨</a>
-                    <a href="http://www.hyosungheavyindustries.com/kr/main.do" className="btn-type1" target="_blank" rel="noreferrer">효성중공업</a>
-                    <a href="http://www.hyosungadvancedmaterials.com/kr/main.do" className="btn-type1" target="_blank" rel="noreferrer">효성첨단소재</a>
-                    <a href="http://www.hyosungchemical.com/kr/main.do" className="btn-type1" target="_blank" rel="noreferrer">효성화학</a>
+                    <ButtonType href="http://www.hyosung.co.kr/kr/index.do" target="_blank" rel="noreferrer">효성그룹</ButtonType>
+                    <ButtonType href="http://www.hyosungtnc.com/kr/main.do" target="_blank" rel="noreferrer">효성티앤씨</ButtonType>
+                    <ButtonType href="http://www.hyosungheavyindustries.com/kr/main.do" target="_blank" rel="noreferrer">효성중공업</ButtonType>
+                    <ButtonType href="http://www.hyosungadvancedmaterials.com/kr/main.do" target="_blank" rel="noreferrer">효성첨단소재</ButtonType>
+                    <ButtonType href="http://www.hyosungchemical.com/kr/main.do" target="_blank" rel="noreferrer">효성화학</ButtonType>
                   </BtnArea>
                 </Tooltip>
-                <Link to="/works2" className="btn-type1">기술서</Link>
+                <ButtonType as="Link" to="/works2">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>
@@ -148,8 +147,8 @@ const IndexPage = () => {
               <p>역할: PA 100%</p>
               <p>기간: 2016.07 ~ 2018.07</p>
               <BtnArea>
-                <a href="https://www.heroesbaseball.co.kr/index.do" className="btn-type1" target="_blank" rel="noreferrer">사이트 바로가기</a>
-                <Link to="/works1" className="btn-type1">기술서</Link>
+                <ButtonType href="https://www.heroesbaseball.co.kr/index.do" target="_blank" rel="noreferrer">사이트 바로가기</ButtonType>
+                <ButtonType as="Link" to="/works1">기술서</ButtonType>
               </BtnArea>
             </div>
           </ScrollAnimation>

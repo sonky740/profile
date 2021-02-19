@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Button = styled.a`
@@ -38,8 +39,16 @@ const Button = styled.a`
   }
 `
 
-export default function ButtonType({children, href, to, target, rel, onClick}) {
+const LinkStyled = styled(Button.withComponent(Link))``
+
+export default function ButtonType({as, children, href, to, target, rel, onClick}) {
   return (
-    <Button href={href} to={to} target={target} rel={rel} onClick={onClick}>{children}</Button>
+    <>
+      {as === "Link" ? 
+        <LinkStyled to={to}>{children}</LinkStyled>
+        :
+        <Button href={href} target={target} rel={rel} onClick={onClick}>{children}</Button>
+      }
+    </>
   )
 }
