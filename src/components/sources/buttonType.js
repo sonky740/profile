@@ -39,7 +39,7 @@ const Button = styled.a`
   }
 `
 
-const LinkStyled = styled(Button.withComponent(Link))``
+const LinkStyled = Button.withComponent(Link);
 
 export default function ButtonType({as, children, href, to, target, rel, onClick}) {
   return (
