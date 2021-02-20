@@ -18,7 +18,7 @@ const Box = styled.div`
     padding: 24px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
-    color: $text-default;
+    color: #bebebe;
     transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 
     &:hover {
@@ -35,7 +35,7 @@ const Box = styled.div`
       font-size: 16px;
       color: #fff;
 
-      >.btn-area1 {
+      >[class*="buttonArea"] {
         margin-top: 8px;
       }
     }
