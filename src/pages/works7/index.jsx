@@ -38,7 +38,7 @@ const IndexPage = () => {
     <Layout align="center">
       {/* 우리은행 */}
       <SectionType title="우리은행 WON기업뱅킹 앱 구축">
-        <p>상단 메뉴는 네이티브였으며 컨텐츠는 웹뷰로 진행하였습니다. 신규 앱 구축이라 인터랙션을 많이 신경 쓴 프로젝트입니다.</p>
+        <p>우리은행 WON기업뱅킹앱 구축. 순수 CSS 인터랙션과 CSS 변수에 대해서 많은 걸 배웠던 프로젝트입니다.</p>
         <FigureBox>
           <figure>
             <a href={Woori1} target="_blank" rel="noreferrer">

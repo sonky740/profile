@@ -23,8 +23,7 @@ const IndexPage = () => {
       {/* 포스코 */}
       <SectionType title="포스코 차세대 MES 3.0 시스템 UI 개선">
         <p>
-          포스코 MES 시스템을 React로 재구축한 프로젝트입니다.<br />
-          UI는 <a href="https://react.semantic-ui.com/" target="_blank" rel="noreferrer">Semantic-UI-React</a>를 기반으로 하였습니다.
+          React로 구축을 해야 했기에 기존 jQuery를 쓰던 방식을 버리고<br />es6와 React를 실무에 적용하기 위해 업무 내외 시간 모두 스크립트 공부를 많이 했던 프로젝트입니다.
         </p>
         <FigureBox>
           <figure>
