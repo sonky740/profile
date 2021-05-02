@@ -70,7 +70,7 @@ const SkyLayout = styled.div`
   min-width: 375px;
 `
 
-const SkyHeader = styled.div`
+const SkyHeader = styled.header`
   display: flex;
   max-width: 1200px;
   margin: auto;
