@@ -58,7 +58,7 @@ const IndexPage = () => {
           <ScrollAnimation animateIn="fadeIn" offset={0}>
             <h3>고객언어솔루션</h3>
             <div className="content">
-              자사 자체 언어교정 솔루션으로 PC버전만 제작하여 테스트 중
+              자사 자체 언어교정 솔루션으로 PC버전만 제작
             </div>
             <div className="bottom">
               <p>역할: PL 100%</p>

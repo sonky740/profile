@@ -18,6 +18,17 @@ const Section = styled.section`
       color: rgba(255, 255, 255, 0.15);
       z-index: -1;
       font-weight: 900;
+      animation: main-title 1s ease-out;
+
+      @keyframes main-title {
+        from {
+          transform: scale(0);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
 
       @media screen and (max-width: 640px) {
         content: "";

@@ -120,7 +120,7 @@ export default function Layout({ children, align }) {
         {/* <!-- ### 헤더 ### --> */}
         <SkyHeader>
           <h1>
-            <Link to="/">Sonky</Link>
+            <Link to="/" className="home-link" data-text="Sonky">손기연</Link>
           </h1>
           <nav>
             <Link to="/about">About</Link>
