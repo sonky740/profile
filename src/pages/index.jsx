@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType } from "../components/index";
+import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType, LabelText } from "../components/index";
 import ScrollAnimation from "react-animate-on-scroll";
 
 // main
@@ -11,7 +11,7 @@ const IndexPage = () => {
         <BoxType>
           {/* <!-- 우리은행 마이데이터 구축 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
-            <h3>우리은행 마이데이터 구축</h3>
+            <h3>우리은행 마이데이터 구축 <LabelText>접근성</LabelText></h3>
             <div className="content">
               우리은행 마이데이터 구축 프로젝트 진행 중
             </div>
@@ -26,7 +26,7 @@ const IndexPage = () => {
           </ScrollAnimation>
           {/* <!-- KB국민은행 오픈뱅킹 고도화 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
-            <h3>KB국민은행 오픈뱅킹 고도화</h3>
+            <h3>KB국민은행 오픈뱅킹 고도화 <LabelText>접근성</LabelText></h3>
             <div className="content">
               KB국민은행 오픈뱅킹(인터넷뱅킹, 스타뱅킹) 고도화
             </div>
@@ -41,7 +41,7 @@ const IndexPage = () => {
           </ScrollAnimation>
           {/* <!-- 우리은행 WON기업뱅킹 앱 구축 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
-            <h3>우리은행 WON기업뱅킹 앱 구축</h3>
+            <h3>우리은행 WON기업뱅킹 앱 구축 <LabelText>접근성</LabelText></h3>
             <div className="content">
               새로운 WON기업뱅킹 앱 구축, 웹뷰 영역 작업
             </div>
@@ -86,7 +86,7 @@ const IndexPage = () => {
           </ScrollAnimation>
           {/* <!-- 포스코 차세대 MES 3.0 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
-            <h3>포스코 차세대 MES 3.0 시스템 UI 개선</h3>
+            <h3>포스코 차세대 MES 3.0 시스템 UI 개선 <LabelText>React</LabelText></h3>
             <div className="content">
               MES 시스템 React로 구축
             </div>
@@ -101,7 +101,7 @@ const IndexPage = () => {
           </ScrollAnimation>
           {/* <!-- KB국민은행 인뱅 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
-            <h3>KB국민은행 개인 인터넷뱅킹 리뉴얼</h3>
+            <h3>KB국민은행 개인 인터넷뱅킹 리뉴얼 <LabelText>접근성</LabelText></h3>
             <div className="content">
               KB국민은행 개인 인터넷뱅킹 리뉴얼 및 웹 접근성 취득, 웹 어워드 대상 수상
             </div>
@@ -116,7 +116,7 @@ const IndexPage = () => {
           </ScrollAnimation>
           {/* <!-- 효성 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
-            <h3>효성그룹 및 계열사 홈페이지 리뉴얼</h3>
+            <h3>효성그룹 및 계열사 홈페이지 리뉴얼 <LabelText>접근성</LabelText></h3>
             <div className="content">
               효성그룹 사이트 수정 및 하위 4개 사이트 리뉴얼, 다국어 추가
             </div>

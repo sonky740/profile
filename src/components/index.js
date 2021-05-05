@@ -8,3 +8,4 @@ export {default as SectionType} from './sources/sectionType';
 export {default as FigureBox} from './sources/figureBox';
 export {default as BoxType} from './sources/boxType';
 export {default as ButtonType} from './sources/buttonType';
+export {default as LabelText} from './sources/labelText';
