@@ -99,7 +99,7 @@ const SkyContainer = styled.div`
   max-width: 1200px;
   padding: 0 24px 24px;
 
-  text-align: ${props => (props.align === "center" ? "center" : "auto")};
+  text-align: ${props => (props.align === "center" ? "center" : "left")};
 
   >section {
     +section {
