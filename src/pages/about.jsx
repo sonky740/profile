@@ -34,8 +34,7 @@ const IndexPage = () => {
           <DL title="다른 프레임워크를 두고 왜 Gatsby를 사용하였는지?">
             이 사이트를 만들면서 다짐했던 게 새로운 프레임워크를 쓰자였습니다. 그래서 프레임워크를 찾아보다가 처음엔 국내에선 그다지 알려지지 않았지만 요즘 떠오르는 GO 언어를 활용한 <a href="https://gohugo.io/" className="color-a" target="_blank" rel="noreferrer">Hugo</a>로 만들었다가 GO 언어를 새로 배워야 하는 것과 익힌다고 하여도 국내에선 범용성이 많이 떨어져 그나마 익숙한 React로 눈을 돌린 와중에 <a href="https://create-react-app.dev/" className="color-a" target="_blank" rel="noreferrer">CRA</a>, <a href="https://nextjs.org/" className="color-a" target="_blank" rel="noreferrer">Nextjs</a>, <a href="https://www.gatsbyjs.com/" className="color-a" target="_blank" rel="noreferrer">Gatsby</a> 3개로 좁혀졌습니다.<br />
             CRA는 포스코 차세대 MES 프로젝트 때 써봤기에 제외하였고<br />
-            Nextjs를 받아서 빌드해보니 내용이 별로 없음에도 불구하고 시간이 오래 걸렸습니다.<br />
-            그렇게 자연스럽게 Gatsby로 만들게 되었습니다.
+            Nextjs와 Gatsbyjs를 두고 찾아보다가 정적인 환경에 더 적합한 Gatsby로 구축하게 되었습니다.
           </DL>
         </About>
       </SectionMain>
