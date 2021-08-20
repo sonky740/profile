@@ -9,6 +9,36 @@ const IndexPage = () => {
       {/* <!-- 포폴 --> */}
       <SectionMain title="PROJECT">
         <BoxType>
+          {/* <!-- Tior 운영 --> */}
+          <ScrollAnimation animateIn="fadeIn" offset={0}>
+            <h3>Tior 운영</h3>
+            <div className="content">
+              Tior 운영 및 고도화 진행 중
+            </div>
+            <div className="bottom">
+              <p>역할: PL 100%</p>
+              <p>기간: 2021.06 ~ </p>
+              <BtnArea>
+                <ButtonType href="https://m.tior.co.kr/" target="_blank" rel="noreferrer">사이트 바로가기</ButtonType>
+                {/* <ButtonType as="Link" to="/works9">기술서</ButtonType> */}
+              </BtnArea>
+            </div>
+          </ScrollAnimation>
+          {/* <!-- PASS 운영 --> */}
+          <ScrollAnimation animateIn="fadeIn" offset={0}>
+            <h3>PASS 운영</h3>
+            <div className="content">
+              PASS 운영 및 고도화 진행 중
+            </div>
+            <div className="bottom">
+              <p>역할: PL 100%</p>
+              <p>기간: 2021.06 ~ </p>
+              <BtnArea>
+                <ButtonType href="https://www.sktpass.com/" target="_blank" rel="noreferrer">사이트 바로가기</ButtonType>
+                {/* <ButtonType as="Link" to="/works9">기술서</ButtonType> */}
+              </BtnArea>
+            </div>
+          </ScrollAnimation>
           {/* <!-- 우리은행 마이데이터 구축 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
             <h3>우리은행 마이데이터 구축 <LabelText>접근성</LabelText></h3>
