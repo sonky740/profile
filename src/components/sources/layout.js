@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const SkyLayout = styled.div`
-  min-width: 375px;
+  min-width: 320px;
 `
 
 const SkyHeader = styled.header`

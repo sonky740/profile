@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ButtonType } from "../index";
 import styled from "styled-components";
 
@@ -16,7 +16,7 @@ const Tooltips = styled.div`
     word-break: break-all;
   }
   
-  &.active {
+  &.on {
     
     >div {
       display: block;
@@ -26,21 +26,25 @@ const Tooltips = styled.div`
 `
 
 export default function Tooltip({ text, children }) {
+  const [on, setOn] = useState(false);
 
-  const handleTooltip = (e) => {
+  const toggle = e => {
     e.preventDefault();
     e.stopPropagation();
+    setOn(!on);
+  };
 
-    if (e.target.parentNode.classList.contains('active')) {
-      e.target.parentNode.classList.remove('active');
-    } else {
-      e.target.parentNode.classList.add('active');
-    }
+  const closeAll = (e) => {
+    if(!e.target.parentNode.getAttribute('data-tooltip')) setOn(null);
   }
 
+  useEffect(() => {
+    document.body.addEventListener('click', closeAll);
+  });
+
   return (
-    <Tooltips data-tooltip="click">
-      <ButtonType href="#none" target="_blank" rel="noreferrer" onClick={handleTooltip} >{text}</ButtonType>
+    <Tooltips data-tooltip="click" className={on ? 'on' : ''}>
+      <ButtonType href="#none" target="_blank" rel="noreferrer" onClick={toggle} >{text}</ButtonType>
       <div>{children}</div>
     </Tooltips>
   )
