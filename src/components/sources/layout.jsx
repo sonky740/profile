@@ -92,6 +92,10 @@ const SkyHeader = styled.header`
   > nav {
     font-size: 18px;
 
+    .test {
+      color: transparent;
+    }
+
     a + a {
       margin-left: 10px;
     }
@@ -138,7 +142,7 @@ export default function Layout({ children, align }) {
             </Link>
           </h1>
           <nav>
-            <Link to="/test">Test</Link>
+            <Link to="/test" className="test">Test</Link>
             <a
               href="https://sonky740.github.io/Guide/src/html/"
               target="_blank"
