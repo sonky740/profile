@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const LabelText = styled.span `
+const LabelText = styled.span`
   display: inline-block;
   padding: 0 4px;
   line-height: 20px;
@@ -11,10 +11,8 @@ const LabelText = styled.span `
   font-weight: 400;
   color: #fff;
   vertical-align: middle;
-`
+`;
 
-export default function Label({children}) {
-  return (
-    <LabelText>{children}</LabelText>
-  )
+export default function Label({ children }) {
+  return <LabelText>{children}</LabelText>;
 }

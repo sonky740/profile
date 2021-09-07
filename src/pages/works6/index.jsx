@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SectionType, FigureBox } from "../../components/index";
+import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import Jamo1 from '../../images/jamo/jamo1.png';

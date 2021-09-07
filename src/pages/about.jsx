@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, DL, SectionMain } from "../components/index";
+import { Layout, DL, SectionMain } from "../components/index.jsx";
 import styled from "styled-components";
 
 const About = styled.div`

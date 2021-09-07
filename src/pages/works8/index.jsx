@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SectionType, FigureBox } from "../../components/index";
+import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import KbOpenbk1 from '../../images/kbopenbk/kb_openbk1.png';

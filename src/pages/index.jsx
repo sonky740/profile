@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType, LabelText } from "../components/index";
+import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType, LabelText } from "../components/index.jsx";
 import ScrollAnimation from "react-animate-on-scroll";
 
 // main

@@ -64,45 +64,58 @@ const GlobalStyle = createGlobalStyle`
       cursor: zoom-in;
     }
   }
-`
+
+  .blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+  }
+`;
 
 const SkyLayout = styled.div`
   min-width: 320px;
-`
+`;
 
 const SkyHeader = styled.header`
   display: flex;
   max-width: 1200px;
-  margin: auto;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
   padding: 8px 24px;
   font-size: 24px;
   align-items: center;
   justify-content: space-between;
 
-  >nav {
+  > nav {
     font-size: 18px;
+
+    a + a {
+      margin-left: 10px;
+    }
   }
 
   @media screen and (max-width: 1120px) {
     width: 100%;
     font-size: 21px;
 
-    >nav {
+    > nav {
       font-size: 16px;
     }
   }
-`
+`;
 
 const SkyContainer = styled.div`
   margin: auto;
   max-width: 1200px;
   padding: 0 24px 24px;
 
-  text-align: ${props => (props.align === "center" ? "center" : "left")};
+  text-align: ${(props) => (props.align === "center" ? "center" : "left")};
 
-  >section {
-    +section {
+  > section {
+    + section {
       margin-top: 24px;
     }
   }
@@ -110,7 +123,7 @@ const SkyContainer = styled.div`
   @media screen and (max-width: 1120px) {
     width: 100%;
   }
-`
+`;
 
 export default function Layout({ children, align }) {
   return (
@@ -120,17 +133,25 @@ export default function Layout({ children, align }) {
         {/* <!-- ### 헤더 ### --> */}
         <SkyHeader>
           <h1>
-            <Link to="/" className="home-link" data-text="Sonky">손기연</Link>
+            <Link to="/" className="home-link" data-text="Sonky">
+              손기연
+            </Link>
           </h1>
           <nav>
+            <Link to="/test">Test</Link>
+            <a
+              href="https://sonky740.github.io/Guide/src/html/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Guide
+            </a>
             <Link to="/about">About</Link>
           </nav>
         </SkyHeader>
 
-        <SkyContainer align={align}>
-          {children}
-        </SkyContainer>
+        <SkyContainer align={align}>{children}</SkyContainer>
       </SkyLayout>
     </>
-  )
+  );
 }

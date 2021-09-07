@@ -15,19 +15,15 @@ const FigureBoxes = styled.div`
       display: flex;
       max-width: 100%;
       margin: -16px 0 0 -16px;
-  
+
       figure {
         width: calc(33% - 8px);
         margin: 16px 0 0 16px;
       }
     }
   }
-`
+`;
 
-export default function FigureBox({children}) {
-  return (
-    <FigureBoxes>
-      {children}
-    </FigureBoxes>
-  )
+export default function FigureBox({ children }) {
+  return <FigureBoxes>{children}</FigureBoxes>;
 }

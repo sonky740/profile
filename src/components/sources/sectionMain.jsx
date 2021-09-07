@@ -35,13 +35,13 @@ const Section = styled.section`
       }
     }
   }
-`
+`;
 
-export default function SectionMain({title, children}) {
+export default function SectionMain({ title, children }) {
   return (
     <Section>
       <h2 data-text={title}>{title}</h2>
       {children}
     </Section>
-  )
+  );
 }

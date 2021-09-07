@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const DL = styled.dl `
+const DL = styled.dl`
   font-size: 16px;
 
   dt {
@@ -27,7 +27,7 @@ const DL = styled.dl `
     word-break: break-all;
 
     p {
-      +p {
+      + p {
         margin-top: 4px;
       }
     }
@@ -36,13 +36,13 @@ const DL = styled.dl `
   & + & {
     margin-top: 16px;
   }
-`
+`;
 
-export default function DefinitionList({title, children}) {
+export default function DefinitionList({ title, children }) {
   return (
     <DL>
       <dt>{title}</dt>
       <dd>{children}</dd>
     </DL>
-  )
+  );
 }

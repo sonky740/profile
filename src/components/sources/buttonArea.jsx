@@ -9,15 +9,11 @@ const ButtonArea = styled.div`
   margin: 0 -4px;
   text-align: center;
 
-  >* {
+  > * {
     margin: 2px 4px 2px;
   }
-`
+`;
 
-export default function BtnArea({children}) {
-  return (
-    <ButtonArea>
-      {children}
-    </ButtonArea>
-  )
+export default function BtnArea({ children }) {
+  return <ButtonArea>{children}</ButtonArea>;
 }

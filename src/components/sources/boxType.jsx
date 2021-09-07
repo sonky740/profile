@@ -10,8 +10,8 @@ const Box = styled.div`
     display: block;
   }
 
-  >article,
-  >div {
+  > article,
+  > div {
     position: relative;
     width: calc(50% - 8px);
     height: 320px;
@@ -35,7 +35,7 @@ const Box = styled.div`
       font-size: 16px;
       color: #fff;
 
-      >[class*="buttonArea"] {
+      > [class*="buttonArea"] {
         margin-top: 8px;
       }
     }
@@ -44,7 +44,7 @@ const Box = styled.div`
       font-size: 16px;
       margin-top: 8px;
     }
-    
+
     h3 {
       font-size: 20px;
       color: #ffbd39;
@@ -56,7 +56,7 @@ const Box = styled.div`
         margin-left: 16px;
       }
 
-      &:nth-of-type(2n)~* {
+      &:nth-of-type(2n) ~ * {
         margin-top: 16px;
       }
     }
@@ -81,12 +81,8 @@ const Box = styled.div`
       transform: translateY(0);
     }
   }
-`
+`;
 
-export default function BoxType({children}) {
-  return (
-    <Box>
-      {children}
-    </Box>
-  )
+export default function BoxType({ children }) {
+  return <Box>{children}</Box>;
 }
