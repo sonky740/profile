@@ -46,8 +46,8 @@ const IndexPage = () => {
               우리은행 마이데이터 구축 프로젝트 진행 중
             </div>
             <div className="bottom">
-              <p>역할: PA ?%</p>
-              <p>기간: 2021.02 ~ 2021.09</p>
+              <p>역할: PA 70%</p>
+              <p>기간: 2021.02 ~ 2021.05</p>
               <BtnArea>
                 <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
                 <ButtonType as="Link" to="/works9">기술서</ButtonType>
