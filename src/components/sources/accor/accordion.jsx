@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import AccordionItemWrap from "./accordionItem";
 
 const Accordion = styled.div``;
 
-const AccordionWrap = ({ children }) => {
-  const [trigger, setTrigger] = useState(false);
+const AccordionWrap = ({ children, only }) => {
+  const target = useRef();
 
   const getID = () => {
     let expandedIndex = [];
 
     React.Children.map(children, (child, i) => {
-      expandedIndex.push(i);
+      if (child.props.expanded) {
+        expandedIndex.push(i);
+      }
     });
 
     return expandedIndex;
@@ -20,16 +22,39 @@ const AccordionWrap = ({ children }) => {
   const [activedIndex, setActivedIndex] = useState(getID);
 
   const handleClick = (acdID) => {
-    // setTrigger(!trigger);
     let activedList = [...activedIndex];
     let activedItem = activedIndex.indexOf(acdID);
-    console.log(activedIndex)
 
-    if (activedItem !== -1) {
-      activedList.splice(activedItem, 1);
-      setActivedIndex(activedList);
+    if (only) {
+      if (activedItem !== -1) {
+        activedList.splice(activedItem, 1);
+        setActivedIndex(activedList);
+      } else {
+        setActivedIndex([acdID]);
+      }
     } else {
-      setActivedIndex([...activedList, acdID]);
+      if (activedItem !== -1) {
+        activedList.splice(activedItem, 1);
+        setActivedIndex(activedList);
+      } else {
+        setActivedIndex([...activedList, acdID]);
+      }
+    }
+  };
+
+  const isButton = (acdID) => {
+    if (activedIndex.includes(acdID)) {
+      return "on";
+    } else {
+      return "";
+    }
+  };
+
+  const isContent = (acdID) => {
+    if (activedIndex.includes(acdID)) {
+      return "shown";
+    } else {
+      return "hidden";
     }
   };
 
@@ -45,11 +70,12 @@ const AccordionWrap = ({ children }) => {
       key: i,
       index: i,
       handleClick: handleClick,
-      trigger: trigger,
+      isButton: isButton,
+      isContent: isContent,
     });
   });
 
-  return <Accordion>{items}</Accordion>;
+  return <Accordion only={only}>{items}</Accordion>;
 };
 
 AccordionWrap.Item = AccordionItemWrap;

@@ -73,16 +73,16 @@ const AccordionBody = styled.div`
   padding: 16px;
 `;
 
-export default function AccordionItemWrap({ index, title, children, handleClick, trigger }) {
+export default function AccordionItemWrap({ index, title, children, handleClick, isButton, isContent, ref }) {
   return (
-    <AccordionItem id={index} key={index}>
+    <AccordionItem key={index}>
       <AccordionTitle>
         <div>{title}</div>
-        <button type="button" onClick={handleClick} className={trigger ? "on" : ""}>
+        <button type="button" onClick={() => handleClick(index)} className={isButton(index)}>
           <span className="blind">펼치기</span>
         </button>
       </AccordionTitle>
-      <AccordionContent>
+      <AccordionContent ref={ref} className={isContent(index)}>
         <AccordionBody>{children}</AccordionBody>
       </AccordionContent>
     </AccordionItem>
