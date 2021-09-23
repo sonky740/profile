@@ -19,7 +19,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/KB국민은행_인뱅">
       {/* KB국민은행 인터넷뱅킹 */}
       <SectionType title="KB국민은행 개인 인터넷뱅킹 리뉴얼">
         <p>

@@ -19,7 +19,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/포스코">
       {/* 포스코 */}
       <SectionType title="포스코 차세대 MES 3.0 시스템 UI 개선">
         <p>

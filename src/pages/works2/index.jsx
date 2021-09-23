@@ -27,7 +27,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/효성">
       {/* 효성 */}
       <SectionType title="효성그룹 및 계열사 홈페이지 리뉴얼">
         <p>

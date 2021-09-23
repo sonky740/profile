@@ -1,50 +1,50 @@
 import React from "react";
-import { Layout, SectionType } from "../../components/index.jsx";
-// import { graphql, useStaticQuery } from "gatsby";
-// import Img from "gatsby-image";
-// import KbOpenbk1 from '../../images/kbopenbk/kb_openbk1.png';
-// import KbOpenbk2 from '../../images/kbopenbk/kb_openbk2.png';
+import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import woori1 from '../../images/woori_mydata/woori1.png';
+import woori2 from '../../images/woori_mydata/woori2.png';
 
 // main
 const IndexPage = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     file1: file(relativePath: { eq: "kbopenbk/kb_openbk1.png" }) {
-  //       childImageSharp {
-  //         fluid {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //     file2: file(relativePath: { eq: "kbopenbk/kb_openbk2.png" }) {
-  //       childImageSharp {
-  //         fluid {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query {
+      file1: file(relativePath: { eq: "woori_mydata/woori1.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      file2: file(relativePath: { eq: "woori_mydata/woori2.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/우리은행_마이데이터">
       {/* 우리은행 마이데이터 구축 */}
       <SectionType title="우리은행 마이데이터 구축">
-        <p>프로젝트 진행 중입니다.</p>
-        {/* <FigureBox>
+        <p>bootstrap 5.0의 javascript를 참고 및 활용하여 UI script를 좀 더 효율적으로 짤 수 있게된 프로젝트였습니다. 여기서 배운걸 가지고 현재 제 Guide를 만들고 있습니다.</p>
+        <FigureBox>
           <figure>
-            <a href={KbOpenbk1} target="_blank" rel="noreferrer">
+            <a href={woori1} target="_blank" rel="noreferrer">
               <Img fluid={data.file1.childImageSharp.fluid} alt="작업당시 일부분" />
             </a>
             <figcaption></figcaption>
           </figure>
           <figure>
-            <a href={KbOpenbk2} target="_blank" rel="noreferrer">
+            <a href={woori2} target="_blank" rel="noreferrer">
               <Img fluid={data.file2.childImageSharp.fluid} alt="작업당시 일부분" />
             </a>
             <figcaption></figcaption>
           </figure>
-        </FigureBox> */}
+        </FigureBox>
       </SectionType>
     </Layout>
   )

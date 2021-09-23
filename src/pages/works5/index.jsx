@@ -28,7 +28,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/KB국민은행_통합인증서">
       {/* KB국민은행 통합인증 */}
       <SectionType title="KB국민은행 차세대 통합인증서 플랫폼 구축">
         <p>사실상 처음으로 혼자 파견 나가서 퍼블리싱 업무를 혼자 했던<br />프로젝트였는데 html 가이드부터 마지막까지<br />제 손으로 모든 것을 구현했기에 흥미롭고 많은 시행착오를 겪었던 프로젝트입니다.</p>

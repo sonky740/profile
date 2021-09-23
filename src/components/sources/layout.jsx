@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled, { createGlobalStyle } from "styled-components";
 import "./fonts/font.css";
+import { Helmet } from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, object, iframe,
@@ -129,9 +130,12 @@ const SkyContainer = styled.div`
   }
 `;
 
-export default function Layout({ children, align }) {
+export default function Layout({ children, align, title }) {
   return (
     <>
+      <Helmet>
+        <title>{title || "손기연"}</title>
+      </Helmet>
       <GlobalStyle />
       <SkyLayout>
         {/* <!-- ### 헤더 ### --> */}
@@ -142,7 +146,9 @@ export default function Layout({ children, align }) {
             </Link>
           </h1>
           <nav>
-            <Link to="/test" className="test">Test</Link>
+            <Link to="/test" className="test">
+              Test
+            </Link>
             <a
               href="https://sonky740.github.io/Guide/src/html/"
               target="_blank"

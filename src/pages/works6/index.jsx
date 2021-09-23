@@ -35,7 +35,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/고객언어솔루션">
       {/* 고객언어솔루션 */}
       <SectionType title="고객언어솔루션">
         <p>

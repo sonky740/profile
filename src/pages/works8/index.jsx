@@ -27,7 +27,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/KB국민은행_오픈뱅킹">
       {/* KB국민은행 오픈뱅킹 */}
       <SectionType title="KB국민은행 오픈뱅킹 고도화">
         <p>저축은행 및 증권사 79개가 추가됨으로 인한 인/스뱅 오픈뱅킹 고도화하는 프로젝트,<br />시각화(차트)가 중요시되는 프로젝트였는데 IE8 하위 버전에서 작동해야 하고<br />웹 접근성을 맞춰야 하는 환경에서 차트의 구현 방식에 대해 많은 걸 배웠던 프로젝트입니다.</p>

@@ -2,29 +2,29 @@ import React from "react";
 import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import Woori1 from '../../images/woori/woori1.png';
-import Woori2 from '../../images/woori/woori2.png';
-import Woori3 from '../../images/woori/woori3.png';
+import Woori1 from '../../images/woori_won/woori1.png';
+import Woori2 from '../../images/woori_won/woori2.png';
+import Woori3 from '../../images/woori_won/woori3.png';
 
 // main
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file1: file(relativePath: { eq: "woori/woori1.png" }) {
+      file1: file(relativePath: { eq: "woori_won/woori1.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      file2: file(relativePath: { eq: "woori/woori2.png" }) {
+      file2: file(relativePath: { eq: "woori_won/woori2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      file3: file(relativePath: { eq: "woori/woori3.png" }) {
+      file3: file(relativePath: { eq: "woori_won/woori3.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -35,7 +35,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout align="center">
+    <Layout align="center" title="손기연/우리은행_WON기업뱅킹">
       {/* 우리은행 */}
       <SectionType title="우리은행 WON기업뱅킹 앱 구축">
         <p>우리은행 WON기업뱅킹앱 구축. 순수 CSS 인터랙션과 CSS 변수에 대해서 많은 걸 배웠던 프로젝트입니다.</p>
