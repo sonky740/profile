@@ -34,15 +34,15 @@ const IndexPage = () => {
         <FigureBox>
           <figure>
             <a href={woori1} target="_blank" rel="noreferrer">
-              <Img fluid={data.file1.childImageSharp.fluid} alt="작업당시 일부분" />
+              <Img fluid={data.file1.childImageSharp.fluid} alt="코치 메인(미래의 나)" />
             </a>
-            <figcaption></figcaption>
+            <figcaption>코칭 메인(미래의 나)</figcaption>
           </figure>
           <figure>
             <a href={woori2} target="_blank" rel="noreferrer">
-              <Img fluid={data.file2.childImageSharp.fluid} alt="작업당시 일부분" />
+              <Img fluid={data.file2.childImageSharp.fluid} alt="고수의랭킹_투자고수" />
             </a>
-            <figcaption></figcaption>
+            <figcaption>고수의랭킹 투자고수</figcaption>
           </figure>
         </FigureBox>
       </SectionType>
