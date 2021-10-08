@@ -90,6 +90,46 @@ const SkyHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  svg {
+    text {
+      stroke-width: 1;
+      fill: #fff;
+      stroke: #fff;
+      font-size: 24px;
+      animation: stroke 5s linear;
+      letter-spacing: 1px;
+
+      @keyframes stroke {
+        0% {
+          fill: rgba(72, 138, 20, 0);
+          stroke: #fff;
+          stroke-dashoffset: 25%;
+          stroke-dasharray: 0 50%;
+          stroke-width: 2;
+        }
+
+        70% {
+          fill: rgba(72, 138, 20, 0);
+          stroke: #fff;
+        }
+
+        80% {
+          fill: rgba(72, 138, 20, 0);
+          stroke: #fff;
+          stroke-width: 3;
+        }
+
+        100% {
+          fill: #fff;
+          stroke: rgba(54, 95, 160, 0);
+          stroke-dashoffset: -25%;
+          stroke-dasharray: 50% 0;
+          stroke-width: 2;
+        }
+      }
+    }
+  }
+
   > nav {
     font-size: 18px;
 
@@ -142,7 +182,12 @@ export default function Layout({ children, align, title }) {
         <SkyHeader>
           <h1>
             <Link to="/" className="home-link" data-text="Sonky">
-              손기연
+              {/* 손기연 */}
+              <svg width="100" hegiht="40" viewBox="0 0 100 45">
+                <text x="0" y="85%">
+                  손기연
+                </text>
+              </svg>
             </Link>
           </h1>
           <nav>
