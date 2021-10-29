@@ -9,6 +9,21 @@ const IndexPage = () => {
       {/* <!-- 포폴 --> */}
       <SectionMain title="PROJECT">
         <BoxType>
+          {/* <!-- Sheeeda 구축 --> */}
+          <ScrollAnimation animateIn="fadeIn" offset={0}>
+            <h3>Sheeeda 구축 및 운영</h3>
+            <div className="content">
+              캠핑 Sheeeda 구축 및 운영
+            </div>
+            <div className="bottom">
+              <p>역할: PL 100%</p>
+              <p>기간: 2021.10 ~ </p>
+              <BtnArea>
+                <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
+                {/* <ButtonType as="Link" to="/works10">기술서</ButtonType> */}
+              </BtnArea>
+            </div>
+          </ScrollAnimation>
           {/* <!-- Tior 운영 --> */}
           <ScrollAnimation animateIn="fadeIn" offset={0}>
             <h3>Tior 운영</h3>
