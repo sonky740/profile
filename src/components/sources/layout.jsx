@@ -195,7 +195,7 @@ export default function Layout({ children, align, title }) {
               Test
             </Link>
             <a
-              href="https://sonky740.github.io/Guide/src/html/"
+              href="https://sonky740.github.io/Guide/"
               target="_blank"
               rel="noreferrer"
             >
