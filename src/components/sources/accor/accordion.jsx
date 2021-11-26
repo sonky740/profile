@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AccordionItemWrap from "./accordionItem";
 
 const Accordion = styled.div``;
 
 const AccordionWrap = ({ children, only }) => {
-  const target = useRef();
-
   const getID = () => {
     let expandedIndex = [];
 
