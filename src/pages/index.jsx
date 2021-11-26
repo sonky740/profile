@@ -1,6 +1,5 @@
 import React from "react";
-import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType, LabelText } from "../components/index.jsx";
-import ScrollAnimation from "react-animate-on-scroll";
+import { Layout, Tooltip, BtnArea, SectionMain, BoxType, ButtonType, LabelText, ScrollAni } from "../components/index.jsx";
 
 // main
 const IndexPage = () => {
@@ -10,7 +9,7 @@ const IndexPage = () => {
       <SectionMain title="PROJECT">
         <BoxType>
           {/* <!-- Sheeeda 구축 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>Sheeeda 구축 및 운영</h3>
             <div className="content">
               캠핑 Sheeeda 구축 및 운영
@@ -23,9 +22,9 @@ const IndexPage = () => {
                 {/* <ButtonType as="Link" to="/works10">기술서</ButtonType> */}
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- Tior 운영 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>Tior 운영</h3>
             <div className="content">
               Tior 운영 및 고도화 진행 중
@@ -38,9 +37,9 @@ const IndexPage = () => {
                 {/* <ButtonType as="Link" to="/works9">기술서</ButtonType> */}
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- PASS 운영 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>PASS 운영</h3>
             <div className="content">
               PASS 운영 및 고도화 진행 중
@@ -53,9 +52,9 @@ const IndexPage = () => {
                 {/* <ButtonType as="Link" to="/works9">기술서</ButtonType> */}
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- 우리은행 마이데이터 구축 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>우리은행 마이데이터 구축 <LabelText>접근성</LabelText></h3>
             <div className="content">
               우리은행 마이데이터 구축 프로젝트 진행 중
@@ -68,9 +67,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works9">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- KB국민은행 오픈뱅킹 고도화 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>KB국민은행 오픈뱅킹 고도화 <LabelText>접근성</LabelText></h3>
             <div className="content">
               KB국민은행 오픈뱅킹(인터넷뱅킹, 스타뱅킹) 고도화
@@ -83,9 +82,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works8">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- 우리은행 WON기업뱅킹 앱 구축 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>우리은행 WON기업뱅킹 앱 구축 <LabelText>접근성</LabelText></h3>
             <div className="content">
               새로운 WON기업뱅킹 앱 구축, 웹뷰 영역 작업
@@ -98,9 +97,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works7">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- 고객언어솔루션 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>고객언어솔루션</h3>
             <div className="content">
               자사 자체 언어교정 솔루션으로 PC버전만 제작
@@ -113,9 +112,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works6">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- KB국민은행 차세대 통합인증서 플랫폼 구축 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>KB국민은행 차세대 통합인증서 플랫폼 구축</h3>
             <div className="content">
               관리자 통합인증 부분을 독립사이트로 구축
@@ -128,9 +127,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works5">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- 포스코 차세대 MES 3.0 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>포스코 차세대 MES 3.0 시스템 UI 개선 <LabelText>React</LabelText></h3>
             <div className="content">
               MES 시스템 React로 구축
@@ -143,9 +142,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works4">기술서</ButtonType>
               </BtnArea>
             </div>  
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- KB국민은행 인뱅 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>KB국민은행 개인 인터넷뱅킹 리뉴얼 <LabelText>접근성</LabelText></h3>
             <div className="content">
               KB국민은행 개인 인터넷뱅킹 리뉴얼 및 웹 접근성 취득, 웹 어워드 대상 수상
@@ -158,9 +157,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works3">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- 효성 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>효성그룹 및 계열사 홈페이지 리뉴얼 <LabelText>접근성</LabelText></h3>
             <div className="content">
               효성그룹 사이트 수정 및 하위 4개 사이트 리뉴얼, 다국어 추가
@@ -181,9 +180,9 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works2">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
           {/* <!-- 넥센 --> */}
-          <ScrollAnimation animateIn="fadeIn" offset={0}>
+          <ScrollAni>
             <h3>넥센(現키움) 히어로즈 사이트 시스템 유지보수</h3>
             <div className="content">
               시스템 유지보수, 퍼블리싱 및 간단한 개발
@@ -196,7 +195,7 @@ const IndexPage = () => {
                 <ButtonType as="Link" to="/works1">기술서</ButtonType>
               </BtnArea>
             </div>
-          </ScrollAnimation>
+          </ScrollAni>
         </BoxType>
       </SectionMain>
     </Layout>
