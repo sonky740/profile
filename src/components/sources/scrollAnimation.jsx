@@ -16,20 +16,26 @@ const ScrollAni = styled.div`
 `;
 
 export default function ScrollAniType({ multiple = 0.8, children }) {
-  const target = useRef();
+  const target = useRef(null);
 
-  const throttle = (callback, limit) => {
-    let waiting = false;
-    return function () {
-      if (!waiting) {
-        callback.apply(this, arguments);
-        waiting = true;
-        setTimeout(function () {
-          waiting = false;
-        }, limit);
-      }
+  useEffect(() => {
+    if (!target.current) return false;
+    
+    // init
+    handleScroll();
+
+    // add Event
+    ["resize", "scroll"].forEach(function (events) {
+      window.addEventListener(events, handleScroll);
+    });
+
+    // remove Event
+    return () => {
+      ["resize", "scroll"].forEach(function (events) {
+        window.removeEventListener(events, handleScroll);
+      });
     };
-  };
+  });
 
   const handleScroll = () => {
     let itemTop = target.current.getBoundingClientRect().top;
@@ -47,13 +53,6 @@ export default function ScrollAniType({ multiple = 0.8, children }) {
       target.current.classList.remove("focus-in");
     }
   };
-
-  useEffect(() => {
-    handleScroll();
-    ["resize", "scroll"].forEach(function (events) {
-      window.addEventListener(events, throttle(handleScroll, 100));
-    });
-  });
 
   return (
     <ScrollAni ref={target} multiple={multiple}>

@@ -39,6 +39,9 @@ export default function Tooltip({ text, children }) {
 
   useEffect(() => {
     document.body.addEventListener("click", closeAll);
+    return () => {
+      document.body.removeEventListener("click", closeAll);
+    }
   });
 
   return (
