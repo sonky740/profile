@@ -16,9 +16,9 @@ const IndexPage = () => {
             </div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2021.10 ~ </p>
+              <p>기간: 2021.10 ~ 중단</p>
               <BtnArea>
-                <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
+                <Tooltip text="사이트 바로가기">중단되었습니다.</Tooltip>
                 {/* <ButtonType as="Link" to="/works10">기술서</ButtonType> */}
               </BtnArea>
             </div>

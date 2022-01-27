@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import styled, { createGlobalStyle } from "styled-components";
 import "./fonts/font.css";
 import { Helmet } from "react-helmet";
-import { useEffect } from "react";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, object, iframe,
@@ -172,18 +171,6 @@ const SkyContainer = styled.div`
 `;
 
 export default function Layout({ children, align, title }) {
-
-  useEffect(() => {
-    (function(w, d, a){
-      w.__beusablerumclient__ = {
-          load : function(src){
-              var b = d.createElement("script");
-              b.src = src; b.async=true; b.type = "text/javascript";
-              d.getElementsByTagName("head")[0].appendChild(b);
-          }
-      };w.__beusablerumclient__.load(a);
-    })(window, document, "//rum.beusable.net/script/b220104e140501u949/f1afacc75c");
-  })
   return (
     <>
       <Helmet>
@@ -196,7 +183,7 @@ export default function Layout({ children, align, title }) {
           <h1>
             <Link to="/" className="home-link" data-text="Sonky">
               {/* 손기연 */}
-              <svg width="100" hegiht="40" viewBox="0 0 100 45">
+              <svg width="72" hegiht="40" viewBox="0 0 72 45">
                 <text x="0" y="85%">
                   손기연
                 </text>
@@ -204,9 +191,16 @@ export default function Layout({ children, align, title }) {
             </Link>
           </h1>
           <nav>
-            <Link to="/test" className="test">
+            {/* <Link to="/test" className="test">
               Test
-            </Link>
+            </Link> */}
+            <a
+              href="https://sonky740.github.io/Guide_es6/dist/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Guide_ES6
+            </a>
             <a
               href="https://sonky740.github.io/Guide/"
               target="_blank"
