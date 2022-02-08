@@ -137,8 +137,14 @@ const SkyHeader = styled.header`
       color: transparent;
     }
 
-    a + a {
-      margin-left: 10px;
+    a {
+      &:hover {
+        color: #ffbd39;
+      }
+
+      +a {
+        margin-left: 8px;
+      }
     }
   }
 
@@ -183,7 +189,7 @@ export default function Layout({ children, align, title }) {
           <h1>
             <Link to="/" className="home-link" data-text="Sonky">
               {/* 손기연 */}
-              <svg width="72" hegiht="40" viewBox="0 0 72 45">
+              <svg width="72" hegiht="36" viewBox="0 0 72 36">
                 <text x="0" y="85%">
                   손기연
                 </text>
@@ -206,7 +212,7 @@ export default function Layout({ children, align, title }) {
               target="_blank"
               rel="noreferrer"
             >
-              Guide
+              Guide_ES5
             </a>
             <Link to="/about">About</Link>
           </nav>
