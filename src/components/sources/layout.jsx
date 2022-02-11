@@ -207,13 +207,13 @@ export default function Layout({ children, align, title }) {
             >
               Guide_ES6
             </a>
-            <a
+            {/* <a
               href="https://sonky740.github.io/Guide/"
               target="_blank"
               rel="noreferrer"
             >
               Guide_ES5
-            </a>
+            </a> */}
             <Link to="/about">About</Link>
           </nav>
         </SkyHeader>
