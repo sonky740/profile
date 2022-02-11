@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const DL = styled.dl`
+const Dl = styled.dl`
   font-size: 16px;
 
   dt {
@@ -40,9 +40,9 @@ const DL = styled.dl`
 
 export default function DefinitionList({ title, children }) {
   return (
-    <DL>
+    <Dl>
       <dt>{title}</dt>
       <dd>{children}</dd>
-    </DL>
+    </Dl>
   );
 }
