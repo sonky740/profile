@@ -1,12 +1,14 @@
 import React from 'react';
-import { Layout, Tooltip, BtnArea, SectionMain, BoxWrap, Btn, LabelText, ScrollAni } from '../components/index.jsx';
+import { Layout, Tooltip, BtnArea, SectionMain, BoxWrap, Btn, LabelText, ScrollAni /* ScrollDetail */ } from '../components/index.jsx';
 
 // main
 const IndexPage = () => {
   return (
     <Layout>
+      {/* INTRO */}
+      {/* <ScrollDetail /> */}
       {/* 소개 */}
-      {/* <SectionMain title="PROFILE"></SectionMain> */}
+      {/* <SectionMain title="ABOUT ME"></SectionMain> */}
       {/* 포폴 */}
       <SectionMain title="PROJECT">
         <BoxWrap>
@@ -142,9 +144,7 @@ const IndexPage = () => {
           </ScrollAni>
           {/* 포스코 차세대 MES 3.0 */}
           <ScrollAni>
-            <h3>
-              포스코 차세대 MES 3.0 시스템 UI 개선 <LabelText>React</LabelText>
-            </h3>
+            <h3>포스코 차세대 MES 3.0 시스템 UI 개선</h3>
             <div className="content">MES 시스템 React로 구축</div>
             <div className="bottom">
               <p>역할: PA 70%</p>

@@ -83,6 +83,7 @@ const SkyLayout = styled.div`
 
 const SkyHeader = styled.header`
   display: flex;
+  height: 6rem;
   max-width: 1200px;
   margin: 0 auto 2.4rem;
   padding: 0.8rem 2.4rem;
@@ -200,7 +201,7 @@ export default function Layout({ children, align, title }) {
             {/* <Link to="/test" className="test">
               Test
             </Link> */}
-            <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer">
+            <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer" title="Guide_es6 새 창으로 이동">
               Guide_ES6
             </a>
             {/* <a

@@ -17,10 +17,11 @@ const Btn = styled.a`
     content: '';
     position: absolute;
     top: 0;
-    left: -150px;
+    left: 0;
     width: 100%;
     height: 100%;
     background: #ffbd39;
+    transform: translateX(-100%);
     transition: all 0.5s ease;
     z-index: -1;
   }
@@ -34,7 +35,7 @@ const Btn = styled.a`
   &:focus {
     color: #000;
     &:before {
-      left: 0;
+      transform: translateX(0);
     }
   }
 `;
