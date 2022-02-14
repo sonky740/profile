@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.section`
   h2 {
     position: relative;
-    font-size: 48px;
-    margin-bottom: 24px;
+    font-size: 4.8rem;
+    margin-bottom: 3.2rem;
     text-align: center;
 
     &:before {
@@ -14,7 +14,7 @@ const Section = styled.section`
       top: 0;
       left: 0;
       right: 0;
-      font-size: 70px;
+      font-size: 7rem;
       color: rgba(255, 255, 255, 0.15);
       z-index: -1;
       font-weight: 900;
@@ -31,7 +31,7 @@ const Section = styled.section`
       }
 
       @media screen and (max-width: 640px) {
-        content: "";
+        content: '';
       }
     }
   }

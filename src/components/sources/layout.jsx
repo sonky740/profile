@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled, { createGlobalStyle } from "styled-components";
-import "./fonts/font.css";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
+import './fonts/font.css';
+import { Helmet } from 'react-helmet';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, object, iframe,
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {font-size:62.5%;}
   html, body {width:100%;height:100%;}
-  body {background:#000;line-height:1.43;color:#fff;word-break:keep-all;-ms-text-size-adjust:100%;-webkit-test-size-adjust:100%;--webkit-font-smoothing:antialiased;}
+  body {background:#1a1b1e;line-height:1.43;color:#fff;word-break:keep-all;-ms-text-size-adjust:100%;-webkit-test-size-adjust:100%;--webkit-font-smoothing:antialiased;}
   body, select, input, button, textarea, button, pre {font-size:14px;font-family:'NotoSansKR', sans-serif;}
   article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main, summary {display:block;}
   blockquote, q {quotes:none;}
@@ -84,9 +84,9 @@ const SkyLayout = styled.div`
 const SkyHeader = styled.header`
   display: flex;
   max-width: 1200px;
-  margin: 0 auto 24px;
-  padding: 8px 24px;
-  font-size: 24px;
+  margin: 0 auto 2.4rem;
+  padding: 0.8rem 2.4rem;
+  font-size: 2.4rem;
   align-items: center;
   justify-content: space-between;
 
@@ -95,7 +95,7 @@ const SkyHeader = styled.header`
       stroke-width: 1;
       fill: #fff;
       stroke: #fff;
-      font-size: 24px;
+      font-size: 2.4rem;
       animation: stroke 5s linear;
       letter-spacing: 1px;
 
@@ -131,7 +131,7 @@ const SkyHeader = styled.header`
   }
 
   > nav {
-    font-size: 18px;
+    font-size: 1.8rem;
 
     .test {
       color: transparent;
@@ -142,18 +142,18 @@ const SkyHeader = styled.header`
         color: #ffbd39;
       }
 
-      +a {
-        margin-left: 8px;
+      + a {
+        margin-left: 0.8rem;
       }
     }
   }
 
-  @media screen and (max-width: 1120px) {
+  @media screen and (max-width: 920px) {
     width: 100%;
-    font-size: 21px;
+    font-size: 2rem;
 
     > nav {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
 `;
@@ -161,17 +161,17 @@ const SkyHeader = styled.header`
 const SkyContainer = styled.div`
   margin: auto;
   max-width: 1200px;
-  padding: 0 24px 24px;
+  padding: 0 2.4rem 2.4rem;
 
-  text-align: ${(props) => (props.align === "center" ? "center" : "left")};
+  text-align: ${(props) => (props.align === 'center' ? 'center' : 'left')};
 
   > section {
     + section {
-      margin-top: 24px;
+      margin-top: 2.4rem;
     }
   }
 
-  @media screen and (max-width: 1120px) {
+  @media screen and (max-width: 920px) {
     width: 100%;
   }
 `;
@@ -180,7 +180,7 @@ export default function Layout({ children, align, title }) {
   return (
     <>
       <Helmet>
-        <title>{title || "손기연"}</title>
+        <title>{title || '손기연'}</title>
       </Helmet>
       <GlobalStyle />
       <SkyLayout>
@@ -200,11 +200,7 @@ export default function Layout({ children, align, title }) {
             {/* <Link to="/test" className="test">
               Test
             </Link> */}
-            <a
-              href="https://sonky740.github.io/Guide_es6/dist/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer">
               Guide_ES6
             </a>
             {/* <a

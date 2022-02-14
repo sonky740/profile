@@ -1,7 +1,7 @@
-import React from "react";
-import { Layout, SectionType, FigureBox, Code } from "../../components/index.jsx";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { Layout, SectionType, FigureBox, Code } from '../../components/index.jsx';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Posco1 from '../../images/posco/posco1.png';
 
 // main
@@ -16,14 +16,16 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout align="center" title="손기연/포스코">
       {/* 포스코 */}
       <SectionType title="포스코 차세대 MES 3.0 시스템 UI 개선">
         <p>
-          React로 구축을 해야 했기에 기존 jQuery를 쓰던 방식을 버리고<br />es6와 React를 실무에 적용하기 위해 업무 내외 시간 모두 스크립트 공부를 많이 했던 프로젝트입니다.
+          React로 구축을 해야 했기에 기존 jQuery를 쓰던 방식을 버리고
+          <br />
+          es6와 React를 실무에 적용하기 위해 업무 내외 시간 모두 스크립트 공부를 많이 했던 프로젝트입니다.
         </p>
         <FigureBox>
           <figure>
@@ -31,12 +33,15 @@ const IndexPage = () => {
               <Img fluid={data.file1.childImageSharp.fluid} alt="작업 중 일부분" />
             </a>
             <figcaption>
-              ag-grid 와 rechart를 활용한 페이지<br />
-              <a href="https://codepen.io/Sonky/project/editor/ZKezNM" target="_blank" rel="noreferrer">https://codepen.io/Sonky/project/editor/ZKezNM</a>
+              ag-grid 와 rechart를 활용한 페이지
+              <br />
+              <a href="https://codepen.io/Sonky/project/editor/ZKezNM" target="_blank" rel="noreferrer">
+                https://codepen.io/Sonky/project/editor/ZKezNM
+              </a>
             </figcaption>
           </figure>
           <Code title="index.jsx" type="js">
-{`import React, { Component } from 'react';
+            {`import React, { Component } from 'react';
 import { ContentLayout, Segment } from '@mes/mes-ui-react';
 import SearchView from './SearchView';
 import ButtonView1 from './ButtonView1';
@@ -69,7 +74,7 @@ render() {
 export default Index;`}
           </Code>
           <Code title="datagrid.jsx" type="js">
-{`import React, { Component } from 'react';
+            {`import React, { Component } from 'react';
 import { DataGrid } from '@mes/mes-ui-react';
 
 class TableView extends Component {
@@ -167,7 +172,7 @@ render() {
 export default TableView;`}
           </Code>
           <Code title="chart.jsx" type="js">
-{`import React, { PureComponent } from 'react';
+            {`import React, { PureComponent } from 'react';
 import { Chart } from '@mes/mes-ui-react';
 
 class ChartView extends PureComponent {
@@ -194,7 +199,7 @@ export default ChartView;`}
         </FigureBox>
       </SectionType>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

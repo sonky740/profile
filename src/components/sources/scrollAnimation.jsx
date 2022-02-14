@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 
 // 버튼 영역 지정
 const ScrollAni = styled.div`
@@ -20,18 +20,18 @@ export default function ScrollAniType({ multiple = 0.8, children }) {
 
   useEffect(() => {
     if (!target.current) return false;
-    
+
     // init
     handleScroll();
 
     // add Event
-    ["resize", "scroll"].forEach(function (events) {
+    ['resize', 'scroll'].forEach(function (events) {
       window.addEventListener(events, handleScroll);
     });
 
     // remove Event
     return () => {
-      ["resize", "scroll"].forEach(function (events) {
+      ['resize', 'scroll'].forEach(function (events) {
         window.removeEventListener(events, handleScroll);
       });
     };
@@ -41,16 +41,10 @@ export default function ScrollAniType({ multiple = 0.8, children }) {
     let itemTop = target.current.getBoundingClientRect().top;
     let viewH = document.documentElement.offsetHeight;
 
-    if (
-      itemTop < viewH * multiple &&
-      !target.current.classList.contains("focus-in")
-    ) {
-      target.current.classList.add("focus-in");
-    } else if (
-      itemTop > (viewH * 3) / 4 &&
-      target.current.classList.contains("focus-in")
-    ) {
-      target.current.classList.remove("focus-in");
+    if (itemTop < viewH * multiple && !target.current.classList.contains('focus-in')) {
+      target.current.classList.add('focus-in');
+    } else if (itemTop > (viewH * 3) / 4 && target.current.classList.contains('focus-in')) {
+      target.current.classList.remove('focus-in');
     }
   };
 

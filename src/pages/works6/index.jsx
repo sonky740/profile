@@ -1,7 +1,7 @@
-import React from "react";
-import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { Layout, SectionType, FigureBox } from '../../components/index.jsx';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Jamo1 from '../../images/jamo/jamo1.png';
 import Jamo2 from '../../images/jamo/jamo2.png';
 import Jamo3 from '../../images/jamo/jamo3.png';
@@ -32,15 +32,13 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout align="center" title="손기연/고객언어솔루션">
       {/* 고객언어솔루션 */}
       <SectionType title="고객언어솔루션">
-        <p>
-          자사 자체 언어교정 솔루션으로 PC버전만 제작한 프로젝트입니다.
-        </p>
+        <p>자사 자체 언어교정 솔루션으로 PC버전만 제작한 프로젝트입니다.</p>
         <FigureBox>
           <figure>
             <a href={Jamo1} target="_blank" rel="noreferrer">
@@ -63,7 +61,7 @@ const IndexPage = () => {
         </FigureBox>
       </SectionType>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

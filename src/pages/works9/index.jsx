@@ -1,7 +1,7 @@
-import React from "react";
-import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { Layout, SectionType, FigureBox } from '../../components/index.jsx';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import woori1 from '../../images/woori_mydata/woori1.png';
 import woori2 from '../../images/woori_mydata/woori2.png';
 
@@ -24,7 +24,7 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout align="center" title="손기연/우리은행_마이데이터">
@@ -47,7 +47,7 @@ const IndexPage = () => {
         </FigureBox>
       </SectionType>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

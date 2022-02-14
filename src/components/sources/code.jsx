@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import Prism from "prismjs";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import Prism from 'prismjs';
 
 // 버튼 영역 지정
 const Codes = styled.div`
-  margin-top: 24px;
+  margin-top: 2.4rem;
   text-align: left;
 
   + .code {
-    margin-top: 16px;
+    margin-top: 1.6rem;
   }
 
   pre {
@@ -25,7 +25,7 @@ export default function Code({ title, children, type }) {
     <Codes>
       <strong>{title}</strong>
       <pre className="line-numbers">
-        <code className={type === "js" ? "language-js" : ""}>{children}</code>
+        <code className={type === 'js' ? 'language-js' : ''}>{children}</code>
       </pre>
     </Codes>
   );

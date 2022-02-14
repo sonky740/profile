@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 // 버튼 영역 지정
 const FigureBoxes = styled.div`
@@ -7,20 +7,7 @@ const FigureBoxes = styled.div`
   margin: 0 auto;
 
   figure {
-    margin: 16px auto 0;
-  }
-
-  &.flex {
-    @media screen and (min-width: 1121px) {
-      display: flex;
-      max-width: 100%;
-      margin: -16px 0 0 -16px;
-
-      figure {
-        width: calc(33% - 8px);
-        margin: 16px 0 0 16px;
-      }
-    }
+    margin: 1.6rem auto 0;
   }
 `;
 

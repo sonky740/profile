@@ -2,31 +2,31 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-const Button = styled.a`
+const Btn = styled.a`
   display: inline-block;
   position: relative;
-  height: 40px;
-  padding: 8px 16px;
+  height: 4rem;
+  padding: 0.8rem 1.6rem;
   border: 1px solid #ffbd39;
-  border-radius: 24px;
-  font-size: 14px;
-  transition: all .5s ease;
+  border-radius: 2.4rem;
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
   overflow: hidden;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: -150px;
     width: 100%;
     height: 100%;
     background: #ffbd39;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     z-index: -1;
   }
 
   & + & {
-    margin-left: 4px;
+    margin-left: 0.4rem;
   }
 
   &.active,
@@ -37,18 +37,20 @@ const Button = styled.a`
       left: 0;
     }
   }
-`
+`;
 
-const LinkStyled = Button.withComponent(Link);
+const LinkStyled = Btn.withComponent(Link);
 
-export default function ButtonType({as, children, href, to, target, rel, onClick}) {
+export default function Button({ as, children, href, to, target, rel, onClick }) {
   return (
     <>
-      {as === "Link" ? 
+      {as === 'Link' ? (
         <LinkStyled to={to}>{children}</LinkStyled>
-        :
-        <Button href={href} target={target} rel={rel} onClick={onClick}>{children}</Button>
-      }
+      ) : (
+        <Btn href={href} target={target} rel={rel} onClick={onClick}>
+          {children}
+        </Btn>
+      )}
     </>
-  )
+  );
 }

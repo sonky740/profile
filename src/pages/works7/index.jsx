@@ -1,7 +1,7 @@
-import React from "react";
-import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { Layout, SectionType, FigureBox } from '../../components/index.jsx';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Woori1 from '../../images/woori_won/woori1.png';
 import Woori2 from '../../images/woori_won/woori2.png';
 import Woori3 from '../../images/woori_won/woori3.png';
@@ -32,7 +32,7 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout align="center" title="손기연/우리은행_WON기업뱅킹">
@@ -61,7 +61,7 @@ const IndexPage = () => {
         </FigureBox>
       </SectionType>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

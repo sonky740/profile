@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const LabelText = styled.span`
   display: inline-block;
-  padding: 0 4px;
-  line-height: 20px;
+  padding: 0 0.4rem;
+  line-height: 2rem;
   background: #555;
-  border-radius: 8px;
-  font-size: 11px;
+  border-radius: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #fff;
   vertical-align: middle;

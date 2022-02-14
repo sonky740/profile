@@ -1,7 +1,7 @@
-import React from "react";
-import { Layout, SectionType, FigureBox } from "../../components/index.jsx";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { Layout, SectionType, FigureBox } from '../../components/index.jsx';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Heroes1 from '../../images/heroes/heroes1.png';
 import Heroes2 from '../../images/heroes/heroes2.png';
 
@@ -24,14 +24,18 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout align="center" title="손기연/키움">
       {/* 키움 */}
       <SectionType title="넥센(現키움) 히어로즈 사이트 시스템 유지보수">
         <p>
-        넥센 히어로즈 현업 마케팅 담당자와의 원활한 소통,<br />혼자서 서버부터 앞 단까지 하다 보니 의사소통 문제 없이 빠른 해결 가능하였습니다.<br />이때부터 여러가지 언어를 배우고자 노력하였습니다.
+          넥센 히어로즈 현업 마케팅 담당자와의 원활한 소통,
+          <br />
+          혼자서 서버부터 앞 단까지 하다 보니 의사소통 문제 없이 빠른 해결 가능하였습니다.
+          <br />
+          이때부터 여러가지 언어를 배우고자 노력하였습니다.
         </p>
         <FigureBox>
           <figure>
@@ -49,7 +53,7 @@ const IndexPage = () => {
         </FigureBox>
       </SectionType>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

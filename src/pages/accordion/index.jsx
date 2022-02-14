@@ -1,10 +1,5 @@
-import React from "react";
-import {
-  AccordionItem,
-  Layout,
-  SectionMain,
-  Accor,
-} from "../../components/index.jsx";
+import React from 'react';
+import { AccordionItem, Layout, SectionMain, Accor } from '../../components/index.jsx';
 
 // main
 const TestPage = () => {
@@ -20,7 +15,9 @@ const TestPage = () => {
         <br />
         <br />
         <Accor multiple={true}>
-          <Accor.Item expanded={true} title="아코디언 타이틀1">내용</Accor.Item>
+          <Accor.Item expanded={true} title="아코디언 타이틀1">
+            내용
+          </Accor.Item>
           <Accor.Item title="아코디언 타이틀2">내용</Accor.Item>
         </Accor>
 
