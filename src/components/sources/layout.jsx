@@ -83,13 +83,21 @@ const SkyLayout = styled.div`
 
 const SkyHeader = styled.header`
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
   height: 6rem;
   max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 auto 2.4rem;
   padding: 0.8rem 2.4rem;
   font-size: 2.4rem;
-  align-items: center;
-  justify-content: space-between;
+  background: rgba(26, 27, 30, 0.6);
+  backdrop-filter: blur(15px);
+  transform: translateX(-50%);
+  z-index: 10;
 
   svg {
     text {
@@ -162,7 +170,7 @@ const SkyHeader = styled.header`
 const SkyContainer = styled.div`
   margin: auto;
   max-width: 1200px;
-  padding: 0 2.4rem 2.4rem;
+  padding: 8.4rem 2.4rem 2.4rem;
 
   text-align: ${(props) => (props.align === 'center' ? 'center' : 'left')};
 
