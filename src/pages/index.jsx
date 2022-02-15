@@ -1,14 +1,16 @@
 import React from 'react';
-import { Layout, Tooltip, BtnArea, SectionMain, BoxWrap, Btn, LabelText, ScrollAni /* ScrollDetail */ } from '../components/index.jsx';
+import { Layout, Tooltip, BtnArea, SectionMain, BoxWrap, Btn, LabelText, ScrollAni, ScrollDetail } from '../components/index.jsx';
 
 // main
 const IndexPage = () => {
   return (
     <Layout>
       {/* INTRO */}
-      {/* <ScrollDetail /> */}
+      <ScrollDetail />
       {/* 소개 */}
-      {/* <SectionMain title="ABOUT ME"></SectionMain> */}
+      {/* <SectionMain title="ABOUT ME">
+
+      </SectionMain> */}
       {/* 포폴 */}
       <SectionMain title="PROJECT">
         <BoxWrap>

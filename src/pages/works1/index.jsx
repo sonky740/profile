@@ -27,7 +27,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout align="center" title="손기연/키움">
+    <Layout align="center" title="손기연 | 키움">
       {/* 키움 */}
       <SectionType title="넥센(現키움) 히어로즈 사이트 시스템 유지보수">
         <p>

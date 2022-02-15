@@ -27,7 +27,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout align="center" title="손기연/KB국민은행_통합인증서">
+    <Layout align="center" title="손기연 | KB국민은행_통합인증서">
       {/* KB국민은행 통합인증 */}
       <SectionType title="KB국민은행 차세대 통합인증서 플랫폼 구축">
         <p>

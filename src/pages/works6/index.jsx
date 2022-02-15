@@ -35,7 +35,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout align="center" title="손기연/고객언어솔루션">
+    <Layout align="center" title="손기연 | 고객언어솔루션">
       {/* 고객언어솔루션 */}
       <SectionType title="고객언어솔루션">
         <p>자사 자체 언어교정 솔루션으로 PC버전만 제작한 프로젝트입니다.</p>

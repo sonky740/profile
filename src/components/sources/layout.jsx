@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
-import './fonts/font.css';
+import '../../scss/common.scss';
 import { Helmet } from 'react-helmet';
 
 const GlobalStyle = createGlobalStyle`
@@ -65,16 +65,6 @@ const GlobalStyle = createGlobalStyle`
       cursor: zoom-in;
     }
   }
-
-  .blind {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-    clip: rect(0, 0, 0, 0);
-  }
 `;
 
 const SkyLayout = styled.div`
@@ -91,7 +81,6 @@ const SkyHeader = styled.header`
   max-width: 1200px;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 2.4rem;
   padding: 0.8rem 2.4rem;
   font-size: 2.4rem;
   background: rgba(26, 27, 30, 0.6);
@@ -105,7 +94,7 @@ const SkyHeader = styled.header`
       fill: #fff;
       stroke: #fff;
       font-size: 2.4rem;
-      animation: stroke 5s linear;
+      animation: stroke 3s linear;
       letter-spacing: 1px;
 
       @keyframes stroke {
@@ -170,7 +159,7 @@ const SkyHeader = styled.header`
 const SkyContainer = styled.div`
   margin: auto;
   max-width: 1200px;
-  padding: 8.4rem 2.4rem 2.4rem;
+  padding: 6rem 2.4rem 2.4rem;
 
   text-align: ${(props) => (props.align === 'center' ? 'center' : 'left')};
 

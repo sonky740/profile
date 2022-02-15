@@ -27,7 +27,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout align="center" title="손기연/우리은행_마이데이터">
+    <Layout align="center" title="손기연 | 우리은행_마이데이터">
       {/* 우리은행 마이데이터 구축 */}
       <SectionType title="우리은행 마이데이터 구축">
         <p>bootstrap 5.0의 javascript를 참고 및 활용하여 UI script를 좀 더 효율적으로 짤 수 있게된 프로젝트였습니다. 여기서 배운걸 가지고 현재 제 Guide를 만들고 있습니다.</p>

@@ -35,7 +35,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout align="center" title="손기연/우리은행_WON기업뱅킹">
+    <Layout align="center" title="손기연 | 우리은행_WON기업뱅킹">
       {/* 우리은행 */}
       <SectionType title="우리은행 WON기업뱅킹 앱 구축">
         <p>우리은행 WON기업뱅킹앱 구축. 순수 CSS 인터랙션과 CSS 변수에 대해서 많은 걸 배웠던 프로젝트입니다.</p>

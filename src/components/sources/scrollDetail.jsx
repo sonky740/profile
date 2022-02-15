@@ -2,42 +2,50 @@ import React, { useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  .scroll-section {
-    position: relative;
-    /* padding-top: calc(50vh - 8.4rem); */
+  position: relative;
+  font-size: 4rem;
 
-    &-title {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: calc(100vh - 8.4rem);
-      font-size: 4rem;
-      text-align: center;
-    }
+  @media screen and (max-width: 414px) {
+    font-size: 3.2rem;
+  }
+`;
 
-    &-message {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      top: 45%;
-      font-size: 4rem;
-      text-align: center;
+const Title = styled.h2`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -6rem;
+  height: 100vh;
+  text-align: center;
+
+  .svg-img {
+    position: absolute;
+    left: 50%;
+    margin-top: 10rem;
+    transform: translateX(-50%) rotate(90deg);
+    animation: down 0.6s infinite alternate-reverse ease-out;
+    @keyframes down {
+      0% {
+        margin-top: 8rem;
+      }
+      100% {
+        margin-top: 10rem;
+      }
     }
   }
+`;
 
-  .sticky-elem {
-    display: flex;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-
-    .scroll-effect-end & {
-      display: none !important;
-    }
-  }
+const Msg = styled.div`
+  display: flex;
+  position: fixed;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 45%;
+  text-align: center;
+  opacity: 0;
 `;
 
 export default function ScrollMain() {
@@ -50,6 +58,24 @@ export default function ScrollMain() {
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) scene(scroll-section)
   let enterNewScene = false; // 새로운 scene이 시작된 순간 true
+
+  useLayoutEffect(() => {
+    setLayout();
+
+    window.addEventListener('scroll', scrollCurrent);
+
+    // ['resize', 'orientationchange'].forEach(function (events) {
+    //   window.addEventListener(events, function () {
+    //     window.location.reload();
+    //   });
+    // });
+
+    return () => {
+      ['resize', 'scroll'].forEach(events => {
+        window.removeEventListener(events, scrollCurrent);
+      });
+    };
+  });
 
   const sceneInfo = [
     {
@@ -218,47 +244,26 @@ export default function ScrollMain() {
     playAnimation();
   };
 
-  useLayoutEffect(() => {
-    setLayout();
-
-    window.addEventListener('scroll', function () {
-      scrollCurrent();
-    });
-
-    // ['resize', 'orientationchange'].forEach(function (events) {
-    //   window.addEventListener(events, function () {
-    //     window.location.reload();
-    //   });
-    // });
-
-    return () => {
-      ['resize', 'scroll'].forEach(function (events) {
-        window.removeEventListener(events, scrollCurrent);
-      });
-    };
-  });
-
   return (
-    <Section>
-      <main className="container scroll-detail">
-        <section className="main-section">
-          <div ref={container} className="scroll-section">
-            <h1 className="scroll-section-title">타이틀인데요</h1>
-            <div ref={messageA} className="sticky-elem scroll-section-message">
-              <p>첫번째 문단이구요.</p>
-            </div>
-            <div ref={messageB} className="sticky-elem scroll-section-message">
-              <p>이러쿵 저러쿵해서 저러쿵하지 않나요?</p>
-            </div>
-            <div ref={messageC} className="sticky-elem scroll-section-message">
-              <p>이건 세번째 문단인데 어떻게 생각하세요?</p>
-            </div>
-            <div ref={messageD} className="sticky-elem scroll-section-message">
-              <p>어떻게 생각하긴요 아무 생각 없는데요.</p>
-            </div>
-          </div>
-        </section>
-      </main>
+    <Section ref={container}>
+      <Title>
+        안녕하세요!
+        <svg xmlns="http://www.w3.org/2000/svg" width="28.879" height="23.6" viewBox="0 0 28.879 23.6" className="svg-img">
+          <path d="M21.208,17.538a1.471,1.471,0,0,1,2.1,0,1.508,1.508,0,0,1,0,2.1l-8.8,8.8a1.522,1.522,0,0,1-2.142,0l-8.8-8.8a1.485,1.485,0,0,1,2.1-2.1l6.28,6.3V1.47A1.477,1.477,0,0,1,13.436,0a1.461,1.461,0,0,1,1.47,1.47V23.838Z" transform="translate(0 23.733) rotate(-90)" fill="#fff"></path>
+        </svg>
+      </Title>
+      <Msg ref={messageA}>
+        <p>UI 개발자 손기연입니다.</p>
+      </Msg>
+      <Msg ref={messageB}>
+        <p>여기는 제 포트폴리오 사이트구요.</p>
+      </Msg>
+      <Msg ref={messageC}>
+        <p>상단의 Guide에서 제 개인 가이드도 보실 수 있습니다.</p>
+      </Msg>
+      <Msg ref={messageD}>
+        <p>잘 부탁드립니다!</p>
+      </Msg>
     </Section>
   );
 }

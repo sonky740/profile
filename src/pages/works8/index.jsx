@@ -27,7 +27,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout align="center" title="손기연/KB국민은행_오픈뱅킹">
+    <Layout align="center" title="손기연 | KB국민은행_오픈뱅킹">
       {/* KB국민은행 오픈뱅킹 */}
       <SectionType title="KB국민은행 오픈뱅킹 고도화">
         <p>
