@@ -23,6 +23,18 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Sonky_PortFolio',
+        short_name: 'Sonky_PF',
+        start_url: '/',
+        background_color: '#1a1b1e',
+        theme_color: '#1a1b1e',
+        display: 'standalone',
+        icon: 'src/images/favicon.svg',
+      },
     }
   ],
   pathPrefix: `/PF`,

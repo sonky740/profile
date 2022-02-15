@@ -32,7 +32,6 @@ const AboutPage = () => {
               </a>{' '}
               프레임워크를 사용하였으며,
             </p>
-            <p>함수형 컴포넌트로 작업하였고,</p>
             <p>
               <a href="https://styled-components.com/" target="_blank" className="link" rel="noreferrer">
                 styled-components
@@ -42,6 +41,17 @@ const AboutPage = () => {
                 scss
               </a>
               를 혼용하였습니다.
+            </p>
+            <p>
+              해당 포트폴리오는 github를 통한{' '}
+              <a href="https://www.gatsbyjs.com/products/cloud/" target="_blank" className="link" rel="noreferrer">
+                gatsby-cloud
+              </a>{' '}
+              와{' '}
+              <a href="https://vercel.com" target="_blank" className="link" rel="noreferrer">
+                vercel
+              </a>
+              에 배포됩니다.
             </p>
           </Dl>
         </About>
