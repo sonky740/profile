@@ -35,6 +35,7 @@ const IndexPage = () => {
           <br />
           시각화(차트)가 중요시되는 프로젝트였는데 IE8 하위 버전에서 작동해야 하고
           <br />웹 접근성을 맞춰야 하는 환경에서 차트의 구현 방식에 대해 많은 걸 배웠던 프로젝트입니다.
+          <br />2021년 12월 웹 어워드 <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=11054" target="_blank" rel="noreferrer">대상</a>을 탔습니다.
         </p>
         <FigureBox>
           <figure>
