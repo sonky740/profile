@@ -11,11 +11,11 @@ const Section = styled.section`
     &:before {
       content: attr(data-text);
       position: absolute;
-      top: 0;
+      top: -3rem;
       left: 0;
       right: 0;
-      font-size: 7rem;
-      color: rgba(255, 255, 255, 0.08);
+      font-size: 7.6rem;
+      color: rgba(255, 255, 255, 0.03);
       z-index: -1;
       font-weight: 900;
       animation: main-title 1s ease-out;
