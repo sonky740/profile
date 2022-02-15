@@ -18,7 +18,7 @@ const About = styled.div`
 // main
 const AboutPage = () => {
   return (
-    <Layout title="손기연 | 이 사이트에 대하여">
+    <Layout title="손기연 | 이 사이트에 대하여....">
       <SectionMain title="ABOUT">
         <About>
           <h3>이 사이트에 대하여</h3>
