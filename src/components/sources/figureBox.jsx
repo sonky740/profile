@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // 버튼 영역 지정
 const FigureBoxes = styled.div`
-  max-width: 600px;
+  max-width: 720px;
   margin: 0 auto;
 
   figure {
