@@ -26,10 +26,23 @@ const AboutPage = () => {
           <Dl title="이 사이트는 무엇인가?">5년차 UI 개발자 손기연의 포트폴리오 사이트입니다.</Dl>
 
           <Dl title="이 사이트는 어떤 구조로 되어있나?">
-            <a href="https://www.gatsbyjs.com/" target="_blank" className="link" rel="noreferrer">
-              Gatsby
-            </a>{' '}
-            프레임워크를 사용하였으며 디자인, 코딩 모두 제 손을 거쳤습니다.
+            <p>
+              <a href="https://www.gatsbyjs.com/" target="_blank" className="link" rel="noreferrer">
+                Gatsby
+              </a>{' '}
+              프레임워크를 사용하였으며,
+            </p>
+            <p>함수형 컴포넌트로 작업하였고,</p>
+            <p>
+              <a href="https://styled-components.com/" target="_blank" className="link" rel="noreferrer">
+                styled-components
+              </a>{' '}
+              와{' '}
+              <a href="https://sass-lang.com/" target="_blank" className="link" rel="noreferrer">
+                scss
+              </a>
+              를 혼용하였습니다.
+            </p>
           </Dl>
         </About>
       </SectionMain>

@@ -9,7 +9,7 @@ const IndexPage = () => {
       <ScrollDetail />
       {/* 소개 */}
       {/* <SectionMain title="ABOUT ME">
-
+       
       </SectionMain> */}
       {/* 포폴 */}
       <SectionMain title="PROJECT">
