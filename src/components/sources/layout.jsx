@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import '../../scss/common.scss';
@@ -112,6 +112,15 @@ const SkyContainer = styled.div`
 `;
 
 export default function Layout({ children, align, title }) {
+  useEffect(() => {
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+      setTimeout(function () {
+        window.location = 'microsoft-edge:' + window.location;
+      }, 0);
+    }
+  })
+
   return (
     <>
       <Helmet>
