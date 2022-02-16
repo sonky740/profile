@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import '../../scss/common.scss';
@@ -112,22 +112,8 @@ const SkyContainer = styled.div`
 `;
 
 export default function Layout({ children, align, title }) {
-  const [isIE, setIsIE] = useState(false);
-
-  const checkIE = () => {
-    const agent = navigator.userAgent.toLowerCase();
-    if ((navigator.appName === 'Netscape' && navigator.userAgent.search('Trident') !== -1) || agent.indexOf('msie') !== -1) {
-      setIsIE(true);
-    }
-  };
-
-  useEffect(() => {
-    checkIE();
-  }, []);
-
   return (
     <>
-      {isIE ? window.location = `microsoft-edge:${window.location}` : <>
       <Helmet>
         <title>{title || '손기연'}</title>
       </Helmet>
@@ -164,7 +150,6 @@ export default function Layout({ children, align, title }) {
 
         <SkyContainer align={align}>{children}</SkyContainer>
       </SkyLayout>
-    </>}
     </>
   );
 }
