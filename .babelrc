@@ -1,21 +1,15 @@
 {
   "plugins": [
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    ["prismjs", {
-      "languages": ["javascript", "css", "html"],
-      "plugins": ["line-numbers", "show-language"],
-      "theme": "okaidia",
-      "css": true
-    }]
-  ],
-  "presets": [
     [
-      "babel-preset-gatsby",
+      "prismjs",
       {
-        "targets": {
-          "browsers": [">0.25%", "not dead"]
-        }
+        "languages": ["javascript", "css", "html"],
+        "plugins": ["line-numbers", "show-language"],
+        "theme": "okaidia",
+        "css": true
       }
     ]
-  ]
+  ],
+  "presets": [["babel-preset-gatsby"]]
 }
