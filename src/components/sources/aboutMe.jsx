@@ -18,6 +18,12 @@ const SubMsg = styled.p`
   }
 `;
 
+const SkillList = styled.ul`
+  li {
+    
+  }
+`
+
 export default function AboutMe() {
   return (
     <Wrap>
@@ -34,6 +40,9 @@ export default function AboutMe() {
         <SubMsg>저는 제 일이 재밌습니다. 재밌으니까 좋아하고 욕심이 생겨서 더 많은 걸 배워보고 싶습니다.</SubMsg>
         <SubMsg>재밌게 일하는 것, 제가 추구하는 목표입니다.</SubMsg>
       </ScrollAni>
+      <SkillList>
+
+      </SkillList>
     </Wrap>
   );
 }
