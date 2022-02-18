@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import woori1 from '../../images/woori_mydata/woori1.png';
@@ -26,11 +26,23 @@ const IndexPage = () => {
     }
   `);
 
+  const list = [
+    {
+      title: '역할',
+      content: 'PA 70%',
+    },
+    {
+      title: '기간',
+      content: '2021.02 ~ 2021.05',
+    },
+  ];
+
   return (
-    <Layout align="center" title="손기연 | 우리은행_마이데이터">
+    <Layout title="손기연 | 우리은행_마이데이터">
       {/* 우리은행 마이데이터 구축 */}
       <SectionType title="우리은행 마이데이터 구축">
-        <p>bootstrap 5.0의 javascript를 참고 및 활용하여 UI script를 좀 더 효율적으로 짤 수 있게된 프로젝트였습니다. 여기서 배운걸 가지고 현재 제 Guide를 만들고 있습니다.</p>
+        <ListDot>{list}</ListDot>
+        <p>bootstrap 5.0의 javascript를 참고 및 활용하여 UI script를 좀 더 효율적으로 짤 수 있게된 프로젝트였습니다. 여기서 배운걸 가지고 현재 <a href="https://sonky740.github.io/Guide_es6/dist/html/" target="_blank" rel="noreferrer">제 Guide</a>를 만들고 있습니다.</p>
         <FigureBox>
           <figure>
             <a href={woori1} target="_blank" rel="noreferrer">

@@ -64,7 +64,7 @@ const IndexPage = () => {
             <h3>
               우리은행 마이데이터 구축 <LabelText>접근성</LabelText>
             </h3>
-            <div className="content">우리은행 마이데이터 구축 프로젝트 진행 중</div>
+            <div className="content">우리은행 마이데이터 구축</div>
             <div className="bottom">
               <p>역할: PA 70%</p>
               <p>기간: 2021.02 ~ 2021.05</p>
@@ -81,7 +81,13 @@ const IndexPage = () => {
             <h3>
               KB국민은행 오픈뱅킹 고도화 <LabelText>접근성</LabelText>
             </h3>
-            <div className="content">KB국민은행 오픈뱅킹(인터넷뱅킹, 스타뱅킹) 고도화</div>
+            <div className="content">
+              KB국민은행 오픈뱅킹(인터넷뱅킹, 스타뱅킹) 고도화,{' '}
+              <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=11054" target="_blank" rel="noreferrer" className="link">
+                웹 어워드 대상
+              </a>{' '}
+              수상
+            </div>
             <div className="bottom">
               <p>역할: PA 100%</p>
               <p>기간: 2020.11 ~ 2021.02</p>
@@ -164,7 +170,13 @@ const IndexPage = () => {
             <h3>
               KB국민은행 개인 인터넷뱅킹 리뉴얼 <LabelText>접근성</LabelText>
             </h3>
-            <div className="content">KB국민은행 개인 인터넷뱅킹 리뉴얼 및 웹 접근성 취득, 웹 어워드 대상 수상</div>
+            <div className="content">
+              KB국민은행 개인 인터넷뱅킹 리뉴얼 및 웹 접근성 취득,{' '}
+              <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=9262" target="_blank" rel="noreferrer" className="link">
+                웹 어워드 최고 대상
+              </a>{' '}
+              수상
+            </div>
             <div className="bottom">
               <p>역할: PA 100%</p>
               <p>기간: 2018.07 ~ 2018.11</p>
@@ -218,7 +230,7 @@ const IndexPage = () => {
             <h3>넥센(現키움) 히어로즈 사이트 시스템 유지보수</h3>
             <div className="content">시스템 유지보수, 퍼블리싱 및 간단한 개발</div>
             <div className="bottom">
-              <p>역할: PA 100%</p>
+              <p>역할: PL 100%</p>
               <p>기간: 2016.07 ~ 2018.07</p>
               <BtnArea>
                 <Btn href="https://www.heroesbaseball.co.kr/index.do" target="_blank" rel="noreferrer">

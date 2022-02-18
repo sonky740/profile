@@ -9,6 +9,10 @@ const FigureBoxes = styled.div`
   figure {
     margin: 1.6rem auto 0;
   }
+
+  figcaption {
+    margin-top: 0.4rem;
+  }
 `;
 
 export default function FigureBox({ children }) {

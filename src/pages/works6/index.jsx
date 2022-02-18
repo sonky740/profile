@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Jamo1 from '../../images/jamo/jamo1.png';
@@ -34,11 +34,23 @@ const IndexPage = () => {
     }
   `);
 
+  const list = [
+    {
+      title: '역할',
+      content: 'PL 100%',
+    },
+    {
+      title: '기간',
+      content: '2020.04 ~ 2020.05',
+    },
+  ];
+
   return (
-    <Layout align="center" title="손기연 | 고객언어솔루션">
+    <Layout title="손기연 | 고객언어솔루션">
       {/* 고객언어솔루션 */}
       <SectionType title="고객언어솔루션">
-        <p>자사 자체 언어교정 솔루션으로 PC버전만 제작한 프로젝트입니다.</p>
+        <ListDot>{list}</ListDot>
+        <p>2번째로 혼자서한 프로젝트로 인픽스 언어교정 솔루션 프로젝트입니다.</p>
         <FigureBox>
           <figure>
             <a href={Jamo1} target="_blank" rel="noreferrer">

@@ -7,19 +7,26 @@ const Section = styled.section`
   margin: 0 auto;
 
   > h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #ffbd39;
     margin-bottom: 1.6rem;
   }
 
   > p {
     color: #bebebe;
-    margin-bottom: 1.6rem;
     font-size: 1.6rem;
 
     a {
       color: #fff;
       text-decoration: underline;
+    }
+
+    +p {
+      margin-top: 0.8rem;
+    }
+
+    +div {
+      margin-top: 1.6rem;
     }
   }
 `;

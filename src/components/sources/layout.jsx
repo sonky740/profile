@@ -121,7 +121,7 @@ export default function Layout({ children, align, title }) {
         {/* <!-- ### 헤더 ### --> */}
         <SkyHeader>
           <h1>
-            <Link to="/" className="home-link" data-text="Sonky">
+            <Link to="/">
               {/* 손기연 */}
               <svg width="72" hegiht="36" viewBox="0 0 72 36">
                 <text x="0" y="85%">

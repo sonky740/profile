@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, Code } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Posco1 from '../../images/posco/posco1.png';
@@ -18,29 +18,37 @@ const IndexPage = () => {
     }
   `);
 
+  const list = [
+    {
+      title: '역할',
+      content: 'PA 70%',
+    },
+    {
+      title: '기간',
+      content: '2019.01 ~ 2019.09',
+    },
+  ];
+
   return (
-    <Layout align="center" title="손기연 | 포스코">
+    <Layout title="손기연 | 포스코">
       {/* 포스코 */}
       <SectionType title="포스코 차세대 MES 3.0 시스템 UI 개선">
-        <p>
-          React로 구축을 해야 했기에 기존 jQuery를 쓰던 방식을 버리고
-          <br />
-          es6와 React를 실무에 적용하기 위해 업무 내외 시간 모두 스크립트 공부를 많이 했던 프로젝트입니다.
-        </p>
+        <ListDot>{list}</ListDot>
+        <p>React를 처음으로 접했고 기존에 jQuery를 쓰던 습관을 버리고 es6와 React를 실무에 적용하기 위해 업무 시간 외에 스터디도 하면서 고생은 많았지만 그만큼 보람찼고 재밌었던 프로젝트입니다.</p>
+        <p>이 포트폴리오를 React로 짤 수 있게 해준 바탕이 된 프로젝트입니다.</p>
         <FigureBox>
           <figure>
             <a href={Posco1} target="_blank" rel="noreferrer">
               <Img fluid={data.file1.childImageSharp.fluid} alt="작업 중 일부분" />
             </a>
             <figcaption>
-              ag-grid 와 rechart를 활용한 페이지
-              <br />
-              <a href="https://codepen.io/Sonky/project/editor/ZKezNM" target="_blank" rel="noreferrer">
+              ag-grid 와 rechart를 활용한 페이지 (해당 프로젝트는 <a href="https://create-react-app.dev/" target="_blank" rel="noreferrer" className="link">CRA</a>, class형으로 되어있습니다.)
+              {/* <a href="https://codepen.io/Sonky/project/editor/ZKezNM" target="_blank" rel="noreferrer">
                 https://codepen.io/Sonky/project/editor/ZKezNM
-              </a>
+              </a> */}
             </figcaption>
           </figure>
-          <Code title="index.jsx" type="js">
+          {/* <Code title="index.jsx" type="js">
             {`import React, { Component } from 'react';
 import { ContentLayout, Segment } from '@mes/mes-ui-react';
 import SearchView from './SearchView';
@@ -195,7 +203,7 @@ render() {
 }
 
 export default ChartView;`}
-          </Code>
+          </Code> */}
         </FigureBox>
       </SectionType>
     </Layout>

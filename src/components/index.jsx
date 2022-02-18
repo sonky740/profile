@@ -3,6 +3,7 @@ export { default as Tooltip } from './sources/tooltip';
 export { default as BtnArea } from './sources/buttonArea';
 export { default as Code } from './sources/code';
 export { default as Dl } from './sources/dl';
+export { default as ListDot } from './sources/listDot';
 export { default as SectionMain } from './sources/sectionMain';
 export { default as SectionType } from './sources/sectionType';
 export { default as FigureBox } from './sources/figureBox';
