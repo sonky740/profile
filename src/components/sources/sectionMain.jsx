@@ -15,7 +15,7 @@ const Section = styled.section`
       left: 0;
       right: 0;
       font-size: 7.6rem;
-      color: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.03);
       z-index: -1;
       font-weight: 900;
       animation: main-title 1s ease-out;
