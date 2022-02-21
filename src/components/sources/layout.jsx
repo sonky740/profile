@@ -9,21 +9,25 @@ const SkyLayout = styled.div`
 `;
 
 const SkyHeader = styled.header`
-  display: flex;
   position: fixed;
   top: 0;
   left: 50%;
   width: 100%;
   height: 6rem;
-  max-width: 1200px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 2.4rem;
+  padding: 0.8rem 1.6rem;
   font-size: 2.4rem;
-  background: rgba(26, 27, 30, 0.6);
+  background: rgba(26, 27, 30, 0.4);
   backdrop-filter: blur(15px);
   transform: translateX(-50%);
   z-index: 10;
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   svg {
     text {
@@ -65,7 +69,7 @@ const SkyHeader = styled.header`
     }
   }
 
-  > nav {
+  nav {
     font-size: 1.8rem;
 
     .test {
@@ -87,7 +91,7 @@ const SkyHeader = styled.header`
     width: 100%;
     font-size: 2rem;
 
-    > nav {
+    nav {
       font-size: 1.6rem;
     }
   }
@@ -120,32 +124,34 @@ export default function Layout({ children, align, title }) {
       <SkyLayout>
         {/* <!-- ### 헤더 ### --> */}
         <SkyHeader>
-          <h1>
-            <Link to="/">
-              {/* 손기연 */}
-              <svg width="72" hegiht="36" viewBox="0 0 72 36">
-                <text x="0" y="85%">
-                  손기연
-                </text>
-              </svg>
-            </Link>
-          </h1>
-          <nav>
-            {/* <Link to="/test" className="test">
-              Test
-            </Link> */}
-            <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer" title="Guide_es6 새 창으로 이동">
-              Guide_ES6
-            </a>
-            {/* <a
-              href="https://sonky740.github.io/Guide/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Guide_ES5
-            </a> */}
-            <Link to="/about">About</Link>
-          </nav>
+          <div>
+            <h1>
+              <Link to="/">
+                {/* 손기연 */}
+                <svg width="72" hegiht="36" viewBox="0 0 72 36">
+                  <text x="0" y="85%">
+                    손기연
+                  </text>
+                </svg>
+              </Link>
+            </h1>
+            <nav>
+              {/* <Link to="/test" className="test">
+                Test
+              </Link> */}
+              <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer" title="Guide_es6 새 창으로 이동">
+                Guide_ES6
+              </a>
+              {/* <a
+                href="https://sonky740.github.io/Guide/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Guide_ES5
+              </a> */}
+              <Link to="/about">About</Link>
+            </nav>
+          </div>
         </SkyHeader>
 
         <SkyContainer align={align}>{children}</SkyContainer>
