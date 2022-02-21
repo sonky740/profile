@@ -49,7 +49,7 @@ export default function ScrollAniType({ multiple = 0.8, children }) {
   };
 
   return (
-    <ScrollAni ref={target} multiple={multiple}>
+    <ScrollAni ref={target}>
       {children}
     </ScrollAni>
   );
