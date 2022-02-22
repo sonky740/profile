@@ -28,7 +28,7 @@ const AboutPage = () => {
           <Dl title="이 사이트는 어떤 구조로 되어있나?">
             <p>
               <a href="https://www.gatsbyjs.com/" target="_blank" className="link" rel="noreferrer">
-                Gatsby
+                GatsbyJS
               </a>{' '}
               프레임워크를 사용하였으며,
             </p>
@@ -53,6 +53,12 @@ const AboutPage = () => {
               </a>
               에 배포됩니다.
             </p>
+          </Dl>
+          <Dl title="왜 GatsbyJS를 썼는지?">
+            <p>1. React로 포트폴리오를 만들고 싶었습니다. 그 중 NextJS, GatsbyJS를 두고 고민하였으나,</p>
+            <p>2. 다음 2가지 이유로 인해 Gatsbyjs를 택했습니다.</p>
+            <p>2-1. 사이트 규모가 작은 포트폴리오이기에 좀 더 가벼운 GatsbyJS가 이점이 있었습니다.</p>
+            <p>2-2. 성능을 높이기위한 <a href="https://www.gatsbyjs.com/plugins/gatsby-image/" target="_blank" rel="noreferrer" className="link">gaysby-image</a>, Link에 마우스를 올리기만해도 해당 Link를 미리 불러와서 빠른 로딩을 구현하는게 간단하였습니다.</p>
           </Dl>
         </About>
       </SectionMain>
