@@ -2,6 +2,12 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Prism from 'prismjs';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+  title: string;
+  type?: string;
+}
+
 // 버튼 영역 지정
 const Codes = styled.div`
   margin-top: 2.4rem;
@@ -16,7 +22,7 @@ const Codes = styled.div`
   }
 `;
 
-export default function Code({ title, children, type }) {
+export default function Code({ children, title, type }: DefaultTypes) {
   useEffect(() => {
     setTimeout(() => Prism.highlightAll(), 0);
   });

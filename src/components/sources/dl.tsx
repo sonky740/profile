@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+  title: string;
+}
+
 const Dl = styled.dl`
   font-size: 1.6rem;
 
@@ -38,7 +43,7 @@ const Dl = styled.dl`
   }
 `;
 
-export default function DefinitionList({ title, children }) {
+export default function DefinitionList({ children, title }: DefaultTypes) {
   return (
     <Dl>
       <dt>{title}</dt>

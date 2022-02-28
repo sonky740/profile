@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+  title: string;
+}
+
 // 버튼 영역 지정
 const Section = styled.section`
   max-width: 720px;
@@ -31,7 +36,7 @@ const Section = styled.section`
   }
 `;
 
-export default function SectionType({ title, children }) {
+export default function SectionType({ children, title }: DefaultTypes) {
   return (
     <Section>
       <h2>{title}</h2>

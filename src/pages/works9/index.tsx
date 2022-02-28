@@ -1,9 +1,9 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import woori1 from '../../images/woori_mydata/woori1.png';
-import woori2 from '../../images/woori_mydata/woori2.png';
+let woori1 = require('../../images/woori_mydata/woori1.png');
+let woori2 = require('../../images/woori_mydata/woori2.png');
 
 // main
 const IndexPage = () => {
@@ -26,7 +26,7 @@ const IndexPage = () => {
     }
   `);
 
-  const list = [
+  const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
       content: 'PA 70%',

@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+  multiple?: number;
+}
+
 // 버튼 영역 지정
 const ScrollAni = styled.div`
   opacity: 0;
@@ -15,10 +20,10 @@ const ScrollAni = styled.div`
   }
 `;
 
-export default function ScrollAniType({ multiple = 0.8, children }) {
-  const target = useRef(null);
+export default function ScrollAniType({ children, multiple = 0.8 }: DefaultTypes) {
+  const target = useRef() as React.MutableRefObject<HTMLDivElement>;
 
-  useEffect(() => {
+  useEffect((): any => {
     if (!target.current) return false;
 
     // init
@@ -48,9 +53,5 @@ export default function ScrollAniType({ multiple = 0.8, children }) {
     }
   };
 
-  return (
-    <ScrollAni ref={target}>
-      {children}
-    </ScrollAni>
-  );
+  return <ScrollAni ref={target}>{children}</ScrollAni>;
 }

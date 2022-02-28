@@ -4,6 +4,16 @@ import styled from 'styled-components';
 import '../../scss/common.scss';
 import { Helmet } from 'react-helmet';
 
+interface SkyC {
+  align?: string;
+}
+
+interface DefaultTypes {
+  children: React.ReactNode;
+  align?: string;
+  title?: string;
+}
+
 const SkyLayout = styled.div`
   min-width: 320px;
 `;
@@ -97,7 +107,7 @@ const SkyHeader = styled.header`
   }
 `;
 
-const SkyContainer = styled.div`
+const SkyContainer = styled.div<SkyC>`
   margin: auto;
   max-width: 1200px;
   padding: 6rem 2.4rem 2.4rem;
@@ -115,7 +125,7 @@ const SkyContainer = styled.div`
   }
 `;
 
-export default function Layout({ children, align, title }) {
+export default function Layout({ children, align, title }: DefaultTypes) {
   return (
     <>
       <Helmet>
@@ -128,7 +138,7 @@ export default function Layout({ children, align, title }) {
             <h1>
               <Link to="/">
                 {/* 손기연 */}
-                <svg width="72" hegiht="36" viewBox="0 0 72 36">
+                <svg width="72" height="36" viewBox="0 0 72 36">
                   <text x="0" y="85%">
                     손기연
                   </text>

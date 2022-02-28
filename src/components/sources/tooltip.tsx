@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Btn } from '../index';
+import { Button } from '../index';
 import styled from 'styled-components';
+
+interface DefaultTypes {
+  children: React.ReactNode;
+  text: string;
+}
 
 const Tooltips = styled.div`
   > div {
@@ -24,17 +29,17 @@ const Tooltips = styled.div`
   }
 `;
 
-export default function Tooltip({ text, children }) {
+export default function Tooltip({ children, text }: DefaultTypes) {
   const [on, setOn] = useState(false);
 
-  const toggle = (e) => {
+  const toggle = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setOn(!on);
   };
 
-  const closeAll = (e) => {
-    if (!e.target.parentNode.getAttribute('data-tooltip')) setOn(null);
+  const closeAll = (e: any) => {
+    if (!e.target.parentNode.getAttribute('data-tooltip')) setOn(false);
   };
 
   useEffect(() => {
@@ -46,9 +51,9 @@ export default function Tooltip({ text, children }) {
 
   return (
     <Tooltips data-tooltip="click" className={on ? 'on' : ''}>
-      <Btn href="#none" target="_blank" rel="noreferrer" onClick={toggle}>
+      <Button href="#none" target="_blank" rel="noreferrer" onClick={e => toggle(e)}>
         {text}
-      </Btn>
+      </Button>
       <div>{children}</div>
     </Tooltips>
   );

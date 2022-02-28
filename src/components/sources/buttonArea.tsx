@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+}
+
 // 버튼 영역 지정
 const ButtonArea = styled.div`
   display: flex;
@@ -14,6 +18,6 @@ const ButtonArea = styled.div`
   }
 `;
 
-export default function BtnArea({ children }) {
+export default function BtnArea({ children }: DefaultTypes) {
   return <ButtonArea>{children}</ButtonArea>;
 }

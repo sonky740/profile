@@ -1,9 +1,9 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import Kbcert1 from '../../images/kbcert/kbcert1.png';
-import Kbcert2 from '../../images/kbcert/kbcert2.png';
+let Kbcert1 = require('../../images/kbcert/kbcert1.png');
+let Kbcert2 = require('../../images/kbcert/kbcert2.png');
 
 // main
 const IndexPage = () => {
@@ -26,7 +26,7 @@ const IndexPage = () => {
     }
   `);
 
-  const list = [
+  const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
       content: 'PL 100%',

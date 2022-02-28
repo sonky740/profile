@@ -8,7 +8,7 @@ export { default as SectionMain } from './sources/sectionMain';
 export { default as SectionType } from './sources/sectionType';
 export { default as FigureBox } from './sources/figureBox';
 export { default as BoxWrap } from './sources/boxWrap';
-export { default as Btn } from './sources/button';
+export { Button, ButtonLink } from './sources/button';
 export { default as LabelText } from './sources/labelText';
 export { default as ScrollAni } from './sources/scrollAnimation';
 export { default as ScrollDetail } from './sources/scrollDetail';

@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: Array<{title:string, content: string}>;
+}
+
 const List = styled.ul`
   margin-bottom: 1.6rem;
   
@@ -31,10 +35,10 @@ const List = styled.ul`
   }
 `;
 
-export default function ListDot({ children }) {
+export default function ListDot({ children }: DefaultTypes) {
   return (
     <List>
-      {children.map((a, i) => {
+      {children.map((a: {title: string, content: string}, i: number) => {
         return (
           <li key={i}>
             <span>{a.title}: </span>

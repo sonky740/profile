@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Layout, SectionMain } from '../../components/index.jsx';
+import { Layout, SectionMain } from '../../components/index';
 
 // main
 const TestPage = () => {

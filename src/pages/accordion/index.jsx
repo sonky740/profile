@@ -1,5 +1,5 @@
 import React from 'react';
-import { AccordionItem, Layout, SectionMain, Accor } from '../../components/index.jsx';
+import { AccordionItem, Layout, SectionMain, Accor } from '../../components/index';
 
 // main
 const TestPage = () => {

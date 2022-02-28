@@ -2,6 +2,19 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+interface ButtonTypes {
+  children: React.ReactNode;
+  href?: string;
+  target?: string;
+  rel?: string;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+}
+
+interface LinkTypes {
+  children: React.ReactNode;
+  to: string;
+}
+
 const Btn = styled.a`
   display: inline-block;
   position: relative;
@@ -42,16 +55,14 @@ const Btn = styled.a`
 
 const LinkStyled = Btn.withComponent(Link);
 
-export default function Button({ as, children, href, to, target, rel, onClick }) {
+export function Button({ children, href, target, rel, onClick }: ButtonTypes) {
   return (
-    <>
-      {as === 'Link' ? (
-        <LinkStyled to={to}>{children}</LinkStyled>
-      ) : (
-        <Btn href={href} target={target} rel={rel} onClick={onClick}>
-          {children}
-        </Btn>
-      )}
-    </>
+    <Btn href={href} target={target} rel={rel} onClick={onClick}>
+      {children}
+    </Btn>
   );
+}
+
+export function ButtonLink({ children, to }: LinkTypes) {
+  return <LinkStyled to={to}>{children}</LinkStyled>;
 }

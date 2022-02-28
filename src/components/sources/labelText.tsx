@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode
+}
+
 const LabelText = styled.span`
   display: inline-block;
   padding: 0 0.4rem;
@@ -13,6 +17,6 @@ const LabelText = styled.span`
   vertical-align: middle;
 `;
 
-export default function Label({ children }) {
+export default function Label({ children }: DefaultTypes) {
   return <LabelText>{children}</LabelText>;
 }

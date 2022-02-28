@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+  title: string;
+}
+
 const Section = styled.section`
   h2 {
     position: relative;
@@ -37,7 +42,7 @@ const Section = styled.section`
   }
 `;
 
-export default function SectionMain({ title, children }) {
+export default function SectionMain({ children, title }: DefaultTypes) {
   return (
     <Section>
       <h2 data-text={title}>{title}</h2>

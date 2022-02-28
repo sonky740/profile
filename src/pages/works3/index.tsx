@@ -1,8 +1,8 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import Kbbanking1 from '../../images/kbbanking/kb_banking.jpg';
+let Kbbanking1 = require('../../images/kbbanking/kb_banking.jpg');
 
 // main
 const IndexPage = () => {
@@ -18,7 +18,7 @@ const IndexPage = () => {
     }
   `);
 
-  const list = [
+  const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
       content: 'PA 100%'

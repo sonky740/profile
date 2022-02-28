@@ -1,8 +1,8 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import Posco1 from '../../images/posco/posco1.png';
+let Posco1 = require('../../images/posco/posco1.png');
 
 // main
 const IndexPage = () => {
@@ -18,7 +18,7 @@ const IndexPage = () => {
     }
   `);
 
-  const list = [
+  const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
       content: 'PA 70%',

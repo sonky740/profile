@@ -1,10 +1,10 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import Woori1 from '../../images/woori_won/woori1.png';
-import Woori2 from '../../images/woori_won/woori2.png';
-import Woori3 from '../../images/woori_won/woori3.png';
+let Woori1 = require('../../images/woori_won/woori1.png');
+let Woori2 = require('../../images/woori_won/woori2.png');
+let Woori3 = require('../../images/woori_won/woori3.png');
 
 // main
 const IndexPage = () => {
@@ -34,7 +34,7 @@ const IndexPage = () => {
     }
   `);
 
-  const list = [
+  const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
       content: 'PA 80%',

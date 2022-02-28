@@ -49,11 +49,11 @@ const Msg = styled.div`
 `;
 
 export default function ScrollMain() {
-  const container = useRef(null);
-  const messageA = useRef(null);
-  const messageB = useRef(null);
-  const messageC = useRef(null);
-  const messageD = useRef(null);
+  const container = useRef() as React.MutableRefObject<HTMLElement>;
+  const messageA = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const messageB = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const messageC = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const messageD = useRef() as React.MutableRefObject<HTMLDivElement>;
   let yOffset = 0; // window.pageYOffset
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) scene(scroll-section)
@@ -110,7 +110,7 @@ export default function ScrollMain() {
       if (sceneInfo[i].type === 'sticky') {
         sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
       } else if (sceneInfo[i].type === 'normal') {
-        sceneInfo[i].scrollHeight = sceneInfo[i].objs.container.offsetHeight + window.innerHeight * 0.5;
+        sceneInfo[i].scrollHeight = container.current.offsetHeight + window.innerHeight * 0.5;
       }
       return (container.current.style.height = `${sceneInfo[0].scrollHeight}px`);
     }
@@ -129,7 +129,7 @@ export default function ScrollMain() {
     document.body.setAttribute('id', `show-scene-${currentScene}`);
   };
 
-  const calcValues = (values, currentYOffset) => {
+  const calcValues = (values: any, currentYOffset: number) => {
     let rv;
     // 현재 scene에서 스크롤된 범위를 비율로 구하기
     const scrollHeight = sceneInfo[currentScene].scrollHeight;
@@ -160,7 +160,7 @@ export default function ScrollMain() {
     const scrollHeight = sceneInfo[currentScene].scrollHeight;
     const scrollRatio = currentYOffset / scrollHeight;
 
-    const translate = (inOut, currentY) => {
+    const translate = (inOut: any, currentY: number) => {
       return `translate3d(0,${calcValues(inOut, currentY)}%, 0)`;
     };
 

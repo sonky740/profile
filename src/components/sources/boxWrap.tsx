@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+interface DefaultTypes {
+  children: React.ReactNode;
+}
+
 // 버튼 영역 지정
 const Box = styled.div`
   display: grid;
@@ -69,6 +73,6 @@ const Box = styled.div`
   }
 `;
 
-export default function BoxWrap({ children }) {
+export default function BoxWrap({ children }: DefaultTypes) {
   return <Box>{children}</Box>;
 }

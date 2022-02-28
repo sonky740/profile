@@ -1,10 +1,10 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index.jsx';
+import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import Jamo1 from '../../images/jamo/jamo1.png';
-import Jamo2 from '../../images/jamo/jamo2.png';
-import Jamo3 from '../../images/jamo/jamo3.png';
+let Jamo1 = require('../../images/jamo/jamo1.png');
+let Jamo2 = require('../../images/jamo/jamo2.png');
+let Jamo3 = require('../../images/jamo/jamo3.png');
 
 // main
 const IndexPage = () => {
@@ -34,7 +34,7 @@ const IndexPage = () => {
     }
   `);
 
-  const list = [
+  const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
       content: 'PL 100%',
