@@ -82,10 +82,6 @@ const SkyHeader = styled.header`
   nav {
     font-size: 1.8rem;
 
-    .test {
-      color: transparent;
-    }
-
     a {
       &:hover {
         color: #ffbd39;
@@ -146,19 +142,9 @@ export default function Layout({ children, align, title }: DefaultTypes) {
               </Link>
             </h1>
             <nav>
-              {/* <Link to="/test" className="test">
-                Test
-              </Link> */}
               <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer" title="Guide_es6 새 창으로 이동">
                 Guide_ES6
               </a>
-              {/* <a
-                href="https://sonky740.github.io/Guide/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Guide_ES5
-              </a> */}
               <Link to="/about">About</Link>
             </nav>
           </div>
