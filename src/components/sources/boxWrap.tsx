@@ -22,9 +22,11 @@ const Box = styled.div`
     color: #bebebe;
     transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 
-    &:hover {
-      transform: translateY(-10px) !important;
-      box-shadow: 0 2rem 2rem -0.8rem rgba(43, 44, 49, 0.32);
+    @media (min-width: 920px) {
+      &:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 2rem 2rem -0.8rem rgba(43, 44, 49, 0.32);
+      } 
     }
 
     .bottom {
