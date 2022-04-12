@@ -69,7 +69,9 @@ const IndexPage = () => {
               <p>역할: PA 70%</p>
               <p>기간: 2021.02 ~ 2021.05</p>
               <BtnArea>
-                <Tooltip text="사이트 바로가기">아직 오픈전입니다.</Tooltip>
+                <Button href="https://spot.wooribank.com/pot/Dream?withyou=my" target="_blank" rel="noreferrer">
+                  사이트 바로가기
+                </Button>
                 <ButtonLink to="/works9">
                   기술서
                 </ButtonLink>
@@ -143,7 +145,7 @@ const IndexPage = () => {
               <p>역할: PL 100%</p>
               <p>기간: 2019.09 ~ 2020.03</p>
               <BtnArea>
-                <Tooltip text="관리자 사이트">관리자 사이트라 접근이 불가합니다.</Tooltip>
+                <Tooltip text="사이트 바로가기">관리자 사이트라 접근이 불가합니다.</Tooltip>
                 <ButtonLink to="/works5">
                   기술서
                 </ButtonLink>
@@ -158,7 +160,7 @@ const IndexPage = () => {
               <p>역할: PA 70%</p>
               <p>기간: 2019.01 ~ 2019.09</p>
               <BtnArea>
-                <Tooltip text="관리자 사이트">관리자 사이트라 접근이 불가합니다.</Tooltip>
+                <Tooltip text="사이트 바로가기">관리자 사이트라 접근이 불가합니다.</Tooltip>
                 <ButtonLink to="/works4">
                   기술서
                 </ButtonLink>

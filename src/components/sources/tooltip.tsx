@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Button } from '../index';
 import styled from 'styled-components';
 
@@ -19,22 +19,34 @@ const Tooltips = styled.div`
     border-radius: 0.8rem;
     background: #000;
     word-break: break-all;
+    animation: tooltip .3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
-  &.on {
+  &.shown {
     > div {
       display: block;
       z-index: 10;
+    }
+  }
+
+  @keyframes tooltip {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1)
     }
   }
 `;
 
 export default function Tooltip({ children, text }: DefaultTypes) {
   const [on, setOn] = useState(false);
+  const tooltip: React.MutableRefObject<HTMLDivElement> = useRef();
 
-  const toggle = (e: React.MouseEvent) => {
+  const tooltipHandler = (e: React.MouseEvent) => {
     e.preventDefault();
-    e.stopPropagation();
     setOn(!on);
   };
 
@@ -50,8 +62,8 @@ export default function Tooltip({ children, text }: DefaultTypes) {
   });
 
   return (
-    <Tooltips data-tooltip="click" className={on ? 'on' : ''}>
-      <Button href="#none" target="_blank" rel="noreferrer" onClick={e => toggle(e)}>
+    <Tooltips data-tooltip ref={tooltip} className={on ? 'shown' : ''}>
+      <Button href="#none" target="_blank" rel="noreferrer" onClick={tooltipHandler}>
         {text}
       </Button>
       <div>{children}</div>

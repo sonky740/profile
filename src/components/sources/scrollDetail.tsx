@@ -49,11 +49,11 @@ const Msg = styled.div`
 `;
 
 export default function ScrollMain() {
-  const container = useRef() as React.MutableRefObject<HTMLElement>;
-  const messageA = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const messageB = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const messageC = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const messageD = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const container: React.MutableRefObject<HTMLElement> = useRef();
+  const messageA: React.MutableRefObject<HTMLDivElement> = useRef();
+  const messageB: React.MutableRefObject<HTMLDivElement> = useRef();
+  const messageC: React.MutableRefObject<HTMLDivElement> = useRef();
+  const messageD: React.MutableRefObject<HTMLDivElement> = useRef();
   let yOffset = 0; // window.pageYOffset
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) scene(scroll-section)
