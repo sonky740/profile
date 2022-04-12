@@ -22,7 +22,7 @@ const IndexPage = () => {
               <p>역할: PL 100%</p>
               <p>기간: 2021.10 ~ 중단</p>
               <BtnArea>
-                <Button href="http://sonky.myasustor.com/sheeeda/dist/_work_sheet.html" target="_blank" rel="noreferrer">
+                <Button href="https://sonky740.github.io/sheeeda/dist/work_sheet.html" target="_blank" rel="noreferrer">
                   사이트 바로가기
                 </Button>
                 {/* <ButtonLink as="Link" to="/works10">기술서</ButtonLink> */}
