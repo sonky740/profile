@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DefaultTypes {
-  children: Array<{title:string, content: string}>;
+  children?: Array<{title:string, content: string}>;
 }
 
 const List = styled.ul`

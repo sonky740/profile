@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import '../../scss/common.scss';
+import GlobalStyle from '../../resources/style/globalStyle';
 import { Helmet } from 'react-helmet';
 
 interface SkyC {
@@ -9,7 +9,7 @@ interface SkyC {
 }
 
 interface DefaultTypes {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   align?: string;
   title?: string;
 }
@@ -31,7 +31,7 @@ const SkyHeader = styled.header`
   transform: translateX(-50%);
   z-index: 10;
 
-  >div {
+  > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -127,6 +127,7 @@ export default function Layout({ children, align, title }: DefaultTypes) {
       <Helmet>
         <title>{title || '손기연'}</title>
       </Helmet>
+      <GlobalStyle />
       <SkyLayout>
         {/* <!-- ### 헤더 ### --> */}
         <SkyHeader>
@@ -142,7 +143,12 @@ export default function Layout({ children, align, title }: DefaultTypes) {
               </Link>
             </h1>
             <nav>
-              <a href="https://sonky740.github.io/Guide_es6/dist/" target="_blank" rel="noreferrer" title="Guide_es6 새 창으로 이동">
+              <a
+                href="https://sonky740.github.io/Guide_es6/dist/"
+                target="_blank"
+                rel="noreferrer"
+                title="Guide_es6 새 창으로 이동"
+              >
                 Guide_ES6
               </a>
               <Link to="/about">About</Link>

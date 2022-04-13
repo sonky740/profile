@@ -1,31 +1,11 @@
 import React from 'react';
 import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-let woori1 = require('../../images/woori_mydata/woori1.png');
-let woori2 = require('../../images/woori_mydata/woori2.png');
+import { StaticImage } from 'gatsby-plugin-image';
+import woori1 from '../../resources/images/woori_mydata/woori1.png';
+import woori2 from '../../resources/images/woori_mydata/woori2.png';
 
 // main
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file1: file(relativePath: { eq: "woori_mydata/woori1.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      file2: file(relativePath: { eq: "woori_mydata/woori2.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
@@ -46,13 +26,13 @@ const IndexPage = () => {
         <FigureBox>
           <figure>
             <a href={woori1} target="_blank" rel="noreferrer">
-              <Img fluid={data.file1.childImageSharp.fluid} alt="코치 메인(미래의 나)" />
+              <StaticImage src="../../resources/images/woori_mydata/woori1.png" alt="코치 메인(미래의 나)" />
             </a>
             <figcaption>코칭 메인(미래의 나)</figcaption>
           </figure>
           <figure>
             <a href={woori2} target="_blank" rel="noreferrer">
-              <Img fluid={data.file2.childImageSharp.fluid} alt="고수의랭킹_투자고수" />
+              <StaticImage src="../../resources/images/woori_mydata/woori2.png" alt="고수의랭킹_투자고수" />
             </a>
             <figcaption>고수의랭킹 투자고수</figcaption>
           </figure>

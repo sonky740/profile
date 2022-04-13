@@ -1,23 +1,10 @@
 import React from 'react';
 import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-let Kbbanking1 = require('../../images/kbbanking/kb_banking.jpg');
+import { StaticImage } from 'gatsby-plugin-image';
+import Kbbanking1 from '../../resources/images/kbbanking/kb_banking.jpg';
 
 // main
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file1: file(relativePath: { eq: "kbbanking/kb_banking.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
@@ -45,7 +32,7 @@ const IndexPage = () => {
         <FigureBox>
           <figure>
             <a href={Kbbanking1} target="_blank" rel="noreferrer">
-              <Img fluid={data.file1.childImageSharp.fluid} alt="KB국민은행 개인 인터넷뱅킹 메인" />
+              <StaticImage src="../../resources/images/kbbanking/kb_banking.jpg" alt="KB국민은행 개인 인터넷뱅킹 메인" />
             </a>
             <figcaption>KB국민은행 개인 인터넷뱅킹 메인</figcaption>
           </figure>

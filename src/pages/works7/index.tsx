@@ -1,39 +1,12 @@
 import React from 'react';
 import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-let Woori1 = require('../../images/woori_won/woori1.png');
-let Woori2 = require('../../images/woori_won/woori2.png');
-let Woori3 = require('../../images/woori_won/woori3.png');
+import { StaticImage } from 'gatsby-plugin-image';
+import Woori1 from '../../resources/images/woori_won/woori1.png';
+import Woori2 from '../../resources/images/woori_won/woori2.png';
+import Woori3 from '../../resources/images/woori_won/woori3.png';
 
 // main
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file1: file(relativePath: { eq: "woori_won/woori1.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      file2: file(relativePath: { eq: "woori_won/woori2.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      file3: file(relativePath: { eq: "woori_won/woori3.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
@@ -54,19 +27,19 @@ const IndexPage = () => {
         <FigureBox>
           <figure>
             <a href={Woori1} target="_blank" rel="noreferrer">
-              <Img fluid={data.file1.childImageSharp.fluid} alt="작업당시 일부분" />
+              <StaticImage src="../../resources/images/woori_won/woori1.png" alt="작업당시 일부분" />
             </a>
             <figcaption>작업당시 일부분</figcaption>
           </figure>
           <figure>
             <a href={Woori2} target="_blank" rel="noreferrer">
-              <Img fluid={data.file2.childImageSharp.fluid} alt="작업당시 일부분" />
+              <StaticImage src="../../resources/images/woori_won/woori2.png" alt="작업당시 일부분" />
             </a>
             <figcaption>작업당시 일부분</figcaption>
           </figure>
           <figure>
             <a href={Woori3} target="_blank" rel="noreferrer">
-              <Img fluid={data.file3.childImageSharp.fluid} alt="실서버" />
+              <StaticImage src="../../resources/images/woori_won/woori3.png" alt="실서버" />
             </a>
             <figcaption>실서버</figcaption>
           </figure>

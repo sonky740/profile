@@ -1,6 +1,5 @@
 module.exports = {
   plugins: [
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -21,7 +20,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/resources/images/',
       },
       __key: 'images',
     },
@@ -34,7 +33,7 @@ module.exports = {
         background_color: '#1a1b1e',
         theme_color: '#1a1b1e',
         display: 'standalone',
-        icon: 'src/images/favicon.svg',
+        icon: 'src/resources/images/favicon.svg',
       },
     },
     {

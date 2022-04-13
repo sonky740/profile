@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DefaultTypes {
-  children: React.ReactNode;
+  children?: React.ReactNode | HTMLElement;
 }
 
 // 버튼 영역 지정
 const FigureBoxes = styled.div`
   max-width: 720px;
   margin: 0 auto;
+  text-align: center;
 
   figure {
     margin: 1.6rem auto 0;

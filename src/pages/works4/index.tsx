@@ -1,23 +1,10 @@
 import React from 'react';
 import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-let Posco1 = require('../../images/posco/posco1.png');
+import { StaticImage } from 'gatsby-plugin-image';
+import Posco1 from '../../resources/images/posco/posco1.png';
 
 // main
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file1: file(relativePath: { eq: "posco/posco1.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
@@ -39,7 +26,7 @@ const IndexPage = () => {
         <FigureBox>
           <figure>
             <a href={Posco1} target="_blank" rel="noreferrer">
-              <Img fluid={data.file1.childImageSharp.fluid} alt="작업 중 일부분" />
+              <StaticImage src="../../resources/images/posco/posco1.png" alt="작업 중 일부분" />
             </a>
             <figcaption>
               ag-grid 와 rechart를 활용한 페이지 (해당 프로젝트는 <a href="https://create-react-app.dev/" target="_blank" rel="noreferrer" className="link">CRA</a>, class형으로 되어있습니다.)

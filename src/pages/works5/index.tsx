@@ -1,31 +1,11 @@
 import React from 'react';
 import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-let Kbcert1 = require('../../images/kbcert/kbcert1.png');
-let Kbcert2 = require('../../images/kbcert/kbcert2.png');
+import { StaticImage } from 'gatsby-plugin-image';
+import Kbcert1 from '../../resources/images/kbcert/kbcert1.png';
+import Kbcert2 from '../../resources/images/kbcert/kbcert2.png';
 
 // main
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file1: file(relativePath: { eq: "kbcert/kbcert1.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      file2: file(relativePath: { eq: "kbcert/kbcert2.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const list: Array<{title: string, content: string}> = [
     {
       title: '역할',
@@ -46,13 +26,13 @@ const IndexPage = () => {
         <FigureBox>
           <figure>
             <a href={Kbcert1} target="_blank" rel="noreferrer">
-              <Img fluid={data.file1.childImageSharp.fluid} alt="통합인증 메인" />
+              <StaticImage src="../../resources/images/kbcert/kbcert1.png" alt="통합인증 메인" />
             </a>
             <figcaption>KB 통합인증 메인 (목업이지만 혹시 몰라서 가립니다.)</figcaption>
           </figure>
           <figure>
             <a href={Kbcert2} target="_blank" rel="noreferrer">
-              <Img fluid={data.file2.childImageSharp.fluid} alt="통합인증 요소" />
+              <StaticImage src="../../resources/images/kbcert/kbcert2.png" alt="통합인증 요소" />
             </a>
             <figcaption>KB 통합인증 중 하나 (목업이지만 혹시 몰라서 가립니다.)</figcaption>
           </figure>
