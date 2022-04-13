@@ -26,7 +26,7 @@ const Box = styled.div`
       &:hover {
         transform: translateY(-5px) !important;
         box-shadow: 0 2rem 2rem -0.8rem rgba(43, 44, 49, 0.32);
-      } 
+      }
     }
 
     .bottom {

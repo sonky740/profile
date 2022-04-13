@@ -20,7 +20,10 @@ const ScrollAni = styled.div`
   }
 `;
 
-export default function ScrollAniType({ children, multiple = 0.8 }: DefaultTypes) {
+export default function ScrollAniType({
+  children,
+  multiple = 0.8,
+}: DefaultTypes) {
   const target = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect((): any => {
@@ -46,9 +49,15 @@ export default function ScrollAniType({ children, multiple = 0.8 }: DefaultTypes
     let itemTop = target.current.getBoundingClientRect().top;
     let viewH = document.documentElement.offsetHeight;
 
-    if (itemTop < viewH * multiple && !target.current.classList.contains('focus-in')) {
+    if (
+      itemTop < viewH * multiple &&
+      !target.current.classList.contains('focus-in')
+    ) {
       target.current.classList.add('focus-in');
-    } else if (itemTop > (viewH * 3) / 4 && target.current.classList.contains('focus-in')) {
+    } else if (
+      itemTop > (viewH * 3) / 4 &&
+      target.current.classList.contains('focus-in')
+    ) {
       target.current.classList.remove('focus-in');
     }
   };

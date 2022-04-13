@@ -11,6 +11,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "build-pr": "gatsby build --prefix-paths",
+    "tsc": "tsc --noEmit",
     "clean": "gatsby clean"
   },
   "license": "0BSD",

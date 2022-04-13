@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DefaultTypes {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const LabelText = styled.span`

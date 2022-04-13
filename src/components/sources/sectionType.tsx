@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DefaultTypes {
-  children?: React.ReactNode;
-  title?: string;
+  children: React.ReactNode;
+  title: string;
 }
 
 // 버튼 영역 지정
@@ -26,11 +26,11 @@ const Section = styled.section`
       text-decoration: underline;
     }
 
-    +p {
+    + p {
       margin-top: 0.8rem;
     }
 
-    +div {
+    + div {
       margin-top: 1.6rem;
     }
   }

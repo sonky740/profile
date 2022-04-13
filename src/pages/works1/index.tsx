@@ -46,6 +46,7 @@ const IndexPage = () => {
               <StaticImage
                 src="../../resources/images/heroes/heroes1.png"
                 alt="넥센히어로즈 시절 이미지"
+                placeholder="blurred"
               />
             </a>
             <figcaption>넥센히어로즈 시절</figcaption>
@@ -55,6 +56,7 @@ const IndexPage = () => {
               <StaticImage
                 src="../../resources/images/heroes/heroes2.png"
                 alt="키움히어로즈 이미지"
+                placeholder="blurred"
               />
             </a>
             <figcaption>2018년 리뉴얼 후 키움히어로즈 시절</figcaption>

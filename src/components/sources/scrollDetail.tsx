@@ -49,11 +49,11 @@ const Msg = styled.div`
 `;
 
 export default function ScrollMain() {
-  const container: React.MutableRefObject<HTMLElement> = useRef();
-  const messageA: React.MutableRefObject<HTMLDivElement> = useRef();
-  const messageB: React.MutableRefObject<HTMLDivElement> = useRef();
-  const messageC: React.MutableRefObject<HTMLDivElement> = useRef();
-  const messageD: React.MutableRefObject<HTMLDivElement> = useRef();
+  const container = useRef() as React.MutableRefObject<HTMLElement>;
+  const messageA = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const messageB = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const messageC = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const messageD = useRef() as React.MutableRefObject<HTMLDivElement>;
   let yOffset = 0; // window.pageYOffset
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) scene(scroll-section)
@@ -71,7 +71,7 @@ export default function ScrollMain() {
     // });
 
     return () => {
-      ['resize', 'scroll'].forEach(events => {
+      ['resize', 'scroll'].forEach((events) => {
         window.removeEventListener(events, scrollCurrent);
       });
     };
@@ -110,7 +110,8 @@ export default function ScrollMain() {
       if (sceneInfo[i].type === 'sticky') {
         sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
       } else if (sceneInfo[i].type === 'normal') {
-        sceneInfo[i].scrollHeight = container.current.offsetHeight + window.innerHeight * 0.5;
+        sceneInfo[i].scrollHeight =
+          container.current.offsetHeight + window.innerHeight * 0.5;
       }
       return (container.current.style.height = `${sceneInfo[0].scrollHeight}px`);
     }
@@ -140,8 +141,14 @@ export default function ScrollMain() {
       const partScrollEnd = values[2].end * scrollHeight;
       const partScrollHeight = partScrollEnd - partScrollStart;
 
-      if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
-        rv = ((currentYOffset - partScrollStart) / partScrollHeight) * (values[1] - values[0]) + values[0];
+      if (
+        currentYOffset >= partScrollStart &&
+        currentYOffset <= partScrollEnd
+      ) {
+        rv =
+          ((currentYOffset - partScrollStart) / partScrollHeight) *
+            (values[1] - values[0]) +
+          values[0];
       } else if (currentYOffset < partScrollStart) {
         rv = values[0];
       } else if (currentYOffset > partScrollEnd) {
@@ -168,42 +175,90 @@ export default function ScrollMain() {
       case 0:
         if (scrollRatio <= 0.22) {
           // in
-          messageA.current.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
-          messageA.current.style.transform = translate(values.messageA_translateY_in, currentYOffset);
+          messageA.current.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          messageA.current.style.transform = translate(
+            values.messageA_translateY_in,
+            currentYOffset
+          );
         } else {
           // out
-          messageA.current.style.opacity = calcValues(values.messageA_opacity_out, currentYOffset);
-          messageA.current.style.transform = translate(values.messageA_translateY_out, currentYOffset);
+          messageA.current.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset
+          );
+          messageA.current.style.transform = translate(
+            values.messageA_translateY_out,
+            currentYOffset
+          );
         }
 
         if (scrollRatio <= 0.42) {
           // in
-          messageB.current.style.opacity = calcValues(values.messageB_opacity_in, currentYOffset);
-          messageB.current.style.transform = translate(values.messageB_translateY_in, currentYOffset);
+          messageB.current.style.opacity = calcValues(
+            values.messageB_opacity_in,
+            currentYOffset
+          );
+          messageB.current.style.transform = translate(
+            values.messageB_translateY_in,
+            currentYOffset
+          );
         } else {
           // out
-          messageB.current.style.opacity = calcValues(values.messageB_opacity_out, currentYOffset);
-          messageB.current.style.transform = translate(values.messageB_translateY_out, currentYOffset);
+          messageB.current.style.opacity = calcValues(
+            values.messageB_opacity_out,
+            currentYOffset
+          );
+          messageB.current.style.transform = translate(
+            values.messageB_translateY_out,
+            currentYOffset
+          );
         }
 
         if (scrollRatio <= 0.62) {
           // in
-          messageC.current.style.opacity = calcValues(values.messageC_opacity_in, currentYOffset);
-          messageC.current.style.transform = translate(values.messageC_translateY_in, currentYOffset);
+          messageC.current.style.opacity = calcValues(
+            values.messageC_opacity_in,
+            currentYOffset
+          );
+          messageC.current.style.transform = translate(
+            values.messageC_translateY_in,
+            currentYOffset
+          );
         } else {
           // out
-          messageC.current.style.opacity = calcValues(values.messageC_opacity_out, currentYOffset);
-          messageC.current.style.transform = translate(values.messageC_translateY_out, currentYOffset);
+          messageC.current.style.opacity = calcValues(
+            values.messageC_opacity_out,
+            currentYOffset
+          );
+          messageC.current.style.transform = translate(
+            values.messageC_translateY_out,
+            currentYOffset
+          );
         }
 
         if (scrollRatio <= 0.82) {
           // in
-          messageD.current.style.opacity = calcValues(values.messageD_opacity_in, currentYOffset);
-          messageD.current.style.transform = translate(values.messageD_translateY_in, currentYOffset);
+          messageD.current.style.opacity = calcValues(
+            values.messageD_opacity_in,
+            currentYOffset
+          );
+          messageD.current.style.transform = translate(
+            values.messageD_translateY_in,
+            currentYOffset
+          );
         } else {
           // out
-          messageD.current.style.opacity = calcValues(values.messageD_opacity_out, currentYOffset);
-          messageD.current.style.transform = translate(values.messageD_translateY_out, currentYOffset);
+          messageD.current.style.opacity = calcValues(
+            values.messageD_opacity_out,
+            currentYOffset
+          );
+          messageD.current.style.transform = translate(
+            values.messageD_translateY_out,
+            currentYOffset
+          );
         }
 
         break;
@@ -248,8 +303,18 @@ export default function ScrollMain() {
     <Section ref={container}>
       <Title>
         안녕하세요!
-        <svg xmlns="http://www.w3.org/2000/svg" width="28.879" height="23.6" viewBox="0 0 28.879 23.6" className="svg-img">
-          <path d="M21.208,17.538a1.471,1.471,0,0,1,2.1,0,1.508,1.508,0,0,1,0,2.1l-8.8,8.8a1.522,1.522,0,0,1-2.142,0l-8.8-8.8a1.485,1.485,0,0,1,2.1-2.1l6.28,6.3V1.47A1.477,1.477,0,0,1,13.436,0a1.461,1.461,0,0,1,1.47,1.47V23.838Z" transform="translate(0 23.733) rotate(-90)" fill="#fff"></path>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28.879"
+          height="23.6"
+          viewBox="0 0 28.879 23.6"
+          className="svg-img"
+        >
+          <path
+            d="M21.208,17.538a1.471,1.471,0,0,1,2.1,0,1.508,1.508,0,0,1,0,2.1l-8.8,8.8a1.522,1.522,0,0,1-2.142,0l-8.8-8.8a1.485,1.485,0,0,1,2.1-2.1l6.28,6.3V1.47A1.477,1.477,0,0,1,13.436,0a1.461,1.461,0,0,1,1.47,1.47V23.838Z"
+            transform="translate(0 23.733) rotate(-90)"
+            fill="#fff"
+          ></path>
         </svg>
       </Title>
       <Msg ref={messageA}>

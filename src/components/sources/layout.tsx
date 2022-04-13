@@ -9,7 +9,7 @@ interface SkyC {
 }
 
 interface DefaultTypes {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   align?: string;
   title?: string;
 }
