@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -50,10 +50,10 @@ const Msg = styled.div`
 
 export default function ScrollMain() {
   const container = useRef() as React.MutableRefObject<HTMLElement>;
-  const messageA = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const messageB = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const messageC = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const messageD = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const [messageA, setMessageA] = useState({});
+  const [messageB, setMessageB] = useState({});
+  const [messageC, setMessageC] = useState({});
+  const [messageD, setMessageD] = useState({});
   let yOffset = 0; // window.pageYOffset
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) scene(scroll-section)
@@ -175,90 +175,95 @@ export default function ScrollMain() {
       case 0:
         if (scrollRatio <= 0.22) {
           // in
-          messageA.current.style.opacity = calcValues(
-            values.messageA_opacity_in,
-            currentYOffset
-          );
-          messageA.current.style.transform = translate(
-            values.messageA_translateY_in,
-            currentYOffset
-          );
+          setMessageA((prevState) => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageA_opacity_in, currentYOffset),
+              transform: translate(
+                values.messageA_translateY_in,
+                currentYOffset
+              ),
+            };
+          });
         } else {
           // out
-          messageA.current.style.opacity = calcValues(
-            values.messageA_opacity_out,
-            currentYOffset
-          );
-          messageA.current.style.transform = translate(
-            values.messageA_translateY_out,
-            currentYOffset
-          );
+          setMessageA((prevState) => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageA_opacity_out, currentYOffset),
+              transform: translate(
+                values.messageA_translateY_out,
+                currentYOffset
+              ),
+            };
+          });
         }
-
         if (scrollRatio <= 0.42) {
           // in
-          messageB.current.style.opacity = calcValues(
-            values.messageB_opacity_in,
-            currentYOffset
-          );
-          messageB.current.style.transform = translate(
-            values.messageB_translateY_in,
-            currentYOffset
-          );
+          setMessageB(prevState => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageB_opacity_in, currentYOffset),
+              transform: translate(values.messageB_translateY_in, currentYOffset),
+            }
+          });
         } else {
           // out
-          messageB.current.style.opacity = calcValues(
-            values.messageB_opacity_out,
-            currentYOffset
-          );
-          messageB.current.style.transform = translate(
-            values.messageB_translateY_out,
-            currentYOffset
-          );
+          setMessageB(prevState => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageB_opacity_out, currentYOffset),
+              transform: translate(
+                values.messageB_translateY_out,
+                currentYOffset
+              ),
+            }
+          });
         }
-
         if (scrollRatio <= 0.62) {
           // in
-          messageC.current.style.opacity = calcValues(
-            values.messageC_opacity_in,
-            currentYOffset
-          );
-          messageC.current.style.transform = translate(
-            values.messageC_translateY_in,
-            currentYOffset
-          );
+          setMessageC(prevState => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageC_opacity_in, currentYOffset),
+              transform: translate(values.messageC_translateY_in, currentYOffset),
+            }
+          });
         } else {
           // out
-          messageC.current.style.opacity = calcValues(
-            values.messageC_opacity_out,
-            currentYOffset
-          );
-          messageC.current.style.transform = translate(
-            values.messageC_translateY_out,
-            currentYOffset
-          );
+          setMessageC(prevState => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageC_opacity_out, currentYOffset),
+              transform: translate(
+                values.messageC_translateY_out,
+                currentYOffset
+              ),
+            }
+          });
         }
 
         if (scrollRatio <= 0.82) {
           // in
-          messageD.current.style.opacity = calcValues(
-            values.messageD_opacity_in,
-            currentYOffset
-          );
-          messageD.current.style.transform = translate(
-            values.messageD_translateY_in,
-            currentYOffset
-          );
+          setMessageD(prevState => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageD_opacity_in, currentYOffset),
+              transform: translate(values.messageD_translateY_in, currentYOffset),
+            }
+          });
         } else {
           // out
-          messageD.current.style.opacity = calcValues(
-            values.messageD_opacity_out,
-            currentYOffset
-          );
-          messageD.current.style.transform = translate(
-            values.messageD_translateY_out,
-            currentYOffset
-          );
+          setMessageD(prevState => {
+            return {
+              ...prevState,
+              opacity: calcValues(values.messageD_opacity_out, currentYOffset),
+              transform: translate(
+                values.messageD_translateY_out,
+                currentYOffset
+              ),
+            }
+          });
         }
 
         break;
@@ -317,16 +322,16 @@ export default function ScrollMain() {
           ></path>
         </svg>
       </Title>
-      <Msg ref={messageA}>
+      <Msg style={messageA}>
         <p>UI 개발자 손기연입니다.</p>
       </Msg>
-      <Msg ref={messageB}>
+      <Msg style={messageB}>
         <p>여기는 제 포트폴리오 사이트구요.</p>
       </Msg>
-      <Msg ref={messageC}>
+      <Msg style={messageC}>
         <p>상단의 Guide에서 제 개인 가이드도 보실 수 있습니다.</p>
       </Msg>
-      <Msg ref={messageD}>
+      <Msg style={messageD}>
         <p>잘 부탁드립니다!</p>
       </Msg>
     </Section>
