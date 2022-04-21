@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'G-1C1PPJFX4H',
+        trackingIds: ['G-1C1PPJFX4H'],
       },
     },
     'gatsby-plugin-image',
@@ -40,7 +40,7 @@ module.exports = {
         jsxPragma: 'jsx',
         allExtensions: true,
       },
-    }
+    },
   ],
   pathPrefix: '/PF',
 };
