@@ -1,12 +1,9 @@
 module.exports = {
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'UA-186465692-1',
-        head: false,
-        anonymize: true,
-        respectDNT: true
+        trackingId: 'G-1C1PPJFX4H',
       },
     },
     'gatsby-plugin-image',
