@@ -126,8 +126,6 @@ export default function ScrollMain() {
         break;
       }
     }
-
-    document.body.setAttribute('id', `show-scene-${currentScene}`);
   };
 
   const calcValues = (values: any, currentYOffset: number) => {
@@ -167,7 +165,7 @@ export default function ScrollMain() {
     const scrollHeight = sceneInfo[currentScene].scrollHeight;
     const scrollRatio = currentYOffset / scrollHeight;
 
-    const translate = (inOut: any, currentY: number) => {
+    const translate = (inOut: {}, currentY: number) => {
       return `translate3d(0,${calcValues(inOut, currentY)}%, 0)`;
     };
 
