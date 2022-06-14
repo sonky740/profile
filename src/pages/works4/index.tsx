@@ -10,7 +10,7 @@ import Posco1 from '../../resources/images/posco/posco1.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PA 70%',
@@ -19,6 +19,10 @@ const IndexPage = () => {
       title: '기간',
       content: '2019.01 ~ 2019.09',
     },
+    {
+      title: '사용 기술',
+      content: 'React(CRA), scss'
+    }
   ];
 
   return (

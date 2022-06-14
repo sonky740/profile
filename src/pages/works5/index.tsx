@@ -11,7 +11,7 @@ import Kbcert2 from '../../resources/images/kbcert/kbcert2.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PL 100%',
@@ -19,6 +19,10 @@ const IndexPage = () => {
     {
       title: '기간',
       content: '2019.09 ~ 2020.03',
+    },
+    {
+      title: '사용 기술',
+      content: 'html, scss, javascript'
     },
   ];
 
@@ -42,7 +46,7 @@ const IndexPage = () => {
               />
             </a>
             <figcaption>
-              KB 통합인증 메인 (목업이지만 혹시 몰라서 가립니다.)
+              KB 통합인증 메인
             </figcaption>
           </figure>
           <figure>
@@ -54,7 +58,7 @@ const IndexPage = () => {
               />
             </a>
             <figcaption>
-              KB 통합인증 중 하나 (목업이지만 혹시 몰라서 가립니다.)
+              KB 통합인증 중 하나
             </figcaption>
           </figure>
         </FigureBox>

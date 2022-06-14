@@ -12,7 +12,7 @@ import Woori3 from '../../resources/images/woori_won/woori3.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PA 80%',
@@ -21,6 +21,10 @@ const IndexPage = () => {
       title: '기간',
       content: '2020.06 ~ 2020.09',
     },
+    {
+      title: '사용 기술',
+      content: 'html, css, javascript'
+    }
   ];
 
   return (

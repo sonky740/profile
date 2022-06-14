@@ -11,7 +11,7 @@ import woori2 from '../../resources/images/woori_mydata/woori2.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PA 70%',
@@ -20,6 +20,10 @@ const IndexPage = () => {
       title: '기간',
       content: '2021.02 ~ 2021.05',
     },
+    {
+      title: '사용 기술',
+      content: 'html, scss, javascript'
+    }
   ];
 
   return (

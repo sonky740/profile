@@ -12,7 +12,7 @@ import Jamo3 from '../../resources/images/jamo/jamo3.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PL 100%',
@@ -21,6 +21,10 @@ const IndexPage = () => {
       title: '기간',
       content: '2020.04 ~ 2020.05',
     },
+    {
+      title: '사용 기술',
+      content: 'html, scss, javascript'
+    }
   ];
 
   return (
@@ -30,6 +34,7 @@ const IndexPage = () => {
         <ListDot>{list}</ListDot>
         <p>
           2번째로 혼자서한 프로젝트로 인픽스 언어교정 솔루션 프로젝트입니다.
+          protopie로 작업 된 디자인 파일을 보고 애니메이션을 구체적으로 구현했던 프로젝트였습니다.
         </p>
         <FigureBox>
           <figure>

@@ -11,7 +11,7 @@ import Heroes2 from '../../resources/images/heroes/heroes2.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PL 100%',
@@ -19,6 +19,10 @@ const IndexPage = () => {
     {
       title: '기간',
       content: '2016.07 ~ 2018.07',
+    },
+    {
+      title: '사용 기술',
+      content: 'Linux, MySqL, JAVA, html, css, javascript(jquery)'
     },
   ];
 
@@ -32,8 +36,8 @@ const IndexPage = () => {
           운영을 제안하셨고, 저는 기회다 싶어서 수락하였습니다.
         </p>
         <p>
-          혼자 사이트 전체 운영을 맡은거라서 뒷단(MySQL, Linux, JAVA),
-          프론트(html, css, javascript(jquery))를 조금씩 하였습니다.
+          혼자 사이트 전체 운영을 맡은거라서 백단(MySQL, Linux, JAVA),
+          프론트단(html, css, javascript(jquery))을 조금씩 하였습니다.
         </p>
         <p>
           기획자, 디자이너 없이 필요에따라 요청하였고 클라이언트와 소통을

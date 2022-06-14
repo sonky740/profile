@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DefaultTypes {
-  children: Array<{ title: string; content: string }>;
+  children: Array<listType>;
 }
 
 const List = styled.ul`
@@ -38,11 +38,11 @@ const List = styled.ul`
 export default function ListDot({ children }: DefaultTypes) {
   return (
     <List>
-      {children.map((a: { title: string; content: string }, i: number) => {
+      {children.map((list: { title: string; content: string }) => {
         return (
-          <li key={i}>
-            <span>{a.title}: </span>
-            {a.content}
+          <li key={list.title}>
+            <span>{list.title}: </span>
+            {list.content}
           </li>
         );
       })}

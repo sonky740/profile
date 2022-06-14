@@ -11,7 +11,7 @@ import KbOpenbk2 from '../../resources/images/kbopenbk/kb_openbk2.png';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PA 100%',
@@ -20,6 +20,10 @@ const IndexPage = () => {
       title: '기간',
       content: '2020.11 ~ 2021.02',
     },
+    {
+      title: '사용 기술',
+      content: 'html, css, javascript(jquery)'
+    }
   ];
 
   return (

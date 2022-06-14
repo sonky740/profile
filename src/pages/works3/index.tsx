@@ -10,7 +10,7 @@ import Kbbanking1 from '../../resources/images/kbbanking/kb_banking.jpg';
 
 // main
 const IndexPage = () => {
-  const list: Array<{ title: string; content: string }> = [
+  const list: Array<listType> = [
     {
       title: '역할',
       content: 'PA 100%',
@@ -19,6 +19,10 @@ const IndexPage = () => {
       title: '기간',
       content: '2018.07 ~ 2018.11',
     },
+    {
+      title: '사용 기술',
+      content: 'html, css, javascript(jquery)'
+    }
   ];
 
   return (
