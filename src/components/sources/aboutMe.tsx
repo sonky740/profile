@@ -30,13 +30,12 @@ export default function AboutMe() {
         <MainMsg>
           프론트엔드를 지향하는
           <br />
-          욕심 많은 퍼블리셔 손기연입니다!
+          욕심 많은 개발자 손기연입니다!
         </MainMsg>
       </ScrollAni>
       <ScrollAni>
         <SubMsg>
-          저는 서버 엔지니어로 시작해서, 사내 인프라, 다음은 5년넘게 퍼블리셔로
-          활동중입니다.
+          저는 서버 엔지니어로 시작해서, 사내 인프라, 다음은 5년넘게 퍼블리셔로 활동하다가 이제 프론트엔드 개발자를 바라보고 있습니다.
         </SubMsg>
       </ScrollAni>
       <ScrollAni>

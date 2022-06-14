@@ -105,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: #1a1b1e;
-    line-height: 1.43;
+    line-height: 1.5;
     color: #fff;
     word-break: keep-all;
     -ms-text-size-adjust: 100%;

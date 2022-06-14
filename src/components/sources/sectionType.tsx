@@ -18,7 +18,7 @@ const Section = styled.section`
   }
 
   > p {
-    color: #bebebe;
+    color: #fff;
     font-size: 1.6rem;
 
     a {

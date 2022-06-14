@@ -3,6 +3,6 @@ declare module '*.png';
 declare module '*.woff';
 
 interface listType {
-  title: string;
+  title?: string;
   content: string;
 }
