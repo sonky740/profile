@@ -327,7 +327,7 @@ export default function ScrollMain() {
         <p>여기는 제 포트폴리오 사이트구요.</p>
       </Msg>
       <Msg style={messageC}>
-        <p>상단의 Guide에서 제 개인 가이드도 보실 수 있습니다.</p>
+        <p>상단의 Blog와 Guide에서 저의 다른 이야기도 보실 수 있습니다.</p>
       </Msg>
       <Msg style={messageD}>
         <p>잘 부탁드립니다!</p>

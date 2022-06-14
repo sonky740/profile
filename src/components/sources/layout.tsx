@@ -149,7 +149,15 @@ export default function Layout({ children, align, title }: DefaultTypes) {
                 rel="noreferrer"
                 title="Guide_es6 새 창으로 이동"
               >
-                Guide_ES6
+                Guide
+              </a>
+              <a
+                href="https://sonkyblog.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                title="Sonky_Blog 새 창으로 이동"
+              >
+                Blog
               </a>
               <Link to="/about">About</Link>
             </nav>
