@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface DefaultTypes {
+interface SectionType {
   children: React.ReactNode;
   title: string;
 }
@@ -36,7 +36,7 @@ const Section = styled.section`
   }
 `;
 
-export default function SectionType({ children, title }: DefaultTypes) {
+const SectionType: React.FC<SectionType> = ({ children, title }) => {
   return (
     <Section>
       <h2>{title}</h2>
@@ -44,3 +44,5 @@ export default function SectionType({ children, title }: DefaultTypes) {
     </Section>
   );
 }
+
+export default SectionType;

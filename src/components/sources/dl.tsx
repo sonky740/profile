@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface DefaultTypes {
+interface DlType {
   children: React.ReactNode;
   title: string;
 }
@@ -43,7 +43,7 @@ const Dl = styled.dl`
   }
 `;
 
-export default function DefinitionList({ children, title }: DefaultTypes) {
+const DefinitionList: React.FC<DlType> = ({ children, title }) => {
   return (
     <Dl>
       <dt>{title}</dt>
@@ -51,3 +51,4 @@ export default function DefinitionList({ children, title }: DefaultTypes) {
     </Dl>
   );
 }
+export default DefinitionList;

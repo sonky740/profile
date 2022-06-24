@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-interface DefaultTypes {
+interface ScrollAniType {
   children: React.ReactNode;
   multiple?: number;
 }
 
 // 버튼 영역 지정
-const ScrollAni = styled.div`
+const ScrollAniSection = styled.div`
   opacity: 0;
   visibility: hidden;
   transform: translateY(3rem);
@@ -20,10 +20,7 @@ const ScrollAni = styled.div`
   }
 `;
 
-export default function ScrollAniType({
-  children,
-  multiple = 0.8,
-}: DefaultTypes) {
+const ScrollAni: React.FC<ScrollAniType> = ({ children, multiple = 0.8 }) => {
   const target = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect((): any => {
@@ -62,5 +59,7 @@ export default function ScrollAniType({
     }
   };
 
-  return <ScrollAni ref={target}>{children}</ScrollAni>;
-}
+  return <ScrollAniSection ref={target}>{children}</ScrollAniSection>;
+};
+
+export default ScrollAni;

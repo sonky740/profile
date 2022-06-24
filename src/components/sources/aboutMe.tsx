@@ -23,7 +23,7 @@ const SkillList = styled.ul`
   }
 `;
 
-export default function AboutMe() {
+const AboutMe = () => {
   return (
     <Wrap>
       <ScrollAni>
@@ -59,3 +59,5 @@ export default function AboutMe() {
     </Wrap>
   );
 }
+
+export default AboutMe;

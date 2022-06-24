@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface DefaultTypes {
+interface ListDotType {
   children: Array<listType>;
   className?: string;
 }
@@ -48,7 +48,7 @@ const List = styled.ul`
   }
 `;
 
-export default function ListDot({ children, className }: DefaultTypes) {
+const ListDot: React.FC<ListDotType> = ({ children, className }) => {
   return (
     <List className={className}>
       {children.map((list: listType) => {
@@ -62,3 +62,5 @@ export default function ListDot({ children, className }: DefaultTypes) {
     </List>
   );
 }
+
+export default ListDot;

@@ -48,8 +48,8 @@ const Msg = styled.div`
   opacity: 0;
 `;
 
-export default function ScrollMain() {
-  const container = useRef() as React.MutableRefObject<HTMLElement>;
+const ScrollMain = () => {
+  const container = useRef<HTMLElement>(null)
   const [messageA, setMessageA] = useState({});
   const [messageB, setMessageB] = useState({});
   const [messageC, setMessageC] = useState({});
@@ -111,9 +111,9 @@ export default function ScrollMain() {
         sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
       } else if (sceneInfo[i].type === 'normal') {
         sceneInfo[i].scrollHeight =
-          container.current.offsetHeight + window.innerHeight * 0.5;
+          container.current!.offsetHeight + window.innerHeight * 0.5;
       }
-      return (container.current.style.height = `${sceneInfo[0].scrollHeight}px`);
+      return (container.current!.style.height = `${sceneInfo[0].scrollHeight}px`);
     }
 
     yOffset = window.pageYOffset;
@@ -335,3 +335,5 @@ export default function ScrollMain() {
     </Section>
   );
 }
+
+export default ScrollMain;

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Button } from '../index';
 import styled from 'styled-components';
 
-interface DefaultTypes {
+interface TooltipType {
   children: React.ReactNode;
   text: string;
 }
@@ -62,9 +62,9 @@ const Tooltips = styled.div`
   }
 `;
 
-export default function Tooltip({ children, text }: DefaultTypes) {
+const Tooltip = ({ children, text }: TooltipType) => {
   const [isTooltip, setIsTooltip] = useState(false);
-  const tooltip = useRef()as React.MutableRefObject<HTMLDivElement>;
+  const tooltip = useRef<HTMLDivElement>(null);
 
   const tooltipHandler = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -73,13 +73,13 @@ export default function Tooltip({ children, text }: DefaultTypes) {
 
   const closeAll = (e: any) => {
     if (e.target.parentNode !== tooltip.current) {
-      tooltip.current.classList.remove('shown');
-      tooltip.current.classList.add('hidden');
+      tooltip.current!.classList.remove('shown');
+      tooltip.current!.classList.add('hidden');
     }
   };
 
   const animationend = () => {
-    if (tooltip.current.classList.contains('hidden')) setIsTooltip(false);
+    if (tooltip.current!.classList.contains('hidden')) setIsTooltip(false);
   };
 
   useEffect(() => {
@@ -91,9 +91,9 @@ export default function Tooltip({ children, text }: DefaultTypes) {
   }, []);
 
   useEffect(() => {
-    tooltip.current.addEventListener('animationend', () => {
+    tooltip.current!.addEventListener('animationend', () => {
       animationend();
-      tooltip.current.removeEventListener('animationend', animationend);
+      tooltip.current!.removeEventListener('animationend', animationend);
     });
   }, [isTooltip]);
 
@@ -111,3 +111,5 @@ export default function Tooltip({ children, text }: DefaultTypes) {
     </Tooltips>
   );
 }
+
+export default Tooltip;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-interface ButtonTypes {
+interface ButtonType {
   children: React.ReactNode;
   href?: string;
   target?: string;
@@ -10,7 +10,7 @@ interface ButtonTypes {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-interface LinkTypes {
+interface LinkType {
   children: React.ReactNode;
   to: string;
 }
@@ -40,7 +40,7 @@ const Btn = styled.a`
 
 const LinkStyled = Btn.withComponent(Link);
 
-export function Button({ children, href, target, rel, onClick }: ButtonTypes) {
+export const Button: React.FC<ButtonType> = ({ children, href, target, rel, onClick }) => {
   return (
     <Btn href={href} target={target} rel={rel} onClick={onClick}>
       {children}
@@ -48,6 +48,6 @@ export function Button({ children, href, target, rel, onClick }: ButtonTypes) {
   );
 }
 
-export function ButtonLink({ children, to }: LinkTypes) {
+export const ButtonLink: React.FC<LinkType> = ({ children, to }) => {
   return <LinkStyled to={to}>{children}</LinkStyled>;
 }

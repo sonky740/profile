@@ -8,7 +8,7 @@ interface SkyC {
   align?: string;
 }
 
-interface DefaultTypes {
+interface LayoutType {
   children: React.ReactNode;
   align?: string;
   title?: string;
@@ -121,7 +121,7 @@ const SkyContainer = styled.div<SkyC>`
   }
 `;
 
-export default function Layout({ children, align, title }: DefaultTypes) {
+const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
   return (
     <>
       <Helmet>
@@ -169,3 +169,5 @@ export default function Layout({ children, align, title }: DefaultTypes) {
     </>
   );
 }
+
+export default Layout;

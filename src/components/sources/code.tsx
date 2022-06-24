@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Prism from 'prismjs';
 
-interface DefaultTypes {
+interface CodeType {
   children: React.ReactNode;
   title: string;
   type?: string;
@@ -22,7 +22,7 @@ const Codes = styled.div`
   }
 `;
 
-export default function Code({ children, title, type }: DefaultTypes) {
+const Code: React.FC<CodeType> = ({ children, title, type }) => {
   useEffect(() => {
     setTimeout(() => Prism.highlightAll(), 0);
   });
@@ -36,3 +36,5 @@ export default function Code({ children, title, type }: DefaultTypes) {
     </Codes>
   );
 }
+
+export default Code;
