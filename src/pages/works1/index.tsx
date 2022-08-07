@@ -22,7 +22,7 @@ const IndexPage = () => {
     },
     {
       title: '사용 기술',
-      content: 'Linux, MySqL, JAVA, html, css, javascript(jquery)'
+      content: 'Linux, MySqL, JAVA, html, css, javascript(jquery)',
     },
   ];
 

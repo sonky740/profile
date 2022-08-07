@@ -43,6 +43,6 @@ const SectionType: React.FC<SectionType> = ({ children, title }) => {
       {children}
     </Section>
   );
-}
+};
 
 export default SectionType;

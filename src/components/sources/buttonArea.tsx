@@ -14,8 +14,8 @@ const ButtonArea = styled.div`
   }
 `;
 
-const BtnArea: React.FC = ({ children }) => {
+const BtnArea = ({ children }: DefaultFC) => {
   return <ButtonArea>{children}</ButtonArea>;
-}
+};
 
-export default BtnArea
+export default BtnArea;

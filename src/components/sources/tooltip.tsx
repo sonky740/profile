@@ -110,6 +110,6 @@ const Tooltip = ({ children, text }: TooltipType) => {
       {isTooltip && <div>{children}</div>}
     </Tooltips>
   );
-}
+};
 
 export default Tooltip;

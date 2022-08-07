@@ -71,8 +71,8 @@ const Box = styled.div`
   }
 `;
 
-const BoxWrap: React.FC = ({ children }) => {
+const BoxWrap = ({ children }: DefaultFC) => {
   return <Box>{children}</Box>;
-}
+};
 
 export default BoxWrap;

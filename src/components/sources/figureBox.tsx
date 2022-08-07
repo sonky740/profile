@@ -16,7 +16,7 @@ const FigureBoxes = styled.div`
   }
 `;
 
-const FigureBox: React.FC = ({ children }) => {
+const FigureBox = ({ children }: DefaultFC) => {
   return <FigureBoxes>{children}</FigureBoxes>;
 }
 

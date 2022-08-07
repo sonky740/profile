@@ -49,6 +49,6 @@ const SectionMain: React.FC<SectionMainType> = ({ children, title }) => {
       {children}
     </Section>
   );
-}
+};
 
 export default SectionMain;

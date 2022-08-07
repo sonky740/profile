@@ -23,8 +23,8 @@ const IndexPage = () => {
     },
     {
       title: '사용 기술',
-      content: 'html, css, javascript'
-    }
+      content: 'html, css, javascript',
+    },
   ];
 
   return (

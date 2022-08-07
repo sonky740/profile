@@ -22,7 +22,7 @@ const IndexPage = () => {
     },
     {
       title: '사용 기술',
-      content: 'html, scss, javascript'
+      content: 'html, scss, javascript',
     },
   ];
 
@@ -45,9 +45,7 @@ const IndexPage = () => {
                 placeholder="blurred"
               />
             </a>
-            <figcaption>
-              KB 통합인증 메인
-            </figcaption>
+            <figcaption>KB 통합인증 메인</figcaption>
           </figure>
           <figure>
             <a href={Kbcert2} target="_blank" rel="noreferrer">
@@ -57,9 +55,7 @@ const IndexPage = () => {
                 placeholder="blurred"
               />
             </a>
-            <figcaption>
-              KB 통합인증 중 하나
-            </figcaption>
+            <figcaption>KB 통합인증 중 하나</figcaption>
           </figure>
         </FigureBox>
       </SectionType>

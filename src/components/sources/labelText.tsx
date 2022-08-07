@@ -13,7 +13,7 @@ const LabelText = styled.span`
   vertical-align: middle;
 `;
 
-const Label: React.FC = ({ children }) => {
+const Label = ({ children }: DefaultFC) => {
   return <LabelText>{children}</LabelText>;
 };
 

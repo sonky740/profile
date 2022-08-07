@@ -49,7 +49,7 @@ const Msg = styled.div`
 `;
 
 const ScrollMain = () => {
-  const container = useRef<HTMLElement>(null)
+  const container = useRef<HTMLElement>(null);
   const [messageA, setMessageA] = useState({});
   const [messageB, setMessageB] = useState({});
   const [messageC, setMessageC] = useState({});
@@ -198,16 +198,19 @@ const ScrollMain = () => {
         }
         if (scrollRatio <= 0.42) {
           // in
-          setMessageB(prevState => {
+          setMessageB((prevState) => {
             return {
               ...prevState,
               opacity: calcValues(values.messageB_opacity_in, currentYOffset),
-              transform: translate(values.messageB_translateY_in, currentYOffset),
-            }
+              transform: translate(
+                values.messageB_translateY_in,
+                currentYOffset
+              ),
+            };
           });
         } else {
           // out
-          setMessageB(prevState => {
+          setMessageB((prevState) => {
             return {
               ...prevState,
               opacity: calcValues(values.messageB_opacity_out, currentYOffset),
@@ -215,21 +218,24 @@ const ScrollMain = () => {
                 values.messageB_translateY_out,
                 currentYOffset
               ),
-            }
+            };
           });
         }
         if (scrollRatio <= 0.62) {
           // in
-          setMessageC(prevState => {
+          setMessageC((prevState) => {
             return {
               ...prevState,
               opacity: calcValues(values.messageC_opacity_in, currentYOffset),
-              transform: translate(values.messageC_translateY_in, currentYOffset),
-            }
+              transform: translate(
+                values.messageC_translateY_in,
+                currentYOffset
+              ),
+            };
           });
         } else {
           // out
-          setMessageC(prevState => {
+          setMessageC((prevState) => {
             return {
               ...prevState,
               opacity: calcValues(values.messageC_opacity_out, currentYOffset),
@@ -237,22 +243,25 @@ const ScrollMain = () => {
                 values.messageC_translateY_out,
                 currentYOffset
               ),
-            }
+            };
           });
         }
 
         if (scrollRatio <= 0.82) {
           // in
-          setMessageD(prevState => {
+          setMessageD((prevState) => {
             return {
               ...prevState,
               opacity: calcValues(values.messageD_opacity_in, currentYOffset),
-              transform: translate(values.messageD_translateY_in, currentYOffset),
-            }
+              transform: translate(
+                values.messageD_translateY_in,
+                currentYOffset
+              ),
+            };
           });
         } else {
           // out
-          setMessageD(prevState => {
+          setMessageD((prevState) => {
             return {
               ...prevState,
               opacity: calcValues(values.messageD_opacity_out, currentYOffset),
@@ -260,7 +269,7 @@ const ScrollMain = () => {
                 values.messageD_translateY_out,
                 currentYOffset
               ),
-            }
+            };
           });
         }
 
@@ -334,6 +343,6 @@ const ScrollMain = () => {
       </Msg>
     </Section>
   );
-}
+};
 
 export default ScrollMain;

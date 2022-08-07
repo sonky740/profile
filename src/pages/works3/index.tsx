@@ -21,8 +21,8 @@ const IndexPage = () => {
     },
     {
       title: '사용 기술',
-      content: 'html, css, javascript(jquery)'
-    }
+      content: 'html, css, javascript(jquery)',
+    },
   ];
 
   return (

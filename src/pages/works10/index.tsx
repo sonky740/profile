@@ -1,5 +1,10 @@
 import React from 'react';
-import { Layout, SectionType, FigureBox, ListDot } from '../../components/index';
+import {
+  Layout,
+  SectionType,
+  FigureBox,
+  ListDot,
+} from '../../components/index';
 import { StaticImage } from 'gatsby-plugin-image';
 import tpass from '../../resources/images/tpass/tpass.png';
 
@@ -26,12 +31,19 @@ const IndexPage = () => {
       <SectionType title="SKT PASS">
         <ListDot>{list}</ListDot>
         <p>
-          대규모로 운영되고 있는 어플이고, 기존 소스를 개선하려면 많은 개발자들이 고생을 하기에, 개선보다는 현상을 유지하면서 안정적인 서비스를 목표로 작업을 하였습니다. 운영을 하면서 가장 많은 맨먼스가 들어간건 코로나로 인한 QR 인증 페이지였습니다.
+          대규모로 운영되고 있는 어플이고, 기존 소스를 개선하려면 많은
+          개발자들이 고생을 하기에, 개선보다는 현상을 유지하면서 안정적인
+          서비스를 목표로 작업을 하였습니다. 운영을 하면서 가장 많은 맨먼스가
+          들어간건 코로나로 인한 QR 인증 페이지였습니다.
         </p>
         <FigureBox>
           <figure>
             <a href={tpass} target="_blank" rel="noreferrer">
-              <StaticImage src="../../resources/images/tpass/tpass.png" alt="QR 인증 페이지" placeholder="blurred" />
+              <StaticImage
+                src="../../resources/images/tpass/tpass.png"
+                alt="QR 인증 페이지"
+                placeholder="blurred"
+              />
             </a>
             <figcaption>QR 인증 페이지</figcaption>
           </figure>
