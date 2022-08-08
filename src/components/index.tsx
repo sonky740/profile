@@ -1,7 +1,6 @@
 export { default as Layout } from './sources/Layout';
 export { default as Tooltip } from './sources/Tooltip';
 export { default as BtnArea } from './sources/ButtonArea';
-export { default as Code } from './sources/Code';
 export { default as Dl } from './sources/Dl';
 export { default as ListDot } from './sources/ListDot';
 export { default as SectionMain } from './sources/SectionMain';

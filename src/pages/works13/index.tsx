@@ -43,7 +43,8 @@ const IndexPage = () => {
         <ListDot>{list}</ListDot>
         <p>
           기존 백엔드 개발자가 프론트엔드까지 담당하였으나 퇴사로 인해 사내에서
-          리액트를 할줄 아는 제게 넘어왔고, 프론트엔드 작업 중입니다.
+          프론트엔드(React)를 할 줄 아는 제가 기회가 되어 기존 소스 개선 및
+          고도화 중입니다.
         </p>
         <ListDot className="type1">{list2}</ListDot>
         <FigureBox>

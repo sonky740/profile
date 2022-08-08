@@ -25,6 +25,25 @@ const IndexPage = () => {
       </SectionMain>
       <SectionMain title="민앤지">
         <BoxWrap>
+          {/* 더쎈카드 운영 */}
+          <ScrollAni>
+            <h3>더쎈카드 운영</h3>
+            <div className="content">더쎈카드 운영 및 고도화,<br />22년 8월 ~ React Native</div>
+            <div className="bottom">
+              <p>역할: PL 100%</p>
+              <p>기간: 2022.04 ~ </p>
+              <BtnArea>
+                <Button
+                  href="https://thessencard.co.kr/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  사이트 바로가기
+                </Button>
+                <ButtonLink to="/works14">기술서</ButtonLink>
+              </BtnArea>
+            </div>
+          </ScrollAni>
           {/* 아파트청약케어 운영 */}
           <ScrollAni>
             <h3>아파트청약케어 운영</h3>
