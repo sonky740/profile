@@ -1,53 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
-const Section = styled.section`
-  position: relative;
-  font-size: 4rem;
-
-  @media screen and (max-width: 414px) {
-    font-size: 3.2rem;
-  }
-`;
-
-const Title = styled.h2`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -6rem;
-  height: 100vh;
-  text-align: center;
-
-  .svg-img {
-    position: absolute;
-    left: 50%;
-    margin-top: 10rem;
-    transform: translateX(-50%) rotate(90deg);
-    animation: down 0.6s infinite alternate-reverse ease-out;
-    @keyframes down {
-      0% {
-        margin-top: 8rem;
-      }
-      100% {
-        margin-top: 10rem;
-      }
-    }
-  }
-`;
-
-const Msg = styled.div`
-  display: flex;
-  position: fixed;
-  left: 0;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  top: 45%;
-  text-align: center;
-  opacity: 0;
-`;
-
 const ScrollMain = () => {
   const container = useRef<HTMLElement>(null);
   const [messageA, setMessageA] = useState({});
@@ -344,5 +297,52 @@ const ScrollMain = () => {
     </Section>
   );
 };
+
+const Section = styled.section`
+  position: relative;
+  font-size: 4rem;
+
+  @media screen and (max-width: 414px) {
+    font-size: 3.2rem;
+  }
+`;
+
+const Title = styled.h2`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -6rem;
+  height: 100vh;
+  text-align: center;
+
+  .svg-img {
+    position: absolute;
+    left: 50%;
+    margin-top: 10rem;
+    transform: translateX(-50%) rotate(90deg);
+    animation: down 0.6s infinite alternate-reverse ease-out;
+    @keyframes down {
+      0% {
+        margin-top: 8rem;
+      }
+      100% {
+        margin-top: 10rem;
+      }
+    }
+  }
+`;
+
+const Msg = styled.div`
+  display: flex;
+  position: fixed;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 45%;
+  text-align: center;
+  opacity: 0;
+`;
 
 export default ScrollMain;

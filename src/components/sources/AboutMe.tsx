@@ -2,27 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { ScrollAni } from '../index';
 
-const Wrap = styled.div``;
-
-const MainMsg = styled.p`
-  margin-bottom: 1rem;
-  font-size: 3.2rem;
-  color: #ffbd39;
-`;
-
-const SubMsg = styled.p`
-  font-size: 1.8rem;
-
-  & + & {
-    margin-top: 1rem;
-  }
-`;
-
-const SkillList = styled.ul`
-  li {
-  }
-`;
-
 const AboutMe = () => {
   return (
     <Wrap>
@@ -56,9 +35,24 @@ const AboutMe = () => {
       <ScrollAni>
         <SubMsg>재밌게 일하는 것, 제가 추구하는 목표입니다.</SubMsg>
       </ScrollAni>
-      <SkillList></SkillList>
     </Wrap>
   );
 };
+
+const Wrap = styled.div``;
+
+const MainMsg = styled.p`
+  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  color: #ffbd39;
+`;
+
+const SubMsg = styled.p`
+  font-size: 1.8rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
+`;
 
 export default AboutMe;

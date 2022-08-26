@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const FigureBox = ({ children }: DefaultFC) => {
+  return <FigureBoxes>{children}</FigureBoxes>;
+};
+
 // 버튼 영역 지정
 const FigureBoxes = styled.div`
   max-width: 720px;
@@ -15,9 +19,5 @@ const FigureBoxes = styled.div`
     margin-top: 0.4rem;
   }
 `;
-
-const FigureBox = ({ children }: DefaultFC) => {
-  return <FigureBoxes>{children}</FigureBoxes>;
-}
 
 export default FigureBox;

@@ -7,6 +7,56 @@ interface TooltipType {
   text: string;
 }
 
+const Tooltip = ({ children, text }: TooltipType) => {
+  const [isTooltip, setIsTooltip] = useState(false);
+  const tooltip = useRef<HTMLDivElement>(null);
+
+  const tooltipHandler = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsTooltip(true);
+  };
+
+  const closeAll = (e: any) => {
+    if (e.target.parentNode !== tooltip.current) {
+      tooltip.current!.classList.remove('shown');
+      tooltip.current!.classList.add('hidden');
+    }
+  };
+
+  const animationend = () => {
+    if (tooltip.current!.classList.contains('hidden')) setIsTooltip(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('click', closeAll);
+
+    return () => {
+      window.removeEventListener('click', closeAll);
+    };
+  }, []);
+
+  useEffect(() => {
+    tooltip.current!.addEventListener('animationend', () => {
+      animationend();
+      tooltip.current!.removeEventListener('animationend', animationend);
+    });
+  }, [isTooltip]);
+
+  return (
+    <Tooltips ref={tooltip} className={isTooltip ? 'shown' : ''}>
+      <Button
+        href="#none"
+        target="_blank"
+        rel="noreferrer"
+        onClick={tooltipHandler}
+      >
+        {text}
+      </Button>
+      {isTooltip && <div>{children}</div>}
+    </Tooltips>
+  );
+};
+
 const Tooltips = styled.div`
   > div {
     position: absolute;
@@ -61,55 +111,5 @@ const Tooltips = styled.div`
     }
   }
 `;
-
-const Tooltip = ({ children, text }: TooltipType) => {
-  const [isTooltip, setIsTooltip] = useState(false);
-  const tooltip = useRef<HTMLDivElement>(null);
-
-  const tooltipHandler = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsTooltip(true);
-  };
-
-  const closeAll = (e: any) => {
-    if (e.target.parentNode !== tooltip.current) {
-      tooltip.current!.classList.remove('shown');
-      tooltip.current!.classList.add('hidden');
-    }
-  };
-
-  const animationend = () => {
-    if (tooltip.current!.classList.contains('hidden')) setIsTooltip(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener('click', closeAll);
-
-    return () => {
-      window.removeEventListener('click', closeAll);
-    };
-  }, []);
-
-  useEffect(() => {
-    tooltip.current!.addEventListener('animationend', () => {
-      animationend();
-      tooltip.current!.removeEventListener('animationend', animationend);
-    });
-  }, [isTooltip]);
-
-  return (
-    <Tooltips ref={tooltip} className={isTooltip ? 'shown' : ''}>
-      <Button
-        href="#none"
-        target="_blank"
-        rel="noreferrer"
-        onClick={tooltipHandler}
-      >
-        {text}
-      </Button>
-      {isTooltip && <div>{children}</div>}
-    </Tooltips>
-  );
-};
 
 export default Tooltip;

@@ -6,20 +6,6 @@ interface ScrollAniType {
   multiple?: number;
 }
 
-// 버튼 영역 지정
-const ScrollAniSection = styled.div`
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(3rem);
-  transition: all 0.5s;
-
-  &.focus-in {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-`;
-
 const ScrollAni: React.FC<ScrollAniType> = ({ children, multiple = 0.8 }) => {
   const target = useRef() as React.MutableRefObject<HTMLDivElement>;
 
@@ -61,5 +47,19 @@ const ScrollAni: React.FC<ScrollAniType> = ({ children, multiple = 0.8 }) => {
 
   return <ScrollAniSection ref={target}>{children}</ScrollAniSection>;
 };
+
+// 버튼 영역 지정
+const ScrollAniSection = styled.div`
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3rem);
+  transition: all 0.5s;
+
+  &.focus-in {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+`;
 
 export default ScrollAni;

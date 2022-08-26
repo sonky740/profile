@@ -6,6 +6,15 @@ interface DlType {
   title: string;
 }
 
+const DefinitionList: React.FC<DlType> = ({ children, title }) => {
+  return (
+    <Dl>
+      <dt>{title}</dt>
+      <dd>{children}</dd>
+    </Dl>
+  );
+};
+
 const Dl = styled.dl`
   font-size: 1.6rem;
 
@@ -43,12 +52,4 @@ const Dl = styled.dl`
   }
 `;
 
-const DefinitionList: React.FC<DlType> = ({ children, title }) => {
-  return (
-    <Dl>
-      <dt>{title}</dt>
-      <dd>{children}</dd>
-    </Dl>
-  );
-}
 export default DefinitionList;

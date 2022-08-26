@@ -6,6 +6,15 @@ interface SectionType {
   title: string;
 }
 
+const SectionType: React.FC<SectionType> = ({ children, title }) => {
+  return (
+    <Section>
+      <h2>{title}</h2>
+      {children}
+    </Section>
+  );
+};
+
 // 버튼 영역 지정
 const Section = styled.section`
   max-width: 720px;
@@ -35,14 +44,5 @@ const Section = styled.section`
     }
   }
 `;
-
-const SectionType: React.FC<SectionType> = ({ children, title }) => {
-  return (
-    <Section>
-      <h2>{title}</h2>
-      {children}
-    </Section>
-  );
-};
 
 export default SectionType;

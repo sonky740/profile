@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Label = ({ children }: DefaultFC) => {
+  return <LabelText>{children}</LabelText>;
+};
+
 const LabelText = styled.span`
   display: inline-block;
   padding: 0 0.4rem;
@@ -12,9 +16,5 @@ const LabelText = styled.span`
   color: #fff;
   vertical-align: middle;
 `;
-
-const Label = ({ children }: DefaultFC) => {
-  return <LabelText>{children}</LabelText>;
-};
 
 export default Label;

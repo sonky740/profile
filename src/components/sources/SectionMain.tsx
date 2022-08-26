@@ -6,6 +6,15 @@ interface SectionMainType {
   title: string;
 }
 
+const SectionMain: React.FC<SectionMainType> = ({ children, title }) => {
+  return (
+    <Section>
+      <h2 data-text={title}>{title}</h2>
+      {children}
+    </Section>
+  );
+};
+
 const Section = styled.section`
   h2 {
     position: relative;
@@ -41,14 +50,5 @@ const Section = styled.section`
     }
   }
 `;
-
-const SectionMain: React.FC<SectionMainType> = ({ children, title }) => {
-  return (
-    <Section>
-      <h2 data-text={title}>{title}</h2>
-      {children}
-    </Section>
-  );
-};
 
 export default SectionMain;

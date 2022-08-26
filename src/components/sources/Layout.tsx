@@ -14,6 +14,55 @@ interface LayoutType {
   title?: string;
 }
 
+const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
+  return (
+    <>
+      <Helmet>
+        <title>{title || '손기연'}</title>
+      </Helmet>
+      <GlobalStyle />
+      <SkyLayout>
+        {/* <!-- ### 헤더 ### --> */}
+        <SkyHeader>
+          <div>
+            <h1>
+              <Link to="/">
+                {/* 손기연 */}
+                <svg width="72" height="36" viewBox="0 0 72 36">
+                  <text x="0" y="85%">
+                    손기연
+                  </text>
+                </svg>
+              </Link>
+            </h1>
+            <nav>
+              <a
+                href="https://sonky740.github.io/Guide_es6/dist/"
+                target="_blank"
+                rel="noreferrer"
+                title="Guide_es6 새 창으로 이동"
+              >
+                Guide
+              </a>
+              <a
+                href="https://sonkyblog.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                title="Sonky_Blog 새 창으로 이동"
+              >
+                Blog
+              </a>
+              <Link to="/about">About</Link>
+            </nav>
+          </div>
+        </SkyHeader>
+
+        <SkyContainer align={align}>{children}</SkyContainer>
+      </SkyLayout>
+    </>
+  );
+};
+
 const SkyLayout = styled.div`
   min-width: 320px;
 `;
@@ -120,54 +169,5 @@ const SkyContainer = styled.div<SkyC>`
     width: 100%;
   }
 `;
-
-const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
-  return (
-    <>
-      <Helmet>
-        <title>{title || '손기연'}</title>
-      </Helmet>
-      <GlobalStyle />
-      <SkyLayout>
-        {/* <!-- ### 헤더 ### --> */}
-        <SkyHeader>
-          <div>
-            <h1>
-              <Link to="/">
-                {/* 손기연 */}
-                <svg width="72" height="36" viewBox="0 0 72 36">
-                  <text x="0" y="85%">
-                    손기연
-                  </text>
-                </svg>
-              </Link>
-            </h1>
-            <nav>
-              <a
-                href="https://sonky740.github.io/Guide_es6/dist/"
-                target="_blank"
-                rel="noreferrer"
-                title="Guide_es6 새 창으로 이동"
-              >
-                Guide
-              </a>
-              <a
-                href="https://sonkyblog.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                title="Sonky_Blog 새 창으로 이동"
-              >
-                Blog
-              </a>
-              <Link to="/about">About</Link>
-            </nav>
-          </div>
-        </SkyHeader>
-
-        <SkyContainer align={align}>{children}</SkyContainer>
-      </SkyLayout>
-    </>
-  );
-}
 
 export default Layout;

@@ -15,6 +15,24 @@ interface LinkType {
   to: string;
 }
 
+export const Button: React.FC<ButtonType> = ({
+  children,
+  href,
+  target,
+  rel,
+  onClick,
+}) => {
+  return (
+    <Btn href={href} target={target} rel={rel} onClick={onClick}>
+      {children}
+    </Btn>
+  );
+};
+
+export const ButtonLink: React.FC<LinkType> = ({ children, to }) => {
+  return <LinkStyled to={to}>{children}</LinkStyled>;
+};
+
 const Btn = styled.a`
   display: inline-block;
   position: relative;
@@ -39,15 +57,3 @@ const Btn = styled.a`
 `;
 
 const LinkStyled = Btn.withComponent(Link);
-
-export const Button: React.FC<ButtonType> = ({ children, href, target, rel, onClick }) => {
-  return (
-    <Btn href={href} target={target} rel={rel} onClick={onClick}>
-      {children}
-    </Btn>
-  );
-}
-
-export const ButtonLink: React.FC<LinkType> = ({ children, to }) => {
-  return <LinkStyled to={to}>{children}</LinkStyled>;
-}

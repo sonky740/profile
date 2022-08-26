@@ -6,6 +6,21 @@ interface ListDotType {
   className?: string;
 }
 
+const ListDot: React.FC<ListDotType> = ({ children, className }) => {
+  return (
+    <List className={className}>
+      {children.map((list: listType) => {
+        return (
+          <li key={list.content}>
+            {list.title && <span>{list.title}: </span>}
+            {list.content}
+          </li>
+        );
+      })}
+    </List>
+  );
+};
+
 const List = styled.ul`
   margin-bottom: 1.6rem;
 
@@ -38,7 +53,7 @@ const List = styled.ul`
   }
 
   &.type1 {
-    >li {
+    > li {
       color: #fff;
 
       &:before {
@@ -47,20 +62,5 @@ const List = styled.ul`
     }
   }
 `;
-
-const ListDot: React.FC<ListDotType> = ({ children, className }) => {
-  return (
-    <List className={className}>
-      {children.map((list: listType) => {
-        return (
-          <li key={list.content}>
-            {list.title && <span>{list.title}: </span>}
-            {list.content}
-          </li>
-        );
-      })}
-    </List>
-  );
-}
 
 export default ListDot;

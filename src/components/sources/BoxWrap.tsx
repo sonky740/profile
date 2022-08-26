@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const BoxWrap = ({ children }: DefaultFC) => {
+  return <Box>{children}</Box>;
+};
+
 // 버튼 영역 지정
 const Box = styled.div`
   display: grid;
@@ -70,9 +74,5 @@ const Box = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-const BoxWrap = ({ children }: DefaultFC) => {
-  return <Box>{children}</Box>;
-};
 
 export default BoxWrap;

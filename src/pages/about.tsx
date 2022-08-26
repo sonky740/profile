@@ -2,19 +2,6 @@ import React from 'react';
 import { Layout, Dl, SectionMain } from '../components/index';
 import styled from 'styled-components';
 
-const About = styled.div`
-  h3 {
-    font-size: 20px;
-    color: #ffbd39;
-    margin-bottom: 16px;
-  }
-  @media screen and (max-width: 640px) {
-    h3 {
-      text-align: center;
-    }
-  }
-`;
-
 // main
 const AboutPage = () => {
   return (
@@ -119,5 +106,18 @@ const AboutPage = () => {
     </Layout>
   );
 };
+
+const About = styled.div`
+  h3 {
+    font-size: 20px;
+    color: #ffbd39;
+    margin-bottom: 16px;
+  }
+  @media screen and (max-width: 640px) {
+    h3 {
+      text-align: center;
+    }
+  }
+`;
 
 export default AboutPage;
