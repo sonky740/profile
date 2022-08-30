@@ -28,10 +28,14 @@ const IndexPage = () => {
           {/* 더쎈카드 운영 */}
           <ScrollAni>
             <h3>더쎈카드 운영</h3>
-            <div className="content">더쎈카드 운영 및 고도화,<br />22년 8월 ~ React Native</div>
+            <div className="content">
+              더쎈카드 운영 및 고도화,
+              <br />
+              22년 8월 ~ React Native
+            </div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2022.04 ~ </p>
+              <p>기간: 2022.04 ~ 2022.09</p>
               <BtnArea>
                 <Button
                   href="https://thessencard.co.kr/"
@@ -50,7 +54,7 @@ const IndexPage = () => {
             <div className="content">아파트청약케어 운영 React(CRA)</div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2022.03 ~ </p>
+              <p>기간: 2022.03 ~ 2022.09</p>
               <BtnArea>
                 <Button
                   href="https://aptcare.kr/"
@@ -69,15 +73,11 @@ const IndexPage = () => {
             <div className="content">캠핑 Sheeeda 구축</div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2021.10 ~ 중단</p>
+              <p>기간: 2021.10 ~ 2021.12</p>
               <BtnArea>
-                <Button
-                  href="https://sonky740.github.io/sheeeda/dist/work_sheet.html"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  사이트 바로가기
-                </Button>
+                <Tooltip text="사이트 바로가기">
+                  프로젝트 드랍되었습니다.
+                </Tooltip>
                 <ButtonLink to="/works12">기술서</ButtonLink>
               </BtnArea>
             </div>
@@ -88,7 +88,7 @@ const IndexPage = () => {
             <div className="content">Tior 운영 및 고도화 진행 중</div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2021.06 ~ </p>
+              <p>기간: 2021.06 ~ 2022.09</p>
               <BtnArea>
                 <Button
                   href="https://m.tior.co.kr/"
@@ -107,7 +107,7 @@ const IndexPage = () => {
             <div className="content">PASS 운영 및 고도화 진행 중</div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2021.06 ~ </p>
+              <p>기간: 2021.06 ~ 2022.09</p>
               <BtnArea>
                 <Button
                   href="https://www.sktpass.com/"
