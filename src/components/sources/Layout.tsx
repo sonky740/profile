@@ -70,14 +70,13 @@ const SkyLayout = styled.div`
 const SkyHeader = styled.header`
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
   width: 100%;
   height: 6rem;
   padding: 0.8rem 1.6rem;
   font-size: 2.4rem;
-  background: rgba(26, 27, 30, 0.4);
+  background-color: rgba(26, 27, 30, 0.3);
   backdrop-filter: blur(15px);
-  transform: translateX(-50%);
   z-index: 10;
 
   > div {
