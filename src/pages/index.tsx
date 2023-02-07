@@ -23,6 +23,30 @@ const IndexPage = () => {
       <SectionMain title="ABOUT ME">
         <AboutMe />
       </SectionMain>
+      <SectionMain title="엑셈">
+        <BoxWrap>
+          {/* 한국건강관리협회 대시보드 개발 */}
+          <ScrollAni>
+            <h3>한국건강관리협회 대시보드 개발</h3>
+            <div className="content">
+              한국건강관리협회 대시보드 개발,
+              <br />
+              Vite + Vue + pinia + typescript 기반으로한 대시보드 개발
+            </div>
+            <div className="bottom">
+              <p>역할: PL 100%</p>
+              <p>기간: 2022.12 ~ 2023.01</p>
+              <BtnArea>
+                <Tooltip text="사이트 바로가기">
+                  관리자 사이트라 접근이 불가합니다.
+                </Tooltip>
+                {/* <ButtonLink to="/works15">기술서</ButtonLink> */}
+                <Tooltip text="기술서">아직 제작 중입니다.</Tooltip>
+              </BtnArea>
+            </div>
+          </ScrollAni>
+        </BoxWrap>
+      </SectionMain>
       <SectionMain title="민앤지">
         <BoxWrap>
           {/* 더쎈카드 운영 */}
