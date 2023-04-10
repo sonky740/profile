@@ -9,41 +9,44 @@ interface ScrollAniType {
 const ScrollAni: React.FC<ScrollAniType> = ({ children, multiple = 0.8 }) => {
   const target = useRef() as React.MutableRefObject<HTMLDivElement>;
 
-  useEffect((): any => {
-    if (!target.current) return false;
+  useEffect(() => {
+    if (!target.current) return;
 
-    // init
-    handleScroll();
+    const handleScroll = () => {
+      let itemTop = target.current.getBoundingClientRect().top;
+      let viewH = document.documentElement.offsetHeight;
 
-    // add Event
-    ['resize', 'scroll'].forEach(function (events) {
-      window.addEventListener(events, handleScroll);
-    });
+      if (
+        itemTop < viewH * multiple &&
+        !target.current.classList.contains('focus-in')
+      ) {
+        target.current.classList.add('focus-in');
+      } else if (
+        itemTop > (viewH * 3) / 4 &&
+        target.current.classList.contains('focus-in')
+      ) {
+        target.current.classList.remove('focus-in');
+      }
+    };
 
-    // remove Event
-    return () => {
+    const addEventListeners = () => {
+      ['resize', 'scroll'].forEach(function (events) {
+        window.addEventListener(events, handleScroll);
+      });
+    };
+
+    const removeEventListeners = () => {
       ['resize', 'scroll'].forEach(function (events) {
         window.removeEventListener(events, handleScroll);
       });
     };
-  });
 
-  const handleScroll = () => {
-    let itemTop = target.current.getBoundingClientRect().top;
-    let viewH = document.documentElement.offsetHeight;
+    handleScroll();
 
-    if (
-      itemTop < viewH * multiple &&
-      !target.current.classList.contains('focus-in')
-    ) {
-      target.current.classList.add('focus-in');
-    } else if (
-      itemTop > (viewH * 3) / 4 &&
-      target.current.classList.contains('focus-in')
-    ) {
-      target.current.classList.remove('focus-in');
-    }
-  };
+    addEventListeners();
+
+    return removeEventListeners;
+  }, []);
 
   return <ScrollAniSection ref={target}>{children}</ScrollAniSection>;
 };

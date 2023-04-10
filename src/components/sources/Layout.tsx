@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import GlobalStyle from '../../resources/style/globalStyle';
 import { Helmet } from 'react-helmet';
+import AppLoading from './AppLoading';
 
 interface SkyC {
   align?: string;
@@ -15,12 +16,19 @@ interface LayoutType {
 }
 
 const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>{title || '손기연'}</title>
       </Helmet>
       <GlobalStyle />
+      {isLoading && <AppLoading />}
       <SkyLayout>
         {/* <!-- ### 헤더 ### --> */}
         <SkyHeader>

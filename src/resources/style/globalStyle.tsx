@@ -356,6 +356,10 @@ const GlobalStyle = createGlobalStyle`
     white-space: nowrap;
     clip: rect(0, 0, 0, 0);
   }
+
+  .is-locked {
+    overflow: hidden;
+  }
 `;
 
 export default GlobalStyle;
