@@ -25,6 +25,25 @@ const IndexPage = () => {
       </SectionMain>
       <SectionMain title="엑셈">
         <BoxWrap>
+          {/* Data Saker 구축형 개발 */}
+          <ScrollAni>
+            <h3>Data Saker 구축형 개발</h3>
+            <div className="content">
+              Data Saker 구축형 개발,
+              <br />
+              기존 DB 모니터링 제품을 통합 대시보드로 개발 중. vue3 + typescript 기반으로 개발.
+            </div>
+            <div className="bottom">
+              <p>역할: PA 100%</p>
+              <p>기간: 2023.05 ~ </p>
+              <BtnArea>
+                <Tooltip text="사이트 바로가기">
+                  관리자 사이트라 접근이 불가합니다.
+                </Tooltip>
+                <Tooltip text="기술서">아직 개발 중입니다.</Tooltip>
+              </BtnArea>
+            </div>
+          </ScrollAni>
           {/* 모바일 인터맥스 개발 */}
           <ScrollAni>
             <h3>모바일 인터맥스 개발</h3>
@@ -35,13 +54,12 @@ const IndexPage = () => {
             </div>
             <div className="bottom">
               <p>역할: PL 100%</p>
-              <p>기간: 2023.02 ~ </p>
+              <p>기간: 2023.02 ~ 2023.05</p>
               <BtnArea>
                 <Tooltip text="사이트 바로가기">
                   관리자 사이트라 접근이 불가합니다.
                 </Tooltip>
-                {/* <ButtonLink to="/works16">기술서</ButtonLink> */}
-                <Tooltip text="기술서">아직 제작 중입니다.</Tooltip>
+                <ButtonLink to="/works16">기술서</ButtonLink>
               </BtnArea>
             </div>
           </ScrollAni>
