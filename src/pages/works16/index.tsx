@@ -49,11 +49,11 @@ const IndexPage = () => {
             <a href={mobileIntermax} target="_blank" rel="noreferrer">
               <StaticImage
                 src="../../resources/images/mobile_intermax/mobile_intermax.png"
-                alt="모바일 인터맥스 개발 프로토타입"
+                alt="모바일 인터맥스"
                 placeholder="blurred"
               />
             </a>
-            <figcaption>모바일 인터맥스 개발 프로토타입</figcaption>
+            <figcaption>모바일 인터맥스</figcaption>
           </figure>
         </FigureBox>
       </SectionType>

@@ -25,22 +25,22 @@ const IndexPage = () => {
       </SectionMain>
       <SectionMain title="엑셈">
         <BoxWrap>
-          {/* Data Saker 구축형 개발 */}
+          {/* exemONE 개발 */}
           <ScrollAni>
-            <h3>Data Saker 구축형 개발</h3>
+            <h3>exemONE 개발</h3>
             <div className="content">
-              Data Saker 구축형 개발,
+              exemONE 개발,
               <br />
-              기존 DB 모니터링 제품을 통합 대시보드로 개발 중. vue3 + typescript 기반으로 개발.
+              통합 대시보드 개발 vue + typescript
             </div>
             <div className="bottom">
               <p>역할: PA 100%</p>
-              <p>기간: 2023.05 ~ </p>
+              <p>기간: 2023.06 ~ </p>
               <BtnArea>
                 <Tooltip text="사이트 바로가기">
                   관리자 사이트라 접근이 불가합니다.
                 </Tooltip>
-                <Tooltip text="기술서">아직 개발 중입니다.</Tooltip>
+                <ButtonLink to="/works17">기술서</ButtonLink>
               </BtnArea>
             </div>
           </ScrollAni>
@@ -50,7 +50,8 @@ const IndexPage = () => {
             <div className="content">
               모바일 인터맥스 개발,
               <br />
-              기존의 senchaJS로 돼있던 모바일 인터맥스(WAS 모니터링 제품)를 vue 기반으로 재개발
+              기존의 senchaJS로 돼있던 모바일 인터맥스(WAS 모니터링 제품)를 vue
+              기반으로 재개발
             </div>
             <div className="bottom">
               <p>역할: PL 100%</p>

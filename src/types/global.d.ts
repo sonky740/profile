@@ -13,4 +13,8 @@ declare global {
   interface DefaultFC {
     children: ReactNode;
   }
+
+  interface Location {
+    previousPath: Location | null;
+  }
 }

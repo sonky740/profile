@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
+import { useLocation } from '@reach/router';
 import styled from 'styled-components';
 import GlobalStyle from '../../resources/style/globalStyle';
 import { Helmet } from 'react-helmet';
@@ -17,6 +18,7 @@ interface LayoutType {
 
 const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     setIsLoading(false);
@@ -43,25 +45,34 @@ const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
                 </svg>
               </Link>
             </h1>
-            <nav>
-              <a
+            <SkyNav>
+              <div>
+                {location.pathname !== '/' && location.previousPath && (
+                  <button type="button" onClick={() => navigate(-1)}>
+                    Back ←
+                  </button>
+                )}
+              </div>
+              {/* <a
                 href="https://sonky740.github.io/Guide_es6/dist/"
                 target="_blank"
                 rel="noreferrer"
                 title="Guide_es6 새 창으로 이동"
               >
                 Guide
-              </a>
-              <a
-                href="https://sonkyblog.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                title="Sonky_Blog 새 창으로 이동"
-              >
-                Blog
-              </a>
-              <Link to="/about">About</Link>
-            </nav>
+              </a> */}
+              <div>
+                <a
+                  href="https://sonkyblog.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Sonky_Blog 새 창으로 이동"
+                >
+                  Blog
+                </a>
+                <Link to="/about">About</Link>
+              </div>
+            </SkyNav>
           </div>
         </SkyHeader>
 
@@ -73,6 +84,28 @@ const Layout: React.FC<LayoutType> = ({ children, align, title }) => {
 
 const SkyLayout = styled.div`
   min-width: 320px;
+`;
+
+const SkyNav = styled.nav`
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.6rem;
+  font-size: 1.8rem;
+
+  a,
+  button {
+    font-size: inherit;
+    color: #fff;
+
+    &:hover {
+      color: #ffbd39;
+    }
+
+    + a {
+      margin-left: 0.8rem;
+    }
+  }
 `;
 
 const SkyHeader = styled.header`
@@ -135,25 +168,11 @@ const SkyHeader = styled.header`
     }
   }
 
-  nav {
-    font-size: 1.8rem;
-
-    a {
-      &:hover {
-        color: #ffbd39;
-      }
-
-      + a {
-        margin-left: 0.8rem;
-      }
-    }
-  }
-
   @media screen and (max-width: 920px) {
     width: 100%;
     font-size: 2rem;
 
-    nav {
+    ${SkyNav} {
       font-size: 1.6rem;
     }
   }
