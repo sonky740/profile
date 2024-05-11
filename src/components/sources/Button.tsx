@@ -30,7 +30,11 @@ export const Button: React.FC<ButtonType> = ({
 };
 
 export const ButtonLink: React.FC<LinkType> = ({ children, to }) => {
-  return <LinkStyled to={to}>{children}</LinkStyled>;
+  return (
+    <Btn as={Link} to={to}>
+      {children}
+    </Btn>
+  );
 };
 
 const Btn = styled.a`
@@ -55,5 +59,3 @@ const Btn = styled.a`
     color: #222;
   }
 `;
-
-const LinkStyled = Btn.withComponent(Link);
