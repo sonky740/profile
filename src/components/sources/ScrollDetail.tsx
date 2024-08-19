@@ -283,7 +283,7 @@ const ScrollMain = () => {
         </svg>
       </Title>
       <Msg style={messageA}>
-        <p>프론튼엔드 개발자 손기연입니다.</p>
+        <p>프론트엔드 개발자 손기연입니다.</p>
       </Msg>
       <Msg style={messageB}>
         <p>여기는 제 포트폴리오 사이트구요.</p>
